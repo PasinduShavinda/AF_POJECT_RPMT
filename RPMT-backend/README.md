@@ -1,2 +1,0 @@
-# AF_RPMT_BACKEND
-AF Project - BACKEND
