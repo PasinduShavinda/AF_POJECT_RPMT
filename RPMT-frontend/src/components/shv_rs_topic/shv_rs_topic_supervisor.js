@@ -2,67 +2,72 @@
 /// Retrieve Page
 import { Button } from "@mui/material";
 import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./styles/shv_rs_topic.css";
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 const Shv_rs_topic_supervisor = (props) => {
 
   const history = useNavigate();
   
-  const { ResTopicgroupId, ResTopicsupervisor, ResTopicresearchArea, ResTopicResearchTopic, ResTopicdateEntered } = props.resTopic;
+  const { _id, ResTopicgroupId, ResTopicsupervisor, ResTopicresearchArea, ResTopicResearchTopic, ResTopicdateEntered } = props.resTopic;
   
+  const deleteHandler = async () => {
+  
+    await axios
+      .delete(`http://localhost:5000/resTopics/${_id}`)
+      .then((res) => res.data)
+      .then(() => history("/"))
+      .then(() => history("/RsTopics"));
+  };
+
+  const StyledTableCell = withStyles((theme) => ({
+    head: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white,
+    },
+    body: {
+      fontSize: 12,
+    },
+  }))(TableCell);
+
 
   return (
 
 <div>
-    
-      <Table>
-
-        <TableBody>
+    <center>
+      <Table style = {{marginTop:'20px'}}>
               
-              <TableCell
-              align="center" className="ud_order_cellColor">
-              {ResTopicgroupId}
-              </TableCell>
+              <StyledTableCell align="left"
+              >
+              {ResTopicgroupId} 
+              </StyledTableCell>         
 
-              <TableCell
-                align="center" component="th"className="ud_order_cellColor">
+              <StyledTableCell align="left"
+               >
                 {ResTopicsupervisor}
-              </TableCell>
+              </StyledTableCell>         
 
-              <TableCell
-                align="center" className="ud_order_cellColor">
+              <StyledTableCell align="left"
+                >
                 {ResTopicresearchArea}
-              </TableCell>
+              </StyledTableCell>         
 
-              <TableCell
-                align="center" className="ud_order_cellColor">
+              <StyledTableCell align="left"
+                >
                 {ResTopicResearchTopic}
-              </TableCell>
+              </StyledTableCell>         
 
-              <TableCell
-                align="center"className="ud_order_cellColor">
+              <StyledTableCell align="left"
+               >
                 {ResTopicdateEntered}
-              </TableCell>
-            
-        </TableBody>
+              </StyledTableCell>         
+
       </Table>
- 
-      {/* <p>{ResTopicgroupId}</p>
-      <p>{ResTopicsupervisor}</p>
-      <p>{ResTopicresearchArea}</p>
-      <p>{ResTopicResearchTopic}</p>
-      <p>{ResTopicdateEntered}</p>
-  
-      <Button LinkComponent={Link} to={`/RsTopics/${_id}`} sx={{ mt: "auto" }}>
-        Update
-      </Button>
-      <Button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
-        Delete
-      </Button> */}
+      </center>
+
     </div>
   );
 };

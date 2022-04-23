@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import "./styles/shv_rs_topic.css";
 import axios from "axios";
 import Shv_rs_topic_supervisor from "./shv_rs_topic_supervisor";
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 const URL = "http://localhost:5000/resTopics";
 
@@ -26,37 +23,55 @@ const Shv_rs_topics_supervisor = () => {
   }, []);
   
   console.log(resTopics);
+
+
+  const StyledTableCell = withStyles((theme) => ({
+    head: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white,
+    },
+    body: {
+      fontSize: 20,
+      
+    },
+  }))(TableCell);
+
+
+  const StyledTableRow = withStyles((theme) => ({
+    root: {
+      '&:nth-of-type(odd)': {
+        backgroundColor: theme.palette.action.hover,
+      },
+    },
+  }))(TableRow);
+
   return (
     <div>
+      <br/>
+      <br/>
+      <br/>
       <center>
-      <br/>
-      <br/>
-      <h1>Supervisor can view the topics submitted by students here</h1>
-      </center>
-      <br/>
-      <br/>
-      <Table>
-      <TableHead>
-          <TableRow>
-          <TableCell >Group ID</TableCell>
-          <TableCell >Supervisor</TableCell>
-          <TableCell >Research Area</TableCell>
-          <TableCell >Research Topic</TableCell>
-          <TableCell >Date Entered</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
+        <h1>Research topics submitted by students</h1><br/><br/><br/>
       <ul>
+
+      <TableRow>
+          <StyledTableCell align="left">Group ID</StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <StyledTableCell align="left" >Supervisor</StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <StyledTableCell align="left">Research Area</StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <StyledTableCell align="left">Research Topic</StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <StyledTableCell align="left">Date Entered</StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </TableRow>
+      
+        </ul>
+        <br/>
+  
         {resTopics &&
           resTopics.map((resTopic, i) => (
-            <TableRow key={i}>
+            <StyledTableRow key={i}>&nbsp;&nbsp;
               <Shv_rs_topic_supervisor resTopic={resTopic} />
-            </TableRow>
+            </StyledTableRow>
           ))}
-      </ul>
-      </TableBody>
-      </Table>
-  
+  </center>
     </div>
   );
 };
