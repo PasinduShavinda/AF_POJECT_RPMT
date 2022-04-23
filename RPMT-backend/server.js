@@ -11,7 +11,7 @@ app.use("/resTopics", router); // localhost:5000/resTopics
 
 mongoose
   .connect(
-    "mongodb+srv://testclusteraf:test12A123@clusteraftest.pmajz.mongodb.net/testDB?retryWrites=true&w=majority"
+    "mongodb+srv://afProject2022:af2022proj12A@afprojectcluster.t6kdd.mongodb.net/RPMT_DB?retryWrites=true&w=majority"
   )
   .then(() => console.log("Connected To Database"))
   .then(() => {
