@@ -10,6 +10,12 @@ import Shv_rs_topic_details_update from "./components/shv_rs_topic/shv_rs_topic_
 
 import Shv_rs_topics_supervisor from "./components/shv_rs_topic/shv_rs_topics_supervisor";
 
+import Shv_res_topic_notice_admin_add from "./components/shv_submission_notices/shv_res_topic_notice_admin_add";
+import Shv_res_topic_notices_admin from "./components/shv_submission_notices/shv_res_topic_notices_admin";
+import Shv_res_topic_notice_admin_update from "./components/shv_submission_notices/shv_res_topic_notice_admin_update";
+
+import Shv_res_topic_notices_student from "./components/shv_submission_notices/shv_res_topic_notices_student";
+
 
 function App() {
   return (
@@ -26,6 +32,17 @@ function App() {
           <Route path="/RsTopics/:id" element={<Shv_rs_topic_details_update />} exact />
 
           <Route path="/RsTopicsSupervisor" element={<Shv_rs_topics_supervisor />} exact />
+
+          <Route path="/addRsTopicsNotice" element={<Shv_res_topic_notice_admin_add />} exact />
+          
+          <Route path="/RsTopicsNotices" element={<Shv_res_topic_notices_admin />} exact />
+
+          <Route path="/RsTopicsNotice/:id" element={<Shv_res_topic_notice_admin_update />} exact />
+
+          <Route path="/RsTopicsNoticesStudent" element={<Shv_res_topic_notices_student />} exact />
+
+
+
         </Routes>
       </main>
     </React.Fragment>

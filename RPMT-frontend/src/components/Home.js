@@ -33,6 +33,33 @@ const Home = () => {
           <Typography variant="h3">SUPERVISOR - View All research topics submitted by students</Typography>
         </Button>
 
+        <Button
+          LinkComponent={Link}
+          to="/addRsTopicsNotice"
+          sx={{ marginTop: 15, background: "Green" }}
+          variant="contained"
+        >
+          <Typography variant="h3">Admin-Add Research topic Submission</Typography>
+        </Button>
+
+        <Button
+          LinkComponent={Link}
+          to="/RsTopicsNotices"
+          sx={{ marginTop: 15, background: "Green" }}
+          variant="contained"
+        >
+          <Typography variant="h3">Admin-View/update/delete Topic submission Notices</Typography>
+        </Button>
+
+        <Button
+          LinkComponent={Link}
+          to="/RsTopicsNoticesStudent"
+          sx={{ marginTop: 15, background: "Green" }}
+          variant="contained"
+        >
+          <Typography variant="h3">Student Research Topic submission Notices</Typography>
+        </Button>
+
 
       </Box>
     </div>

@@ -1,13 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const router = require("./routes/shv_res_topic_routes");
+const router1 = require("./routes/shv_res_topic_routes");
+const router2 = require("./routes/shv_res_topic_notice_admin_routes");
 const cors = require("cors");
 const app = express();
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
-app.use("/resTopics", router); // localhost:5000/resTopics
+app.use("/resTopics", router1); // localhost:5000/resTopics
+app.use("/resTopicsNotice", router2); // localhost:5000/resTopicsNotice
 
 mongoose
   .connect(

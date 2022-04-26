@@ -40,27 +40,27 @@ const Shv_rs_topic = (props) => {
     <center>
       <Table style = {{marginTop:'20px'}}>
               
-              <StyledTableCell align="left"
+              <StyledTableCell align="left" width="120px"
               >
               {ResTopicgroupId} 
               </StyledTableCell>         
 
-              <StyledTableCell align="left"
+              <StyledTableCell align="left" width="120px"
                >
                 {ResTopicsupervisor}
               </StyledTableCell>         
 
-              <StyledTableCell align="left"
+              <StyledTableCell align="left" width="120px"
                 >
                 {ResTopicresearchArea}
               </StyledTableCell>         
 
-              <StyledTableCell align="left"
+              <StyledTableCell align="left" width="120px"
                 >
                 {ResTopicResearchTopic}
               </StyledTableCell>         
 
-              <StyledTableCell align="left"
+              <StyledTableCell align="left" width="120px"
                >
                 {ResTopicdateEntered}
               </StyledTableCell>         
