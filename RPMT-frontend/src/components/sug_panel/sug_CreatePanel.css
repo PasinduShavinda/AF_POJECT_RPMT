@@ -1,0 +1,48 @@
+#sug_createPanel form {
+    width: 100%;
+    max-width: 32rem; /* Or whatever width you prefer */
+    margin: auto;
+  }
+ 
+ 
+   
+    #sug_createPanel button {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px; 
+    border: none;
+    background: #77beeb; 
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(10, 11, 12);
+    }
+    #sug_createPanel button:hover {
+    background: #054e70;
+    }
+   
+    #sug_createPanel label {
+        padding: 0 20px;
+        
+        vertical-align: middle;
+        }
+
+      #sug_createPanel  input {
+            padding: 8px;
+            width: 250px;
+            vertical-align: middle;
+            border-radius: 0.25em;
+            }
+          
+          #sug_createPanel  select, .children, .gender, .bdate-block {
+            width: calc(50% + 26px);
+            padding: 5px 0;
+            border-radius: 0.25em;
+            }
+    
+      
+          #sug_createPanel  .contain {
+                height: 50px;
+                width: 500px;
+                
+              }

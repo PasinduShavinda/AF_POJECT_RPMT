@@ -29,10 +29,10 @@ const Shv_res_topic_notices_student = () => {
       <h1>Notices - Research Topic submission</h1>
       </center>
       <br/>
-      <ul>
+      <ul className="shv_ul">
         {resTopicsNotices &&
           resTopicsNotices.map((resTopicNotice, i) => (
-            <li key={i}>
+            <li  className="shv_li" key={i}>
               <Shv_res_topic_notice_student resTopicNotice={resTopicNotice} />
             </li>
           ))}

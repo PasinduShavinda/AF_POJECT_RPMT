@@ -82,7 +82,7 @@ import {
             onChange={handleChange}
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="filled"
             name="ResTopicNoticeLineOne"
           />
           <FormLabel>Line Two</FormLabel>
@@ -91,7 +91,7 @@ import {
             onChange={handleChange}
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="filled"
             name="ResTopicNoticeLineTwo"
           />
           <FormLabel>Line Three</FormLabel>
@@ -100,7 +100,7 @@ import {
             onChange={handleChange}
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="filled"
             name="ResTopicNoticeLineThree"
           />
           <FormLabel>Due Date</FormLabel>
@@ -110,7 +110,7 @@ import {
             type="Date"
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="filled"
             name="ResTopicNoticeDueDate"
           />
           <br/>

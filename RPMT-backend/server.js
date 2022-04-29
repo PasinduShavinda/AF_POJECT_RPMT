@@ -11,6 +11,12 @@ app.use(cors());
 app.use("/resTopics", router1); // localhost:5000/resTopics
 app.use("/resTopicsNotice", router2); // localhost:5000/resTopicsNotice
 
+
+
+const panelroutes = require("./routes/sug_panel-routes");
+app.use("/panel", panelroutes );
+
+
 mongoose
   .connect(
     "mongodb+srv://afProject2022:af2022proj12A@afprojectcluster.t6kdd.mongodb.net/RPMT_DB?retryWrites=true&w=majority"

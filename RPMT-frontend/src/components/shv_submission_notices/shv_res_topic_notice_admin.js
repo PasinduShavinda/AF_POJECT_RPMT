@@ -17,7 +17,7 @@ const Shv_res_topic_notice_admin = (props) => {
   };
 
   return (
-    <div className="card">
+    <div className="shv_card">
 
       <center>
       <h4>{ResTopicNoticeHeader}</h4><br/>

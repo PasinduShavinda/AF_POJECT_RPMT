@@ -54,12 +54,12 @@ const Shv_rs_topics = () => {
         <h1>Research topics submitted by students</h1><br/><br/><br/>
       
       <TableRow>
-          <StyledTableCell align="left" ><b>Group ID</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Supervisor</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Research Area</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Research Topic</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
-          <StyledTableCell align="left" ><b>Date Entered</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
-          <StyledTableCell align="left" width="80px"><b>Action</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+          <StyledTableCell align="left" ><b>Group ID</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell align="left" ><b>Supervisor</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell align="left" ><b>Research Area</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell align="left" ><b>Research Topic</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+          <StyledTableCell align="left" ><b>Date Entered</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+          <StyledTableCell align="left" width="80px"><b>Action</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
         </TableRow>
 
         <br/>

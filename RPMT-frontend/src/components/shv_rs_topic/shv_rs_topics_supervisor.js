@@ -55,11 +55,11 @@ const Shv_rs_topics_supervisor = () => {
 
 
         <TableRow>
-          <StyledTableCell align="left" ><b>Group ID</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Supervisor</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Research Area</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Research Topic</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
-          <StyledTableCell align="left" width="95"><b>Date Entered</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+          <StyledTableCell align="left" ><b>Group ID</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell align="left" ><b>Supervisor</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell align="left" ><b>Research Area</b></StyledTableCell>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell align="left" ><b>Research Topic</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+          <StyledTableCell align="left" width="95"><b>Date Entered</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
       
         </TableRow>
 

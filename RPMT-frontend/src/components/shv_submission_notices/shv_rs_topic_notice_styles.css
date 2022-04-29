@@ -1,4 +1,4 @@
- ul {
+ .shv_ul {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -10,7 +10,7 @@
     font-variant-position: normal;
   }
 
-  li {
+  .shv_li {
     padding: 10px;
     margin: 30px;
     width: 250px;
@@ -20,7 +20,7 @@
     justify-content: flex-start;
   }
  
-  .card {
+  .shv_card {
     margin: auto;
     padding: 1px;
     /* box-shadow: 5px 5px 10px rgb(221, 0, 255); */

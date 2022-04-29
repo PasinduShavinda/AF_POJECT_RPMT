@@ -70,7 +70,7 @@ const Shv_rs_add_rs_topic = () => {
           onChange={handleChange}
           margin="normal"
           fullWidth
-          variant="outlined"
+          variant="filled"
           name="ResTopicgroupId"
         />
         <FormLabel>Supervisor's Name</FormLabel>
@@ -79,7 +79,7 @@ const Shv_rs_add_rs_topic = () => {
           onChange={handleChange}
           margin="normal"
           fullWidth
-          variant="outlined"
+          variant="filled"
           name="ResTopicsupervisor"
         />
         <FormLabel>Research Area</FormLabel>
@@ -88,7 +88,7 @@ const Shv_rs_add_rs_topic = () => {
           onChange={handleChange}
           margin="normal"
           fullWidth
-          variant="outlined"
+          variant="filled"
           name="ResTopicresearchArea"
         />
         <FormLabel>Research Topic</FormLabel>
@@ -97,7 +97,7 @@ const Shv_rs_add_rs_topic = () => {
           onChange={handleChange}
           margin="normal"
           fullWidth
-          variant="outlined"
+          variant="filled"
           name="ResTopicResearchTopic"
         />
         <FormLabel>Date</FormLabel>
@@ -107,7 +107,7 @@ const Shv_rs_add_rs_topic = () => {
           type="Date"
           margin="normal"
           fullWidth
-          variant="outlined"
+          variant="filled"
           name="ResTopicdateEntered"
         />
         <br/>
