@@ -16,12 +16,30 @@ import Shv_res_topic_notice_admin_update from "./components/shv_submission_notic
 
 import Shv_res_topic_notices_student from "./components/shv_submission_notices/shv_res_topic_notices_student";
 
-
-
 import Sug_page from "./components/sug_page";
 import Sug_AllPanels from "./components/sug_panel/sug_AllPanel";
 import Sug_CreatePanel from "./components/sug_panel/Sug_CreatePanel";
 import FirstPage from "./components/sug_FirstPage/sug_FirstPage";
+
+import TopicHeader from "./components/shv_rs_topic_file/shv_topic_file_header";
+import TopicHome from "./components/shv_rs_topic_file/shv_topic_file_home";
+import TopicFilesList from "./components/shv_rs_topic_file/shv_topic_file_list";
+
+import ResDocFilesList from "./components/shv_rs_res_document/shv_ResDocFilesList";
+import ResDocHeader from "./components/shv_rs_res_document/shv_ResDocHeader";
+import ResDocHome from "./components/shv_rs_res_document/shv_ResDocHome";
+
+import ThesisDocHome from './components/shv_rs_thesis_document/shv_ThesisDocHome';
+import ThesisDocHeader from './components/shv_rs_thesis_document/shv_ThesisDocHeader'; 
+import ThesisDocFilesList from './components/shv_rs_thesis_document/shv_ThesisDocFilesList';
+
+import MarkingSchemeHome from './components/shv_rs_admin_marking_scheme/shv_marking_scheme_home';
+import MarkingSchemeHeader from './components/shv_rs_admin_marking_scheme/shv_marking_scheme_header'; 
+import MarkingSchemeList from './components/shv_rs_admin_marking_scheme/shv_marking_scheme_List';
+
+import TemplateHome from './components/shv_rs_admin_templates/shv_template_home';
+import TemplateHeader from './components/shv_rs_admin_templates/shv_template_header';
+import TemplateList from './components/shv_rs_admin_templates/shv_template_List';
 
 
 function App() {
@@ -49,12 +67,29 @@ function App() {
 
           <Route path="/RsTopicsNoticesStudent" element={<Shv_res_topic_notices_student />} exact />
            
-
-
-
           <Route path="/sug_page" element={<Sug_page />} exact />
           <Route path="/allPanel" element={<Sug_AllPanels />} exact />
           <Route path="/createPanel" element={< Sug_CreatePanel/>} exact />
+
+          <Route path="/RsTopicFileHome" element={<TopicHome />} exact />
+          <Route path="/RsTopicFileHeader" element={<TopicHeader />} exact />
+          <Route path="/RsTopiFileList" element={<TopicFilesList />} exact />
+
+          <Route path="/RsDocHome" element={<ResDocHome />} exact />
+          <Route path="/RsDocHeader" element={<ResDocHeader />} exact />
+          <Route path="/RsDocFilesList" element={<ResDocFilesList />} exact />
+
+          <Route path="/ThesisHome" element={<ThesisDocHome />} exact />
+          <Route path="/ThesisHeader" element={<ThesisDocHeader />} exact />
+          <Route path="/ThesisFilesList" element={<ThesisDocFilesList />} exact />
+
+          <Route path="/MSchemeHome" element={<MarkingSchemeHome />} exact />
+          <Route path="/MSchemeHeader" element={<MarkingSchemeHeader />} exact />
+          <Route path="/MSchemeList" element={<MarkingSchemeList />} exact />
+
+          <Route path="/TemplateHome" element={<TemplateHome />} exact />
+          <Route path="/TemplateHeader" element={<TemplateHeader />} exact />
+          <Route path="/TemplateList" element={<TemplateList />} exact />
         </Routes>
       </main>
     </React.Fragment>
