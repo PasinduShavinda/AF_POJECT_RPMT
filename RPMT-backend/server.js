@@ -8,6 +8,13 @@ const router5 = require("./routes/shv_ThesisDocfileRoutes");
 const router6 = require("./routes/shv_res_admin_mschme_routes");
 const router7 = require("./routes/shv_res_admin_template_routes");
 const router8 = require("./routes/sug_panel-routes");
+const router9 = require("./routes/sug_resdoc_feedback_router");
+const router10 = require("./routes/sug_resdoc_feedback_router2");
+const router11 = require("./routes/sug_TopicDock_Evaluvate_routes");
+const router12 = require("./routes/sug_TopicDock_Evaluvate_routes2");
+const router13= require("./routes/sug_Thesis_feedback_router");
+const router14= require("./routes/sug_Thesis_feedback_router2");
+const router15= require("./routes/th_group_router");
 
 const cors = require("cors");
 const app = express();
@@ -23,8 +30,13 @@ app.use(router5);
 app.use(router6);  
 app.use(router7); 
 app.use("/panel", router8);
-
-
+app.use("/resdoc_feedback", router9);
+app.use("/resdoc_feedback2", router10);
+app.use("/topicdoc_feedback", router11);
+app.use("/topicdoc_feedback2", router12);
+app.use("/thesisdoc_feedback", router13);
+app.use("/thesisdoc_feedback2", router14);
+app.use("/group", router15);
 mongoose
   .connect(
     "mongodb+srv://afProject2022:af2022proj12A@afprojectcluster.t6kdd.mongodb.net/RPMT_DB?retryWrites=true&w=majority",{

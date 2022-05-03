@@ -49,6 +49,7 @@ const TopicFilesList = () => {
             <th>Research Topic</th>
             <th>Panel</th>
             <th>Download File</th>
+            <th> Give Feedback</th>
           </tr>
         </thead>
         <tbody>
@@ -70,6 +71,7 @@ const TopicFilesList = () => {
                       Download
                     </a>
                   </td>
+                  <td  className="file-title"> <a href={`/AllTopicFilesList/${_id}`} > Give Feedback</a>  </td>
                 </tr>
               )
             )

@@ -41,6 +41,24 @@ import TemplateHome from './components/shv_rs_admin_templates/shv_template_home'
 import TemplateHeader from './components/shv_rs_admin_templates/shv_template_header';
 import TemplateList from './components/shv_rs_admin_templates/shv_template_List';
 
+import Sug_Resdoc_addfeedback from "./components/sug_resdoc_feedback/sug_resdoc_add_feedback";
+import Sug_AllResdocfeedbacks from "./components/sug_resdoc_feedback/sug_Allresdoc_feedbacklist";
+import Sug_Resdoc_updatefeedback from "./components/sug_resdoc_feedback/sug_resDocfeedbackupdate";
+
+import Sug_Topicdoc_addfeedback from "./components/sug_topicdoc_feedback/sug_topicdoc_addfeedback";
+import Sug_AllTopicdocfeedbacks from "./components/sug_topicdoc_feedback/sug_AllTopicfeedbcklist";
+import Sug_Topicdoc_updatefeedback from "./components/sug_topicdoc_feedback/sug_topicFeedbackupdate";
+import Sug_Thesisdoc_addfeedback from "./components/sug_thesisdoc_feedback.js/sug_thesis_addfeedback";
+import Sug_AllThesisdocfeedbacks from "./components/sug_thesisdoc_feedback.js/sug_Allthesis_feedbacks";
+import Sug_thesis_updatefeedback from "./components/sug_thesisdoc_feedback.js/sug_thesisfeedback_update";
+import Th_Group_Reg from "./components/th_group_registration/th_group_registration";
+import Th_AllGroups from "./components/th_group_registration/th_Allgroups";
+import Sug_AllGroups_admin from "./components/sug_Assign_GrpID_&_panel/sug_All_assigned_grp_admin";
+import Sug_Assign_GrpIDPanel from "./components/sug_Assign_GrpID_&_panel/sug_Assign_GrpID_&_panel"
+import Sug_GroupID_and_Panel_Assign from "./components/sug_Assign_GrpID_&_panel/sug_Assign_GrpID_&_panel";
+import Sug_AllGroups_Mark from "./components/sug_panal_uplodemarks/sug_AllGroupsmarks";
+import Sug_FinalMarks_Assign from "./components/sug_panal_uplodemarks/sug_GiveMarks";
+
 
 function App() {
   return (
@@ -67,9 +85,44 @@ function App() {
 
           <Route path="/RsTopicsNoticesStudent" element={<Shv_res_topic_notices_student />} exact />
            
+        
+        
+        
           <Route path="/sug_page" element={<Sug_page />} exact />
+              
+
           <Route path="/allPanel" element={<Sug_AllPanels />} exact />
           <Route path="/createPanel" element={< Sug_CreatePanel/>} exact />
+
+          <Route path="/ResDocFeedback/:id" element={< Sug_Resdoc_addfeedback/>} exact />
+          <Route path="/AllResDocFeedback" element={< Sug_AllResdocfeedbacks/>} exact />
+          <Route path="/AllResDocFeedback/:id" element={< Sug_Resdoc_updatefeedback/>} exact />
+
+          
+          <Route path="/AllTopicFilesList/:id" element={< Sug_Topicdoc_addfeedback/>} exact />
+          <Route path="/AllTopicDocFeedback" element={< Sug_AllTopicdocfeedbacks/>} exact />
+          <Route path="/AllTopicDocFeedback/:id" element={< Sug_Topicdoc_updatefeedback/>} exact />
+
+          <Route path="/ThesisFilesList/:id" element={< Sug_Thesisdoc_addfeedback/>} exact />
+          <Route path="/AllThesisFeedback" element={< Sug_AllThesisdocfeedbacks/>} exact />
+          <Route path="/AllThesisFeedback/:id" element={< Sug_thesis_updatefeedback/>} exact />
+
+          <Route path="/group_reg" element={<Th_Group_Reg />} exact />
+          <Route path="/All_groups" element={<Th_AllGroups/>} exact />
+
+          <Route path="/All_groups_admin" element={<Sug_AllGroups_admin/>} exact />
+          <Route path="/All_groups_admin/:id" element={<Sug_GroupID_and_Panel_Assign/>} exact />
+           
+          <Route path="/All_groups_marks" element={<Sug_AllGroups_Mark/>} exact />
+          <Route path="/All_groups_marks/:id" element={<Sug_FinalMarks_Assign/>} exact />
+
+
+
+
+
+
+
+
 
           <Route path="/RsTopicFileHome" element={<TopicHome />} exact />
           <Route path="/RsTopicFileHeader" element={<TopicHeader />} exact />

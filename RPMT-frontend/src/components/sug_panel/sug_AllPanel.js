@@ -20,7 +20,7 @@ const Sug_AllPanels = () => {
   
   return (
     <div id="sug_table"> <ul>
-     
+     <h1>All Panels</h1>
 <tr >
        <td width={"200px"}>panelID</td>
        <td width={"200px"}>panelmember1</td>

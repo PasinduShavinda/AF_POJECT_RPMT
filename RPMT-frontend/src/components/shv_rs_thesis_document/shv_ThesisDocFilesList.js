@@ -47,6 +47,7 @@ const ThesisDocFilesList = () => {
             <th>Supervisor</th>
             <th>Research Topic</th>
             <th>Download Thesis Document</th>
+            <th> Give Feedback</th>
           </tr>
         </thead>
         <tbody>
@@ -67,6 +68,7 @@ const ThesisDocFilesList = () => {
                       Download
                     </a>
                   </td>
+                  <td  className="file-title"> <a href={`/ThesisFilesList/${_id}`} > Give Feedback</a>  </td>
                 </tr>
               )
             )
