@@ -33,7 +33,7 @@ const Sug_CreatePanel = () => {
   
     const sendRequest = async () => {
       await axios
-        .post("http://localhost:5000/panel", {
+        .post("http://localhost:5000/panelcreate", {
           panelID: String(inputs.panelID),
           panelmember1: String(inputs.panelmember1),
           panelmember2: String(inputs.panelmember2),

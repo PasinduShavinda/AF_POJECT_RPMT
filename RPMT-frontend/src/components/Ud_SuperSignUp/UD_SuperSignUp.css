@@ -1,0 +1,130 @@
+.Supermain {
+  height: 84vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Supersignup {
+  width: 70%;
+  height: 84%;
+  border-radius: 40px;
+  display: flex;
+}
+
+.SuperrightSignup {
+  height: 100%;
+  width: 45%;
+  background-color: #3b477b;
+  border-radius: 0px 40px 40px 0px;
+  position: relative;
+  border: 2px solid black;
+}
+
+.SuperleftSignup {
+  height: 100%;
+  width: 56%;
+  border-radius: 40px 0px 0px 40px;
+  background-image: url("../../assets/signup_left.png");
+  background-size: 125%;
+  background-position: center;
+  border: 2px solid black;
+  background-repeat: no-repeat;
+}
+
+.SupersignupTitle {
+  position: absolute;
+  left: 30%;
+  top: 2%;
+}
+
+.Supersignupform {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 100%;
+  padding: 0px 40px;
+}
+
+@media (max-width: 1366px) {
+  .Supersignupform {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 100%;
+    padding: 0px 40px;
+  }
+}
+
+.Supersignupform h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-top: 12px;
+  margin-left: 2px;
+}
+
+.Supersignupform input {
+  margin-top: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 70%;
+}
+
+.SuperrightSignup .btngroup {
+  position: absolute;
+  bottom: 4%;
+  left: 35%;
+}
+
+.SuperrightSignup .Superbtngroup .Supersignup {
+  color: white;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.SuperrightSignup .Superbtngroup .Supersignup span {
+  color: #ffd600;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.SuperrightSignup .Superbtngroup .btn {
+  background-color: #d03939;
+  width: 150%;
+  text-transform: uppercase;
+}
+
+.SuperrightSignup .Superbtngroup .Superbtn:hover {
+  background-color: black;
+}
+
+.Supersignupform .Superinputgroup {
+  display: flex;
+}
+
+.signupform .inputgroupsecond {
+  flex-basis: 47%;
+}
+
+@media (max-width: 1366px) {
+  .Supersignupform .Superinputgroupsecond {
+    flex-basis: 36%;
+  }
+}
+
+.Supersignupform .Supersignuplink {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25%;
+  font-weight: normal;
+  font-size: 0.7em;
+  margin: 5px;
+}
+
+.Supersignuplink span {
+  color: #ffd600;
+  margin-left: 5px;
+  font-weight: bold;
+}

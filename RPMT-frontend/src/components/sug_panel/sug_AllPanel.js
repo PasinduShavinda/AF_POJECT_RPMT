@@ -3,7 +3,7 @@ import axios from "axios"
 import Panel from "./sug_Panel";
 import "./sug_AllPanel.css"
 
-const URL = "http://localhost:5000/panel";
+const URL = "http://localhost:5000/panelcreate";
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);

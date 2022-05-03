@@ -10,7 +10,7 @@ const Panel= (props) => {
  
     const deleteHandler = async () => {
       await axios
-        .delete(`http://localhost:5000/panel/${_id}`)
+        .delete(`http://localhost:5000/panelcreate/${_id}`)
         .then((res) => res.data)
         .then(() => history("/"))
         .then(() => history("/allPanel"));
