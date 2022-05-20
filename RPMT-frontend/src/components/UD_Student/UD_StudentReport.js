@@ -10,42 +10,30 @@ import swal from "sweetalert";
 import axios from "axios";
 import "./UD_MangeStudent.css";
 import EditStudent from "./UD_EditStudent";
-
 //--------------pdf-------------------------------------
-// import jsPDF from "jspdf";
-// import "jspdf-autotable";
-// import imageUrl from "../../assets/2.jpg";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+import imageUrl from "../../assets/repo.png";
 
-const UD_ManageStudent = (props) => {
+const UD_StudentReport = (props) => {
   const [users, setUsers] = useState([]);
   const [edit, setEdit] = useState(false);
   const [Id, setId] = useState("");
   const [data, setData] = useState({});
+  //-----------------pdf--------
+  const columns = [
+    { title: "FirstName", field: "firstName" },
+    { title: "LastName", field: "lastName" },
+    { title: "Address", field: "address" },
+    { title: "City", field: "city" },
+    { title: " PhoneNumber", field: "phoneNumber" },
+    { title: "Email", field: "email" },
+    { title: "Password", field: "password" },
+  ];
 
   //search..........................
   const [filterText, setFilterText] = useState("");
 
-  //.....Delete..............
-  const deleteData = (e) => {
-    try {
-      axios
-        .delete(`http://localhost:5000/auth/register${e.target.value}`)
-        .then((res) => {
-          swal("Success", "Item Deleted Successfully", "success");
-        });
-    } catch (error) {
-      swal("Error", "Deletion Failed", "error");
-    }
-    console.log(e.target.value);
-  };
-
-  const editData = (e, data) => {
-    setId(e.target.value);
-    setData(data);
-    setEdit(true);
-  };
-
-  //retrieving data from the database---------------------------------
   useEffect(() => {
     axios.get("http://localhost:5000/auth/user${props.ID}").then((res) => {
       setUsers(res.data.data);
@@ -57,6 +45,24 @@ const UD_ManageStudent = (props) => {
     supp.firstName.toLocaleLowerCase().includes(filterText)
   );
   const userss = filterText ? filteredItems : users;
+
+  //------------------Download PDF ---------
+
+  const downloadPdf = () => {
+    const doc = new jsPDF();
+    doc.setFont("Helvertica", "bold");
+    doc.text("Students Details", 90, 10);
+    doc.addImage(imageUrl, "PNG", 20, 20, 50, 50);
+    // doc.text("Date", 200, 20);
+    doc.autoTable({
+      margin: { top: 80 },
+      theme: "grid",
+      columns: columns.map((col) => ({ ...col, dataKey: col.field })),
+      body: users,
+    });
+
+    doc.save("Students Details.pdf");
+  };
 
   return (
     <>
@@ -85,7 +91,7 @@ const UD_ManageStudent = (props) => {
                   <input
                     className="MSud_Msupplier_Search_name "
                     type="text"
-                    placeholder="Search By Student Name"
+                    placeholder="Search By First Name"
                     name="search"
                     onChange={(e) =>
                       setFilterText(e.target.value.toLocaleLowerCase())
@@ -146,20 +152,6 @@ const UD_ManageStudent = (props) => {
                     >
                       <div className="MSud_Msupplier_headcolor">Password</div>
                     </TableCell>
-
-                    <TableCell
-                      align="center"
-                      className="newMSud_Msupplier_cellColor"
-                    >
-                      <div className="MSud_Msupplier_headcolor">Action</div>
-                    </TableCell>
-
-                    <TableCell
-                      align="center"
-                      className="newMSud_Msupplier_cellColor"
-                    >
-                      <div className="MSud_Msupplier_headcolor">Action</div>
-                    </TableCell>
                   </TableRow>
                 </TableHead>
 
@@ -216,57 +208,27 @@ const UD_ManageStudent = (props) => {
                       >
                         {row.password}
                       </TableCell>
-
-                      <TableCell
-                        itemType="button"
-                        align="center"
-                        className="MSud_Msupplier_Edit_Icon5"
-                      >
-                        <button
-                          className="MSud_Msupplier_Edit_Icon6"
-                          value={row._id}
-                          onClick={deleteData}
-                        >
-                          Delete
-                        </button>
-                      </TableCell>
-
-                      <TableCell
-                        itemType="button"
-                        align="center"
-                        className="MSud_Msupplier_deleteIcon7"
-                      >
-                        <button
-                          className="MSud_Msupplier_deleteIcon8"
-                          value={row._id}
-                          onClick={(e) => editData(e, row)}
-                        >
-                          Edit
-                        </button>
-                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
             </TableContainer>
 
-            <div
-              onClick={() => props.onClick("addStudent")}
-              className="MSud_Msupplier_addbutton"
-            >
-              Add New Student
-            </div>
+            {/* <div
+          onClick={() => props.onClick("supplieraddform")}className="ud_Msupplier_addbutton">
+          Add New Supplier
+        </div> */}
 
             <div
               onClick={() => props.onClick("student")}
-              className="MSud_Msupplier_back_button"
+              className="ud_Msupplier_back_button"
             >
               Previous
             </div>
 
-            {/* <button className="ud_Msupplier_Pdf_Button" onClick={downloadPdf}>
-            Downloard PDF
-          </button> */}
+            <button className="ud_Msupplier_Pdf_Button" onClick={downloadPdf}>
+              Downloard PDF
+            </button>
           </div>
         </div>
       )}
@@ -274,4 +236,4 @@ const UD_ManageStudent = (props) => {
   );
 };
 
-export default UD_ManageStudent;
+export default UD_StudentReport;

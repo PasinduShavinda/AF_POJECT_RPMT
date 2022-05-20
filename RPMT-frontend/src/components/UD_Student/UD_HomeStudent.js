@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./UD_HomeStudent.css";
 import UD_ManageStudent from "./UD_MangeStudent";
 import UD_AddStudent from "./UD_AddStudent";
-// import SupplierReport from "./SupplierReport";
+import UD_StudentReport from "./UD_StudentReport";
 
 const UD_HomeStudent = () => {
   const [component, setComponent] = useState("student");
@@ -17,9 +17,9 @@ const UD_HomeStudent = () => {
 
       {component === "addStudent" && <UD_AddStudent onClick={setComponent} />}
 
-      {/* {component === "supplierReport" && (
-        <SupplierReport onClick={setComponent} />
-      )}  */}
+      {component === "studentReport" && (
+        <UD_StudentReport onClick={setComponent} />
+      )}
     </div>
   );
 };
@@ -47,9 +47,9 @@ const StudentMain = (props) => {
         <div className="UD_supplierreportbutton">
           <div
             className="UD_supplierreport"
-            onClick={() => props.onClick("reportGenarate")}
+            onClick={() => props.onClick("studentReport")}
           ></div>
-          <h5>Generate Report</h5>
+          <h5>Generate StudentReport</h5>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 .PenalSignupmain {
-  height: 84vh;
+  height: 108vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
 .PenalSignuprightSignup {
   height: 100%;
   width: 45%;
-  background-color: #3b477b;
+  background-color: #1b2d80;
   border-radius: 0px 40px 40px 0px;
   position: relative;
   border: 2px solid black;
@@ -97,7 +97,7 @@
 }
 
 .PenalSignuprightSignup .PenalSignupbtngroup .PenalSignupbtn:hover {
-  background-color: black;
+  background-color: rgb(65, 49, 49);
 }
 
 .PenalSignupsignupform .PenalSignupinputgroup {

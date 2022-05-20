@@ -1,5 +1,5 @@
 .UDsmain {
-  height: 84vh;
+  height: 108vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
 .UDsrightSignup {
   height: 100%;
   width: 45%;
-  background-color: #3b477b;
+  background-color: #1b2d80;
   border-radius: 0px 40px 40px 0px;
   position: relative;
   border: 2px solid black;
@@ -97,7 +97,7 @@
 }
 
 .UDsrightSignup .UDsbtngroup .UDsbtn:hover {
-  background-color: black;
+  background-color: rgb(58, 47, 47);
 }
 
 .UDssignupform .UDsinputgroup {

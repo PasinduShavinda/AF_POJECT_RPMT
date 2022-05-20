@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./UD_HomeSupervisor.css";
 import UD_ManageSupervisor from "./UD_MangeSupervisor";
 import UD_AddSupervisor from "./UD_AddSupervisor";
-// import SupplierReport from "./SupplierReport";
+import UD_SupervisorReport from "./UD_SupervisorReport";
 
 const UD_HomeSupervisor = () => {
   const [component, setComponent] = useState("supervisor");
@@ -19,9 +19,9 @@ const UD_HomeSupervisor = () => {
         <UD_AddSupervisor onClick={setComponent} />
       )}
 
-      {/* {component === "supplierReport" && (
-        <SupplierReport onClick={setComponent} />
-      )}  */}
+      {component === "supervisorReport" && (
+        <UD_SupervisorReport onClick={setComponent} />
+      )}
     </div>
   );
 };
@@ -49,9 +49,9 @@ const SupervisorMain = (props) => {
         <div className="UD_supplierreportbutton">
           <div
             className="UD_supplierreport"
-            onClick={() => props.onClick("reportGenarate")}
+            onClick={() => props.onClick("supervisorReport")}
           ></div>
-          <h5>Generate Report</h5>
+          <h5>Generate SupervisorReport</h5>
         </div>
       </div>
     </div>

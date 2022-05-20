@@ -49,13 +49,13 @@ const UD_SuperSignup = () => {
 
   return (
     <>
-      <div className="Supermain">
-        <div className="Supersignup">
-          <div className="SuperleftSignup"></div>
-          <div className="SuperrightSignup">
-            <img src={SignupImg} alt="" className="SupersignupTitle" />
-            <div className="Supersignupform">
-              <div className="Superinputgroup">
+      <div className="superSignupmain">
+        <div className="superSignupsignup">
+          <div className="superSignupleftSignup"></div>
+          <div className="superSignuprightSignup">
+            <img src={SignupImg} alt="" className="superSignupsignupTitle" />
+            <div className="superSignupsignupform">
+              <div className="superSignupinputgroup">
                 <div className="inputgroupfirstname">
                   <h3 className="email">First Name</h3>
                   <input
@@ -64,7 +64,7 @@ const UD_SuperSignup = () => {
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
-                <div className="Superinputgroupsecond">
+                <div className="superSignupinputgroupsecond">
                   <h3 className="email">Last Name</h3>
                   <input
                     type="text"
@@ -79,7 +79,7 @@ const UD_SuperSignup = () => {
                 className="addressInput"
                 onChange={(e) => setAddress(e.target.value)}
               />
-              <div className="Superinputgroup">
+              <div className="superSignupinputgroup">
                 <div className="inputgroupfirstname">
                   <h3 className="city">City</h3>
                   <input
@@ -88,7 +88,7 @@ const UD_SuperSignup = () => {
                     onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
-                <div className="Superinputgroupsecond">
+                <div className="superSignupinputgroupsecond">
                   <h3 className="district">PhoneNumber</h3>
                   <input
                     type="text"
@@ -111,7 +111,7 @@ const UD_SuperSignup = () => {
               />
 
               {/* ........................................... */}
-              <h3 className="Supersignuplink">
+              <h3 className="superSignupsignuplink">
                 Already have an account?
                 <Link to="/supervisorlogin" className="link">
                   <span>LOGIN</span>
@@ -119,8 +119,8 @@ const UD_SuperSignup = () => {
               </h3>
             </div>
 
-            <div className="Superbtngroup">
-              <button className="Superbtn" onClick={SupersignUp}>
+            <div className="superSignupbtngroup">
+              <button className="superSignupbtn" onClick={SupersignUp}>
                 SignUp
               </button>
             </div>

@@ -54,7 +54,7 @@ import Sug_thesis_updatefeedback from "./components/sug_thesisdoc_feedback.js/su
 import Th_Group_Reg from "./components/th_group_registration/th_group_registration";
 import Th_AllGroups from "./components/th_group_registration/th_Allgroups";
 import Sug_AllGroups_admin from "./components/sug_Assign_GrpID_&_panel/sug_All_assigned_grp_admin";
-import Sug_Assign_GrpIDPanel from "./components/sug_Assign_GrpID_&_panel/sug_Assign_GrpID_&_panel"
+import Sug_Assign_GrpIDPanel from "./components/sug_Assign_GrpID_&_panel/sug_Assign_GrpID_&_panel";
 import Sug_GroupID_and_Panel_Assign from "./components/sug_Assign_GrpID_&_panel/sug_Assign_GrpID_&_panel";
 import Sug_AllGroups_Mark from "./components/sug_panal_uplodemarks/sug_AllGroupsmarks";
 import Sug_FinalMarks_Assign from "./components/sug_panal_uplodemarks/sug_GiveMarks";
@@ -121,57 +121,102 @@ function App() {
             exact
           />
 
-          <Route path="/RsTopicsNotice/:id" element={<Shv_res_topic_notice_admin_update />} exact />
+          <Route
+            path="/RsTopicsNotice/:id"
+            element={<Shv_res_topic_notice_admin_update />}
+            exact
+          />
 
-          <Route path="/RsTopicsNoticesStudent" element={<Shv_res_topic_notices_student />} exact />
-           
-        
-        
-        
+          <Route
+            path="/RsTopicsNoticesStudent"
+            element={<Shv_res_topic_notices_student />}
+            exact
+          />
+
           <Route path="/sug_page" element={<Sug_page />} exact />
-              
 
           <Route path="/allPanel" element={<Sug_AllPanels />} exact />
           <Route path="/createPanel" element={<Sug_CreatePanel />} exact />
 
-          <Route path="/ResDocFeedback/:id" element={< Sug_Resdoc_addfeedback/>} exact />
-          <Route path="/AllResDocFeedback" element={< Sug_AllResdocfeedbacks/>} exact />
-          <Route path="/AllResDocFeedback/:id" element={< Sug_Resdoc_updatefeedback/>} exact />
+          <Route
+            path="/ResDocFeedback/:id"
+            element={<Sug_Resdoc_addfeedback />}
+            exact
+          />
+          <Route
+            path="/AllResDocFeedback"
+            element={<Sug_AllResdocfeedbacks />}
+            exact
+          />
+          <Route
+            path="/AllResDocFeedback/:id"
+            element={<Sug_Resdoc_updatefeedback />}
+            exact
+          />
 
-          
-          <Route path="/AllTopicFilesList/:id" element={< Sug_Topicdoc_addfeedback/>} exact />
-          <Route path="/AllTopicDocFeedback" element={< Sug_AllTopicdocfeedbacks/>} exact />
-          <Route path="/AllTopicDocFeedback/:id" element={< Sug_Topicdoc_updatefeedback/>} exact />
+          <Route
+            path="/AllTopicFilesList/:id"
+            element={<Sug_Topicdoc_addfeedback />}
+            exact
+          />
+          <Route
+            path="/AllTopicDocFeedback"
+            element={<Sug_AllTopicdocfeedbacks />}
+            exact
+          />
+          <Route
+            path="/AllTopicDocFeedback/:id"
+            element={<Sug_Topicdoc_updatefeedback />}
+            exact
+          />
 
-          <Route path="/ThesisFilesList/:id" element={< Sug_Thesisdoc_addfeedback/>} exact />
-          <Route path="/AllThesisFeedback" element={< Sug_AllThesisdocfeedbacks/>} exact />
-          <Route path="/AllThesisFeedback/:id" element={< Sug_thesis_updatefeedback/>} exact />
+          <Route
+            path="/ThesisFilesList/:id"
+            element={<Sug_Thesisdoc_addfeedback />}
+            exact
+          />
+          <Route
+            path="/AllThesisFeedback"
+            element={<Sug_AllThesisdocfeedbacks />}
+            exact
+          />
+          <Route
+            path="/AllThesisFeedback/:id"
+            element={<Sug_thesis_updatefeedback />}
+            exact
+          />
 
           <Route path="/group_reg" element={<Th_Group_Reg />} exact />
-          <Route path="/All_groups" element={<Th_AllGroups/>} exact />
+          <Route path="/All_groups" element={<Th_AllGroups />} exact />
 
-          <Route path="/All_groups_admin" element={<Sug_AllGroups_admin/>} exact />
-          <Route path="/All_groups_admin/:id" element={<Sug_GroupID_and_Panel_Assign/>} exact />
-           
-          <Route path="/All_groups_marks" element={<Sug_AllGroups_Mark/>} exact />
-          <Route path="/All_groups_marks/:id" element={<Sug_FinalMarks_Assign/>} exact />
+          <Route
+            path="/All_groups_admin"
+            element={<Sug_AllGroups_admin />}
+            exact
+          />
+          <Route
+            path="/All_groups_admin/:id"
+            element={<Sug_GroupID_and_Panel_Assign />}
+            exact
+          />
 
-
-
-
-
-
-
-
+          <Route
+            path="/All_groups_marks"
+            element={<Sug_AllGroups_Mark />}
+            exact
+          />
+          <Route
+            path="/All_groups_marks/:id"
+            element={<Sug_FinalMarks_Assign />}
+            exact
+          />
 
           <Route path="/RsTopicFileHome" element={<TopicHome />} exact />
           <Route path="/RsTopicFileHeader" element={<TopicHeader />} exact />
           <Route path="/RsTopiFileList" element={<TopicFilesList />} exact />
-
           <Route path="/RsDocHome" element={<ResDocHome />} exact />
           <Route path="/RsDocHeader" element={<ResDocHeader />} exact />
           <Route path="/RsDocFilesList" element={<ResDocFilesList />} exact />
-
           <Route path="/ThesisHome" element={<ThesisDocHome />} exact />
           <Route path="/ThesisHeader" element={<ThesisDocHeader />} exact />
           <Route
@@ -179,7 +224,6 @@ function App() {
             element={<ThesisDocFilesList />}
             exact
           />
-
           <Route path="/MSchemeHome" element={<MarkingSchemeHome />} exact />
           <Route
             path="/MSchemeHeader"
@@ -187,24 +231,26 @@ function App() {
             exact
           />
           <Route path="/MSchemeList" element={<MarkingSchemeList />} exact />
-
           <Route path="/TemplateHome" element={<TemplateHome />} exact />
           <Route path="/TemplateHeader" element={<TemplateHeader />} exact />
           <Route path="/TemplateList" element={<TemplateList />} exact />
 
-          {/* ........................................... */}
+          {/* .............udara.............................. */}
           <Route path="/login" element={<UD_Login />} exact />
           <Route path="/signup" element={<UD_SignUp />} exact />
+          {/* student dashbord */}
           <Route path="/student" element={<UD_Student />} exact />
 
           <Route path="/penalmemberlogin" element={<UD_PenalLogin />} exact />
           <Route path="/penalmembersignup" element={<UD_PenalSignUp />} exact />
+          {/* penalmember dashbord */}
           <Route path="/penalmember" element={<UD_Penalmember />} exact />
 
           <Route path="/supervisorlogin" element={<UD_SuperLogin />} exact />
           <Route path="/supervisorsignup" element={<UD_SuperSignUp />} exact />
+          {/* supervisor dashbord */}
           <Route path="/supervisor" element={<UD_Supervisor />} exact />
-
+          {/* admin dashbord */}
           <Route path="/dashboard" element={<UD_Dashboard />} exact />
         </Routes>
       </main>
