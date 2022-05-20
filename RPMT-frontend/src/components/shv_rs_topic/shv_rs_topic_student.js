@@ -29,7 +29,7 @@ const Shv_rs_topic = (props) => {
       color: theme.palette.common.white,
     },
     body: {
-      fontSize: 12,
+      fontSize: 100,
     },
   }))(TableCell);
 
@@ -40,40 +40,40 @@ const Shv_rs_topic = (props) => {
     <center>
       <Table style = {{marginTop:'20px'}}>
               
-              <StyledTableCell align="left" width="120px"
+              <StyledTableCell align="left" width="220px"
               >
               {ResTopicgroupId} 
               </StyledTableCell>         
 
-              <StyledTableCell align="left" width="120px"
+              <StyledTableCell align="left" width="220px"
                >
                 {ResTopicsupervisor}
               </StyledTableCell>         
 
-              <StyledTableCell align="left" width="120px"
+              <StyledTableCell align="left" width="220px"
                 >
                 {ResTopicresearchArea}
               </StyledTableCell>         
 
-              <StyledTableCell align="left" width="120px"
+              <StyledTableCell align="left" width="220px"
                 >
                 {ResTopicResearchTopic}
               </StyledTableCell>         
 
-              <StyledTableCell align="left" width="120px"
+              <StyledTableCell align="left" width="220px"
                >
                 {ResTopicdateEntered}
               </StyledTableCell>         
 
               <StyledTableCell align="right">
-                <Button LinkComponent={Link} to={`/RsTopics/${_id}`} sx={{ mt: "auto" }}>Update</Button>
-                <Button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>Delete</Button>
+                <Button variant="contained" color="warning" LinkComponent={Link} to={`/RsTopics/${_id}`} sx={{ mt: "auto" }}>Update</Button>&nbsp;
+                <Button variant="contained" color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>Delete</Button>
               </StyledTableCell>
 
       </Table>
       </center>
-
     </div>
+
   );
 };
 
