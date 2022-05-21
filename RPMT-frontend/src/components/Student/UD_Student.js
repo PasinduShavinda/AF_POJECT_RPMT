@@ -4,48 +4,9 @@ import { Link } from "react-router-dom";
 import { Button, Typography, Box, responsiveFontSizes } from "@mui/material";
 import "./UD_Student.css";
 
-//.........................................
-//import Logo from "../../assets/logo.png";
-//import axios from "axios";
-//import imgUrl from "../../assets/cart.png";
-//import { CartContext } from "../../Context/CartContext";
 // useHistory  = useNavigate,
 //Redirect = Navigate,NavLink
 const UD_Student = ({ location }) => {
-  //let history = useNavigate();
-  // const navigate = useNavigate();
-
-  // const [component, setComponent] = useState("home");
-  // const [count, setCount] = useState(0);
-
-  // const Logout = () => {
-  //   localStorage.removeItem("user-info-customer");
-  //   //history.push("/");
-  //   navigate("/");
-  // };
-
-  // useEffect(() => {
-  //   if (location.state == null) {
-  //     localStorage.removeItem("user-info-customer");
-  //     //history.push("/");
-  //     navigate("/");
-  //   }
-  //   axios
-  //     .get(`http://localhost:5000/addcart`) //retrieving data from the database
-  //     .then((res) => {
-  //       var cartitems = res.data.data.filter((cart) =>
-  //         cart.cusid
-  //           .toLocaleLowerCase()
-  //           .includes(location.state.currentUser._id)
-  //       );
-  //       setCount(cartitems.length);
-  //     });
-  // });
-
-  // if (!localStorage.getItem("user-info-customer")) {
-  //   return <Navigate to="/" />;
-  // }
-
   return (
     <div>
       <Button

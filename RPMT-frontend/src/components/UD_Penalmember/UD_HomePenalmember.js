@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./UD_HomePenalmember.css";
 import UD_ManagePenalmember from "./UD_MangePenalmember";
 import UD_AddPenalmember from "./UD_AddPenalmember";
-// import SupplierReport from "./SupplierReport";
+import UD_PenalmemberReport from "./UD_PenalmemberReport";
 
 const UD_HomePenalmember = () => {
   const [component, setComponent] = useState("penalmember");
@@ -21,9 +21,9 @@ const UD_HomePenalmember = () => {
         <UD_AddPenalmember onClick={setComponent} />
       )}
 
-      {/* {component === "supplierReport" && (
-        <SupplierReport onClick={setComponent} />
-      )}  */}
+      {component === "penalmemberReport" && (
+        <UD_PenalmemberReport onClick={setComponent} />
+      )}
     </div>
   );
 };
@@ -51,9 +51,9 @@ const PenalmemberMain = (props) => {
         <div className="UD_supplierreportbutton">
           <div
             className="UD_supplierreport"
-            onClick={() => props.onClick("reportGenarate")}
+            onClick={() => props.onClick("penalmemberReport")}
           ></div>
-          <h5>Generate Report</h5>
+          <h5>Generate PenalmemberReport</h5>
         </div>
       </div>
     </div>

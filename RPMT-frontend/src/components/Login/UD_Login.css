@@ -15,7 +15,7 @@
 .UDSDleft {
   height: 100%;
   width: 35%;
-  background-color: #3b477b;
+  background-color: #142674;
   border-radius: 40px 0px 0px 40px;
   position: relative;
   border: 2px solid black;
@@ -25,7 +25,7 @@
   height: 100%;
   width: 65%;
   border-radius: 0px 40px 40px 0px;
-  background-image: url("../../assets/login_right.png");
+  background-image: url("../../assets/loginstudent.jpg");
   background-size: 105%;
   background-position: center;
   border: 2px solid black;
@@ -61,8 +61,8 @@
 
 .UDSDbtngroup {
   position: absolute;
-  bottom: 12%;
-  left: 25%;
+  bottom: 6%;
+  left: 12%;
 }
 
 .UDSDbtngroup .UDSDloginlink {
@@ -85,5 +85,5 @@
 }
 
 .UDSDbtngroup .UDSDbtn:hover {
-  background-color: black;
+  background-color: rgb(60, 49, 49);
 }

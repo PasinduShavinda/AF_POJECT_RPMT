@@ -8,71 +8,76 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import swal from "sweetalert";
 import axios from "axios";
-import "./UD_MangePenalmember.css";
-import EditPenalmember from "./UD_EditPenalmember";
-
+import "./UD_MangeSupervisor.css";
+import EditSupervisor from "./UD_EditSupervisor";
 //--------------pdf-------------------------------------
-// import jsPDF from "jspdf";
-// import "jspdf-autotable";
-// import imageUrl from "../../assets/romaka2.jpg";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+import imageUrl from "../../assets/repo.png";
 
-const UD_ManagePenalmember = (props) => {
-  const [penalmembers, setPenalmembers] = useState([]);
+const UD_StudentReport = (props) => {
+  const [supervisors, setSupervisors] = useState([]);
   const [edit, setEdit] = useState(false);
   const [Id, setId] = useState("");
   const [data, setData] = useState({});
+  //-----------------pdf--------
+  const columns = [
+    { title: "FirstName", field: "firstName" },
+    { title: "LastName", field: "lastName" },
+    { title: "Address", field: "address" },
+    { title: "City", field: "city" },
+    { title: " PhoneNumber", field: "phoneNumber" },
+    { title: "Email", field: "email" },
+    { title: "Password", field: "password" },
+  ];
 
   //search..........................
   const [filterText, setFilterText] = useState("");
 
-  //.....Delete..............
-  const deleteData = (e) => {
-    try {
-      axios
-        .delete(
-          `http://localhost:5000/penal/penalmemberregister${e.target.value}`
-        )
-        .then((res) => {
-          swal("Success", "Item Deleted Successfully", "success");
-        });
-    } catch (error) {
-      swal("Error", "Deletion Failed", "error");
-    }
-    console.log(e.target.value);
-  };
-
-  const editData = (e, data) => {
-    setId(e.target.value);
-    setData(data);
-    setEdit(true);
-  };
-
   //retrieving data from the database---------------------------------
   useEffect(() => {
     axios
-      .get("http://localhost:5000/penal/penalmember${props.ID}")
+      .get("http://localhost:5000/super/supervisor${props.ID}")
       .then((res) => {
-        setPenalmembers(res.data.data);
+        setSupervisors(res.data.data);
       });
   });
 
   //search..........................
-  const filteredItems = penalmembers.filter((supp) =>
+  const filteredItems = supervisors.filter((supp) =>
     supp.firstName.toLocaleLowerCase().includes(filterText)
   );
-  const penalmemberss = filterText ? filteredItems : penalmembers;
+  const supervisorss = filterText ? filteredItems : supervisors;
+
+  //------------------Download PDF ---------
+
+  const downloadPdf = () => {
+    const doc = new jsPDF();
+    doc.setFont("Helvertica", "bold");
+    doc.text("Supervisors Details", 90, 10);
+    doc.addImage(imageUrl, "PNG", 20, 20, 50, 50);
+    // doc.text("Date", 200, 20);
+    doc.autoTable({
+      margin: { top: 80 },
+      theme: "grid",
+      columns: columns.map((col) => ({ ...col, dataKey: col.field })),
+      body: supervisors,
+    });
+
+    doc.save("Supervisors Details.pdf");
+  };
 
   return (
     <>
       {edit ? (
-        <EditPenalmember
+        <EditSupervisor
           onClick={() => setEdit(false)}
           id={Id}
           formData={data}
         />
       ) : (
         <div className="ud_Msupplier_Form1">
-          <div className="ud_Msupplier_title">Penalmember Details</div>
+          <div className="ud_Msupplier_title">Supervisor Details</div>
 
           <div className="ud_Msupplier_Form2">
             <TableContainer
@@ -93,7 +98,7 @@ const UD_ManagePenalmember = (props) => {
                   <input
                     className="ud_Msupplier_Search_name "
                     type="text"
-                    placeholder="Search By Penalmember Name"
+                    placeholder="Search By Supervisor Name"
                     name="search"
                     onChange={(e) =>
                       setFilterText(e.target.value.toLocaleLowerCase())
@@ -152,29 +157,15 @@ const UD_ManagePenalmember = (props) => {
                     >
                       <div className="ud_Msupplier_headcolor">Password</div>
                     </TableCell>
-
-                    <TableCell
-                      align="center"
-                      className="newud_Msupplier_cellColor"
-                    >
-                      <div className="ud_Msupplier_headcolor">Action</div>
-                    </TableCell>
-
-                    <TableCell
-                      align="center"
-                      className="newud_Msupplier_cellColor"
-                    >
-                      <div className="ud_Msupplier_headcolor">Action</div>
-                    </TableCell>
                   </TableRow>
                 </TableHead>
 
                 <TableBody>
-                  {penalmemberss.map((row, index) => (
+                  {supervisorss.map((row, index) => (
                     <TableRow key={index}>
                       <TableCell
                         align="center"
-                        component="udmpth"
+                        component="udmth"
                         scope="UD_row"
                         className="ud_Msupplier_cellColor"
                       >
@@ -222,57 +213,27 @@ const UD_ManagePenalmember = (props) => {
                       >
                         {row.password}
                       </TableCell>
-
-                      <TableCell
-                        itemType="button"
-                        align="center"
-                        className="ud_Msupplier_Edit_Icon5"
-                      >
-                        <button
-                          className="ud_Msupplier_Edit_Icon6"
-                          value={row._id}
-                          onClick={deleteData}
-                        >
-                          Delete
-                        </button>
-                      </TableCell>
-
-                      <TableCell
-                        itemType="button"
-                        align="center"
-                        className="ud_Msupplier_deleteIcon7"
-                      >
-                        <button
-                          className="ud_Msupplier_deleteIcon8"
-                          value={row._id}
-                          onClick={(e) => editData(e, row)}
-                        >
-                          Edit
-                        </button>
-                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
             </TableContainer>
 
-            <div
-              onClick={() => props.onClick("addPenalmember")}
-              className="ud_Msupplier_addbutton"
-            >
-              Add New Penalmember
-            </div>
+            {/* <div
+          onClick={() => props.onClick("supplieraddform")}className="ud_Msupplier_addbutton">
+          Add New Supplier
+        </div> */}
 
             <div
-              onClick={() => props.onClick("penalmember")}
+              onClick={() => props.onClick("supervisor")}
               className="ud_Msupplier_back_button"
             >
               Previous
             </div>
 
-            {/* <button className="ud_Msupplier_Pdf_Button" onClick={downloadPdf}>
-            Downloard PDF
-          </button> */}
+            <button className="ud_Msupplier_Pdf_Button" onClick={downloadPdf}>
+              Downloard PDF
+            </button>
           </div>
         </div>
       )}
@@ -280,4 +241,4 @@ const UD_ManagePenalmember = (props) => {
   );
 };
 
-export default UD_ManagePenalmember;
+export default UD_StudentReport;
