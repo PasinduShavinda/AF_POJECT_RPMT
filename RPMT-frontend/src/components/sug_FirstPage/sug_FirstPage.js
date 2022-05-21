@@ -7,52 +7,6 @@ const FirstPage = () => {
   return (
     <div id="sug_home_page">
       <div class="main-layout">
-        <header>
-          <div class="header">
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                  <div class="full">
-                    <div class="center-desk">
-                      <div class="logo">
-                        {" "}
-                        <a href="index.html">
-                          {" "}
-                          <img
-                            src="assets/images/SLIIT.png"
-                            alt="Second slide"
-                          />
-                        </a>{" "}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                  <div class="menu-area">
-                    <div class="limit-box">
-                      <nav class="main-menu">
-                        <ul class="menu-area-main">
-                          <li>
-                            <a href="login">Student Log IN</a>{" "}
-                          </li>
-
-                          <li>
-                            <a href="supervisorlogin">Supervisor Login</a>{" "}
-                          </li>
-
-                          <li>
-                            <a href="penalmemberlogin">Panel Member Log IN</a>{" "}
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-
         <section class="slider_section">
           <div
             id="myCarousel"
@@ -228,83 +182,6 @@ const FirstPage = () => {
             </div>
           </div>
         </div>
-
-        <footr>
-          <div class="footer">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-2 col-md-6 col-sm-12 width">
-                  <div class="address">
-                    <h3 font-size="18px" className="sug_h">
-                      Address
-                    </h3>
-                    <i>
-                      <img src="assets/icon/3.png" />
-                      Locations
-                    </i>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 width">
-                  <div class="address">
-                    <h3 font-size="18px" className="sug_h">
-                      Menus
-                    </h3>
-                    <i>
-                      <img src="assets/icon/2.png" />
-                      Locations
-                    </i>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 width">
-                  <div class="address">
-                    <h3 font-size="18px" className="sug_h">
-                      Useful Linkes
-                    </h3>
-                    <i>
-                      <img src="assets/assets/icon/1.png" />
-                      Locations
-                    </i>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 width">
-                  <div class="address">
-                    <h3 font-size="18px" className="sug_h">
-                      Social Media{" "}
-                    </h3>
-                    <ul class="contant_icon">
-                      <li>
-                        <img src="assets/icon/fb.png" alt="icon" />
-                      </li>
-                      <li>
-                        <img src="assets/icon/tw.png" alt="icon" />
-                      </li>
-                      <li>
-                        <img src="assets/icon/lin (2).png" alt="icon" />
-                      </li>
-                      <li>
-                        <img src="assets/icon/instagram.png" alt="icon" />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 width">
-                  <div class="address">
-                    <h3 font-size="18px" className="sug_h">
-                      Newsletter{" "}
-                    </h3>
-                    <input
-                      class="form-control"
-                      placeholder="Enter your email"
-                      type="type"
-                      name="Enter your email"
-                    />
-                    <button class="submit-btn">Subscribe</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footr>
       </div>
 
       <div>

@@ -73,7 +73,7 @@ import {
             onChange={handleChange}
             margin="normal"
             fullWidth
-            variant="outlined"
+            variant="filled"
             name="ResTopicNoticeHeader"
           />
           <FormLabel>Line One</FormLabel>

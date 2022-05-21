@@ -38,7 +38,11 @@ const ThesisDocFilesList = () => {
   };
 
   return (
-    <div className="files-container">
+    <div>
+    &nbsp;<a href = "/stdHome"><button className="btn btn-success">Back</button></a>
+    <div className="container">
+       <br/>
+        <center><h2>Thesis Documents</h2></center><br/><br/>
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <table className="files-table">
         <thead>
@@ -46,18 +50,19 @@ const ThesisDocFilesList = () => {
             <th>Group ID</th>
             <th>Supervisor</th>
             <th>Research Topic</th>
+            <th>Submitted Date</th>
             <th>Download Thesis Document</th>
-            <th> Give Feedback</th>
           </tr>
         </thead>
         <tbody>
           {filesList.length > 0 ? (
             filesList.map(
-              ({ _id, ResThesisFileGroupId, ResThesisFileSupervisor, ResThesisFileTopic, file_path, file_mimetype }) => (
+              ({ _id, ResThesisFileGroupId, ResThesisFileSupervisor, ResThesisFileTopic, createdAt, file_path, file_mimetype }) => (
                 <tr key={_id}>
                   <td className="file-title">{ResThesisFileGroupId}</td>
                   <td className="file-title">{ResThesisFileSupervisor}</td>
                   <td className="file-title">{ResThesisFileTopic}</td>
+                  <td className="file-title">{createdAt}</td>
                   <td>
                     <a
                       href="#/"
@@ -68,7 +73,6 @@ const ThesisDocFilesList = () => {
                       Download
                     </a>
                   </td>
-                  <td  className="file-title"> <a href={`/ThesisFilesList/${_id}`} > Give Feedback</a>  </td>
                 </tr>
               )
             )
@@ -82,6 +86,8 @@ const ThesisDocFilesList = () => {
         </tbody>
       </table>
     </div>
+    </div>
+    
   );
 };
 

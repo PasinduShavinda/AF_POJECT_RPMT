@@ -12,7 +12,7 @@ const Shv_rs_topic_supervisor = (props) => {
 
   const history = useNavigate();
   
-  const { _id, ResTopicgroupId, ResTopicsupervisor, ResTopicresearchArea, ResTopicResearchTopic, ResTopicdateEntered } = props.resTopic;
+  const { _id, ResTopicgroupId, ResTopicsupervisor, ResTopicresearchArea, ResTopicResearchTopic, createdAt } = props.resTopic;
   
   const deleteHandler = async () => {
   
@@ -62,7 +62,7 @@ const Shv_rs_topic_supervisor = (props) => {
 
               <StyledTableCell align="left" width="120px"
                >
-                {ResTopicdateEntered}
+                {createdAt}
               </StyledTableCell>        
       </Table>
       </center>

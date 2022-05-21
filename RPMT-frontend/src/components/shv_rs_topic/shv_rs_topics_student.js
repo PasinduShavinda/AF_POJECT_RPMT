@@ -55,10 +55,9 @@ const Shv_rs_topics = () => {
   
   return (
     <div>
-    
+    &nbsp;<a href = "/stdHome"><button className="btn btn-success">Back</button></a>
       <br/>
-      <br/>
-      <br/>
+   
       <center>
         <h1>Research topics submitted by students</h1><br/><br/><br/>
        

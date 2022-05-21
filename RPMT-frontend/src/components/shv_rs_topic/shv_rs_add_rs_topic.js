@@ -18,8 +18,7 @@ const Shv_rs_add_rs_topic = () => {
     ResTopicgroupId: "",
     ResTopicsupervisor: "",
     ResTopicresearchArea: "",
-    ResTopicResearchTopic: "",
-    ResTopicdateEntered: "",
+    ResTopicResearchTopic: ""
   });
 
   const handleChange = (e) => {
@@ -35,8 +34,7 @@ const Shv_rs_add_rs_topic = () => {
         ResTopicgroupId: String(inputs.ResTopicgroupId),
         ResTopicsupervisor: String(inputs.ResTopicsupervisor),
         ResTopicresearchArea: String(inputs.ResTopicresearchArea),
-        ResTopicResearchTopic: String(inputs.ResTopicResearchTopic),
-        ResTopicdateEntered: String(inputs.ResTopicdateEntered)
+        ResTopicResearchTopic: String(inputs.ResTopicResearchTopic)
 
       })
       .then((res) => res.data);
@@ -52,7 +50,7 @@ const Shv_rs_add_rs_topic = () => {
     <div>
      
     <div className="bodyRsTopic">
-    <button class="previous round">&#8249;</button>
+    <a href="/stdHome"><button class="previous round">&#8249;</button></a>
               <center>
         <h1 className="h3 mb-3 font-weight-normal"><font face = "Comic sans MS" size ="6"><b>Submit Research Topic</b></font></h1>
          </center> 
@@ -104,16 +102,6 @@ const Shv_rs_add_rs_topic = () => {
           variant="filled"
           name="ResTopicResearchTopic"
         /><br/>
-        <FormLabel><b>Date</b></FormLabel>
-        <TextField className = "textfield"
-          value={inputs.ResTopicdateEntered}
-          onChange={handleChange}
-          type="Date"
-          margin="normal"
-          fullWidth
-          variant="filled"
-          name="ResTopicdateEntered"
-        />
         <br/>
         <Button variant="contained" color="primary" size = "large" type="submit">
           Submit Your Research Topic

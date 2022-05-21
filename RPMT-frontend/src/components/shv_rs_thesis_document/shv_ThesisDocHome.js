@@ -76,6 +76,8 @@ const ThesisDocHome = (props) => {
 
   return (
     <React.Fragment>
+    <div className='container'><br/>
+    <center><h2>Final Thesis Submission</h2></center><br/><br/>
       <Form className="search-form" onSubmit={handleOnSubmit}>
         {errorMsg && <p className="errorMsg">{errorMsg}</p>}
         <Row>
@@ -145,8 +147,12 @@ const ThesisDocHome = (props) => {
 
         <Button variant="primary" type="submit">
           Submit
-        </Button>
+          </Button>&nbsp;&nbsp;
+        <a href='/stdHome'>
+        <button type="button" class="btn btn-danger">Back</button>
+      </a>
       </Form>
+      </div>
     </React.Fragment>
   );
 };

@@ -23,13 +23,7 @@ const Shv_res_topic_notices_student = () => {
   
   return (
     <div>
-      <br/>
-      <br/>
-      <center>
-      <h1>Notices - Research Topic submission</h1>
-      </center>
-      <br/>
-      <ul className="shv_ul">
+      <ul className="shv_ul" >
         {resTopicsNotices &&
           resTopicsNotices.map((resTopicNotice, i) => (
             <li  className="shv_li" key={i}>
@@ -37,16 +31,6 @@ const Shv_res_topic_notices_student = () => {
             </li>
           ))}
       </ul>
-      <Box display="flex" flexDirection="column" alignItems="center">
-      <Button
-          LinkComponent={Link}
-          to="/addRsTopics"
-          sx={{ marginTop: 5, marginBottom:5, background: "blue"}}
-          variant="contained"
-        >
-          <Typography variant="h3">Click Here To Submit Your Research Topic</Typography>
-        </Button>
-        </Box>
     </div>
   );
 };

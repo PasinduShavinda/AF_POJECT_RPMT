@@ -1,13 +1,21 @@
  .shv_ul {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content: left;
     justify-content: space-around;
     flex-wrap: wrap;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 400;
+    font-weight: 40;
     font-size: larger;
     font-variant-position: normal;
+  }
+
+  .ssCard{
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    width: 1500px;
   }
 
   .shv_li {
@@ -27,6 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: blue;
     
     /* align-items: flex-start;
     align-content: flex-start; */

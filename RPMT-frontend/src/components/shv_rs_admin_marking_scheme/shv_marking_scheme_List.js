@@ -38,21 +38,25 @@ const MarkingSchemeList = () => {
   };
 
   return (
-    <div className="files-container">
+    <div>
+    <h1 className="h3 mb-3 font-weight-normal" ><font face = "Comic sans MS" size =""><b>Uploaded Marking Schemes</b></font></h1>
+    <div className="container">
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <table className="files-table">
         <thead>
           <tr>
             <th>Description</th>
+            <th>Uploaded Date</th>
             <th>Download Marking Scheme</th>
           </tr>
         </thead>
         <tbody>
           {filesList.length > 0 ? (
             filesList.map(
-              ({ _id, markingscheme, file_path, file_mimetype }) => (
+              ({ _id, markingscheme, createdAt, file_path, file_mimetype }) => (
                 <tr key={_id}>
                   <td className="file-title">{markingscheme}</td>
+                  <td className="file-title">{createdAt}</td>
                   <td>
                     <a
                       href="#/"
@@ -74,7 +78,11 @@ const MarkingSchemeList = () => {
             </tr>
           )}
         </tbody>
-      </table>
+      </table><br/>
+      <a href='/dashboard'>
+      <button type="button" class="btn btn-danger">Back</button>
+    </a>
+    </div>
     </div>
   );
 };

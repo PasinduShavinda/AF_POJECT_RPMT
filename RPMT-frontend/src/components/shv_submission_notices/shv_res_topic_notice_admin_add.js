@@ -50,7 +50,7 @@ import {
     return (
       <div className="container">
                 <center>
-          <h1 className="h3 mb-3 font-weight-normal" style = {{backgroundColor:'cyan'}}><font face = "Comic sans MS" size =""><b>Publish the Notice</b></font></h1>
+          <h1 className="h3 mb-3 font-weight-normal" ><font face = "Comic sans MS" size =""><b>Publish the Notice</b></font></h1>
            </center> 
       <form onSubmit={handleSubmit}>
         <Box

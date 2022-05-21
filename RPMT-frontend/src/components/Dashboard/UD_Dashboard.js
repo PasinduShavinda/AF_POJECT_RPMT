@@ -4,6 +4,9 @@ import { Navigate, useNavigate } from "react-router-dom";
 import UD_HomeStudent from "../UD_Student/UD_HomeStudent";
 import UD_HomePenalmember from "../UD_Penalmember/UD_HomePenalmember";
 import UD_HomeSupervisor from "../UD_Supervisor/UD_HomeSupervisor";
+import Shv_admin_notice_home from "../shv_submission_notices/shv_admin_notice_home";
+import Shv_admin_marking_home from "../shv_rs_admin_marking_scheme/shv_admin_marking_home";
+import Shv_admin_template_home from "../shv_rs_admin_templates/shv_admin_template_home";
 
 // useHistory  = useNavigate,
 //Redirect = Navigate,NavLink
@@ -58,8 +61,36 @@ const UD_Dashboard = ({ authorized }) => {
             >
               Supervisor Management
             </li>
+            <li
+              onClick={() => {
+                setComponent("adminNotice");
+              }}
+              className="UDDlink"
+              id={component === "adminNotice" ? "active" : ""}
+            >
+              Notice Management
+            </li>
+            <li
+              onClick={() => {
+                setComponent("adminMarking");
+              }}
+              className="UDDlink"
+              id={component === "adminMarking" ? "active" : ""}
+            >
+              Marking Schemes Management
+            </li>
+            <li
+              onClick={() => {
+                setComponent("adminTemplates");
+              }}
+              className="UDDlink"
+              id={component === "adminTemplates" ? "active" : ""}
+            >
+              Templates Submission
+            </li>
+
           </ul>
-        </div>
+        </div><br/><br/>
         <div className="UDDlgoutbtn" onClick={logout}>
           LOGOUT
         </div>
@@ -68,6 +99,9 @@ const UD_Dashboard = ({ authorized }) => {
         {component === "student" && <UD_HomeStudent />}
         {component === "penalmember" && <UD_HomePenalmember />}
         {component === "supervisor" && <UD_HomeSupervisor />}
+        {component === "adminNotice" && <Shv_admin_notice_home />}
+        {component === "adminMarking" && <Shv_admin_marking_home />}
+        {component === "adminTemplates" && <Shv_admin_template_home />}
       </div>
     </div>
   );

@@ -62,7 +62,8 @@ const ResDocHome = (props) => {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-          });
+          }).then(alert("Research Document Successfully Saved !!"));
+          
         } else {
           setErrorMsg('Please select a file to add.');
         }

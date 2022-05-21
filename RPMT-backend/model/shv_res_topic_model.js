@@ -18,13 +18,13 @@ const ResTopicSchema = new Schema({
     ResTopicResearchTopic: {
     type: String,
     required: true,
-  },
-    ResTopicdateEntered:{
-    type: String,
-    required: true,
   }
+},
+{
+  timestamps: true
+}
 
-});
+);
 
 module.exports = mongoose.model("ResTopic", ResTopicSchema);
 

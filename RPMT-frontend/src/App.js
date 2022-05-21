@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -74,10 +73,16 @@ import UD_Supervisor from "./components/Supervisor/UD_Supervisor";
 
 import UD_Dashboard from "./components/Dashboard/UD_Dashboard";
 
+import Shv_admin_notice_home from "./components/shv_submission_notices/shv_admin_notice_home";
+import Footer from "./components/shv_Footer/shv_footer";
+import Header from "./components/shv_Header/shv_header";
+
 function App() {
   return (
+    <div>
     <React.Fragment>
-      <header></header>
+    <div>
+    <Header/>
       <main>
         <Routes>
           <Route path="/" element={<FirstPage />} exact />
@@ -122,10 +127,10 @@ function App() {
           />
 
           <Route path="/RsTopicsNotice/:id" element={<Shv_res_topic_notice_admin_update />} exact />
+          <Route path="/RsTopicsNoticeAdminHome" element={< Shv_admin_notice_home />} exact />
 
-          <Route path="/RsTopicsNoticesStudent" element={<Shv_res_topic_notices_student />} exact />
            
-        
+       
         
         
           <Route path="/sug_page" element={<Sug_page />} exact />
@@ -210,8 +215,12 @@ function App() {
 
           <Route path="/dashboard" element={<UD_Dashboard />} exact />
         </Routes>
-      </main>
+      </main>  
+      </div>
     </React.Fragment>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <Footer/>
+    </div>
   );
 }
 

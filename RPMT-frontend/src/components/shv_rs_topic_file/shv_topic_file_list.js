@@ -41,6 +41,8 @@ const TopicFilesList = () => {
   };
 
   return (
+    <div>
+          &nbsp;<a href = "/stdHome"><button className="btn btn-success">Back</button></a>
     <div className="container">
       <br/>
     <center><h2>Research Topic Details Documents</h2></center><br/><br/>
@@ -52,19 +54,20 @@ const TopicFilesList = () => {
             <th>Supervisor</th>
             <th>Research Topic</th>
             <th>Panel</th>
+            <th>Submitted Date</th>
             <th>Download File</th>
-            <th> Give Feedback</th>
           </tr>
         </thead>
         <tbody>
           {filesList.length > 0 ? (
             filesList.map(
-              ({ _id, ResTopicFileGroupId, ResTopicFileSupervisor, ResTopicFileTopic, ResTopicFilePanel, file_path, file_mimetype }) => (
+              ({ _id, ResTopicFileGroupId, ResTopicFileSupervisor, ResTopicFileTopic, ResTopicFilePanel, createdAt, file_path, file_mimetype }) => (
                 <tr key={_id}>
                   <td className="file-title">{ResTopicFileGroupId}</td>
                   <td className="file-title">{ResTopicFileSupervisor}</td>
                   <td className="file-title">{ResTopicFileTopic}</td>
                   <td className="file-title">{ResTopicFilePanel}</td>
+                  <td className="file-title">{createdAt}</td>
                   <td>
                     <a
                       href="#/"
@@ -75,7 +78,6 @@ const TopicFilesList = () => {
                       Download
                     </a>
                   </td>
-                  <td  className="file-title"> <a href={`/AllTopicFilesList/${_id}`} > Give Feedback</a>  </td>
                 </tr>
               )
             )
@@ -91,6 +93,7 @@ const TopicFilesList = () => {
       <a href='/stdHome'>
       <button type="button" class="btn btn-danger">Back</button>
       </a>
+    </div>
     </div>
   );
 };

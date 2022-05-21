@@ -36,7 +36,7 @@ const UD_Login = () => {
           } else {
             localStorage.setItem("user-info-customer", currentUser);
             // history.push("/customer", { currentUser });
-            navigate("/student", { currentUser });
+            navigate("/stdHome", { currentUser });
           }
         } else {
           swal("Sorry", "Login Failed", "error");

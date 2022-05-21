@@ -105,16 +105,7 @@ const Shv_rs_topic_details = () => {
           variant="filled"
           name="ResTopicResearchTopic"
         /><br/>
-        <FormLabel><b>Date</b></FormLabel>
-        <TextField
-          value={inputs.ResTopicdateEntered}
-          onChange={handleChange}
-          type="Date"
-          margin="normal"
-          fullWidth
-          variant="filled"
-          name="ResTopicdateEntered"
-        /><br/>
+
         <br/>
         <Button variant="contained" type="submit">
           Update Research Topic

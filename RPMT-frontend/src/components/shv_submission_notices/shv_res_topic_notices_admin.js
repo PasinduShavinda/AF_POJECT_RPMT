@@ -21,12 +21,6 @@ const Shv_res_topic_notices_admin = () => {
   
   return (
     <div>
-      <br/>
-      <br/>
-      <center>
-      <h1>Manage Notices</h1>
-      </center>
-      <br/>
       <ul className="shv_ul">
         {resTopicsNotices &&
           resTopicsNotices.map((resTopicNotice, i) => (
@@ -34,7 +28,8 @@ const Shv_res_topic_notices_admin = () => {
               <Shv_res_topic_notice_admin resTopicNotice={resTopicNotice} />
             </li>
           ))}
-      </ul>
+              
+      </ul><br/><br/>
     </div>
   );
 };

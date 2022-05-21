@@ -72,6 +72,8 @@ const MarkingSchemeHome = (props) => {
 
   return (
     <React.Fragment>
+      <div className='container'>
+      <center><h1 className="h3 mb-3 font-weight-normal" ><font face = "Comic sans MS" size =""><b>Publish the Marking Scheme</b></font></h1></center> 
       <Form className="search-form" onSubmit={handleOnSubmit}>
         {errorMsg && <p className="errorMsg">{errorMsg}</p>}
         <Row>
@@ -113,8 +115,15 @@ const MarkingSchemeHome = (props) => {
 
         <Button variant="primary" type="submit">
           Submit
-        </Button>
+        </Button>&nbsp;
+        <a href='/MSchemeList'>
+      <button type="button" class="btn btn-danger">View</button>
+      </a>&nbsp;
+        <a href='/dashboard'>
+      <button type="button" class="btn btn-secondary">Back</button>
+      </a>
       </Form>
+      </div>
     </React.Fragment>
   );
 };
