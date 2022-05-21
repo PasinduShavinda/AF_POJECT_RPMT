@@ -6,6 +6,18 @@ const Home = () => {
   return (
     <div>
       <Box display="flex" flexDirection="column" alignItems="center">
+
+      
+
+      <Button
+          LinkComponent={Link}
+          to="/stdHome"
+          sx={{ marginTop: 15, background: "orangered"}}
+          variant="contained"
+        >
+          <Typography variant="h3">Student - HOME PAGE</Typography>
+        </Button>
+
       <Button
           LinkComponent={Link}
           to="/addRsTopics"
@@ -163,9 +175,13 @@ const Home = () => {
         </Button>
         
 
+     
+
       </Box>
     </div>
   );
 };
+
+
 
 export default Home;

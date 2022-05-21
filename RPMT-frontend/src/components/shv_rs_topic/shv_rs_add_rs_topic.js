@@ -6,10 +6,11 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, color } from "@mui/system";
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./styles/shv_rs_topic.css";
 
 const Shv_rs_add_rs_topic = () => {
   const history = useNavigate();
@@ -48,9 +49,12 @@ const Shv_rs_add_rs_topic = () => {
   };
 
   return (
-    <div className="container">
+    <div>
+     
+    <div className="bodyRsTopic">
+    <button class="previous round">&#8249;</button>
               <center>
-        <h1 className="h3 mb-3 font-weight-normal" style = {{backgroundColor:'cyan'}}><font face = "Comic sans MS" size =""><b>Submit Research Topic</b></font></h1>
+        <h1 className="h3 mb-3 font-weight-normal"><font face = "Comic sans MS" size ="6"><b>Submit Research Topic</b></font></h1>
          </center> 
     <form onSubmit={handleSubmit}>
       <Box
@@ -63,45 +67,45 @@ const Shv_rs_add_rs_topic = () => {
         marginLeft={"auto"}
         marginRight="auto"
         marginTop={5}
-      >
-        <FormLabel>Group ID</FormLabel>
-        <TextField
+      ><br/>
+        <FormLabel><b>Group ID</b></FormLabel>
+        <TextField className = "textfield"
           value={inputs.ResTopicgroupId}
           onChange={handleChange}
           margin="normal"
           fullWidth
           variant="filled"
           name="ResTopicgroupId"
-        />
-        <FormLabel>Supervisor's Name</FormLabel>
-        <TextField
+        /><br/>
+        <FormLabel><b>Supervisor's Name</b></FormLabel>
+        <TextField className = "textfield"
           value={inputs.ResTopicsupervisor}
           onChange={handleChange}
           margin="normal"
           fullWidth
           variant="filled"
           name="ResTopicsupervisor"
-        />
-        <FormLabel>Research Area</FormLabel>
-        <TextField
+        /><br/>
+        <FormLabel><b>Research Area</b></FormLabel>
+        <TextField className = "textfield"
           value={inputs.ResTopicresearchArea}
           onChange={handleChange}
           margin="normal"
           fullWidth
           variant="filled"
           name="ResTopicresearchArea"
-        />
-        <FormLabel>Research Topic</FormLabel>
-        <TextField
+        /><br/>
+        <FormLabel><b>Research Topic</b></FormLabel>
+        <TextField className = "textfield"
           value={inputs.ResTopicResearchTopic}
           onChange={handleChange}
           margin="normal"
           fullWidth
           variant="filled"
           name="ResTopicResearchTopic"
-        />
-        <FormLabel>Date</FormLabel>
-        <TextField
+        /><br/>
+        <FormLabel><b>Date</b></FormLabel>
+        <TextField className = "textfield"
           value={inputs.ResTopicdateEntered}
           onChange={handleChange}
           type="Date"
@@ -111,12 +115,13 @@ const Shv_rs_add_rs_topic = () => {
           name="ResTopicdateEntered"
         />
         <br/>
-        <Button variant="contained" type="submit">
+        <Button variant="contained" color="primary" size = "large" type="submit">
           Submit Your Research Topic
         </Button>
       </Box>
     </form>
 
+    </div>
     </div>
   );
 };

@@ -26,14 +26,9 @@ const Shv_rs_topics = () => {
 
 
   const StyledTableCell = withStyles((theme) => ({
-    head: {
+  
       backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-    },
-    body: {
-      fontSize: 20,
-      
-    },
+
   }))(TableCell);
 
 
@@ -45,21 +40,35 @@ const Shv_rs_topics = () => {
     },
   }))(TableRow);
 
+  const useStyles = makeStyles((theme) => ({
+    selected: {
+       backgroundColor: "white",
+       "&:hover": {
+         backgroundColor: "white",
+       },
+     },
+   }));
+
+  
+   
+    const classes = useStyles();
+  
   return (
     <div>
+    
       <br/>
       <br/>
       <br/>
       <center>
         <h1>Research topics submitted by students</h1><br/><br/><br/>
-      
-      <TableRow>
-          <StyledTableCell align="left" ><b>Group ID</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Supervisor</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Research Area</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-          <StyledTableCell align="left" ><b>Research Topic</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
-          <StyledTableCell align="left" ><b>Date Entered</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
-          <StyledTableCell align="left" width="80px"><b>Action</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+       
+      <TableRow selected classes={{selected: classes.selected,}} >
+          <StyledTableCell width="135px"><b>Group ID</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell width="210px"><b>Supervisor</b></StyledTableCell> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell width="210px"><b>Research Area</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          <StyledTableCell width="210px"><b>Research Topic</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+          <StyledTableCell width="210px"><b>Date Entered</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+          <StyledTableCell width="100px"><b>Action</b></StyledTableCell>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
         </TableRow>
 
         <br/>

@@ -38,7 +38,9 @@ const ResDocFilesList = () => {
   };
 
   return (
-    <div className="files-container">
+    <div className="container">
+       <br/>
+    <center><h2>Research Documents</h2></center><br/><br/>
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <table className="files-table">
         <thead>
@@ -81,7 +83,10 @@ const ResDocFilesList = () => {
             </tr>
           )}
         </tbody>
-      </table>
+      </table><br/>
+      <a href='/stdHome'>
+      <button type="button" class="btn btn-danger">Back</button>
+      </a>
     </div>
   );
 };

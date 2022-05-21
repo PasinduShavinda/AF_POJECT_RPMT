@@ -50,6 +50,12 @@ const Shv_rs_topic_details = () => {
 
   return (
     <div>
+
+        <center>
+        <h1 className="h3 mb-3 font-weight-normal"><font face = "Comic sans MS" size ="6"><b>Update Research Topic</b></font></h1>
+        </center> 
+
+      <div>
       {inputs && (
         <form onSubmit={handleSubmit}>
          <Box
@@ -63,7 +69,7 @@ const Shv_rs_topic_details = () => {
         marginRight="auto"
         marginTop={5}
       >
-        <FormLabel>Group ID</FormLabel>
+        <FormLabel><b>Group ID</b></FormLabel>
         <TextField
           value={inputs.ResTopicgroupId}
           onChange={handleChange}
@@ -71,8 +77,8 @@ const Shv_rs_topic_details = () => {
           fullWidth
           variant="filled"
           name="ResTopicgroupId"
-        />
-        <FormLabel>Supervisor's Name</FormLabel>
+        /><br/>
+        <FormLabel><b>Supervisor's Name</b></FormLabel>
         <TextField
           value={inputs.ResTopicsupervisor}
           onChange={handleChange}
@@ -80,8 +86,8 @@ const Shv_rs_topic_details = () => {
           fullWidth
           variant="filled"
           name="ResTopicsupervisor"
-        />
-        <FormLabel>Research Area</FormLabel>
+        /><br/>
+        <FormLabel><b>Research Area</b></FormLabel>
         <TextField
           value={inputs.ResTopicresearchArea}
           onChange={handleChange}
@@ -89,8 +95,8 @@ const Shv_rs_topic_details = () => {
           fullWidth
           variant="filled"
           name="ResTopicresearchArea"
-        />
-        <FormLabel>Research Topic</FormLabel>
+        /><br/>
+        <FormLabel><b>Research Topic</b></FormLabel>
         <TextField
           value={inputs.ResTopicResearchTopic}
           onChange={handleChange}
@@ -98,8 +104,8 @@ const Shv_rs_topic_details = () => {
           fullWidth
           variant="filled"
           name="ResTopicResearchTopic"
-        />
-        <FormLabel>Date</FormLabel>
+        /><br/>
+        <FormLabel><b>Date</b></FormLabel>
         <TextField
           value={inputs.ResTopicdateEntered}
           onChange={handleChange}
@@ -108,7 +114,7 @@ const Shv_rs_topic_details = () => {
           fullWidth
           variant="filled"
           name="ResTopicdateEntered"
-        />
+        /><br/>
         <br/>
         <Button variant="contained" type="submit">
           Update Research Topic
@@ -116,6 +122,7 @@ const Shv_rs_topic_details = () => {
       </Box>
         </form>
       )}
+    </div>
     </div>
   );
 };

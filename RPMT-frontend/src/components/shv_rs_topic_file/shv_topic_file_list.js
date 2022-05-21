@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import download from 'downloadjs';
 import axios from 'axios';
+import { Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 
 const API_URL = 'http://localhost:5000';
 
@@ -39,7 +41,9 @@ const TopicFilesList = () => {
   };
 
   return (
-    <div className="files-container">
+    <div className="container">
+      <br/>
+    <center><h2>Research Topic Details Documents</h2></center><br/><br/>
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <table className="files-table">
         <thead>
@@ -83,7 +87,10 @@ const TopicFilesList = () => {
             </tr>
           )}
         </tbody>
-      </table>
+      </table><br/>
+      <a href='/stdHome'>
+      <button type="button" class="btn btn-danger">Back</button>
+      </a>
     </div>
   );
 };

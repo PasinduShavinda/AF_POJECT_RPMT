@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-
+import StudentHomePage_shv from "./components/shv_student_Home/shv_student_home";
 import Shv_rs_add_rs_topic from "./components/shv_rs_topic/shv_rs_add_rs_topic";
 import Shv_rs_topics_student from "./components/shv_rs_topic/shv_rs_topics_student";
 import Shv_rs_topic_details_update from "./components/shv_rs_topic/shv_rs_topic_details_update";
@@ -235,7 +235,10 @@ function App() {
           <Route path="/TemplateHeader" element={<TemplateHeader />} exact />
           <Route path="/TemplateList" element={<TemplateList />} exact />
 
+          <Route path="/StdHome" element={<StudentHomePage_shv />} exact />
+
           {/* .............udara.............................. */}
+          {/* ........................................... */}
           <Route path="/login" element={<UD_Login />} exact />
           <Route path="/signup" element={<UD_SignUp />} exact />
           {/* student dashbord */}

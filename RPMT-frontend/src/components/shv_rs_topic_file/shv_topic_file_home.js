@@ -80,10 +80,13 @@ const TopicHome = (props) => {
   };
 
   return (
+   
     <React.Fragment>
+    <div className='container'><br/>
+    <center><h2>Research Topic Details Document Submission</h2></center><br/><br/>
       <Form className="search-form" onSubmit={handleOnSubmit}>
         {errorMsg && <p className="errorMsg">{errorMsg}</p>}
-        <Row>
+        <Row>    
           <Col>
             <Form.Group controlId="ResTopicFileGroupId">
               <Form.Control
@@ -176,8 +179,12 @@ const TopicHome = (props) => {
         <Button  variant="primary" type="submit" >
           Submit
         </Button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href='/stdHome'>
+        <button type="button" class="btn btn-danger">Back</button>
+      </a>
 
       </Form>
+      </div>
     </React.Fragment>
   );
 };
