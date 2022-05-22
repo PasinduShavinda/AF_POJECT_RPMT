@@ -1,6 +1,6 @@
 import React ,{ useEffect, useState }from 'react'
 import axios from "axios"
-
+import Sug_panelmembers_page from "../sug_panelmembers_page/sug_panelmembers_page"
 import Sug_topicdoc_feedback from "./sug_topicdoc_feedbacks";
 const URL = "http://localhost:5000/topicdoc_feedback2";
 
@@ -16,14 +16,22 @@ const Sug_AllTopicdocfeedbacks = () => {
 
 
   return (
+    <div class="py-3 ">
+
+    <Sug_panelmembers_page/>
+
+    <div className='contentsug'>
+      
+      <h1>All Feedbacks Given for Topic Document Submitions</h1>
+      <div class="py-3 ">
     <div id="sug_table"> <ul>
-      <h1>All Feedbacks given for topic documentation submition</h1>
-     <td width={"200px"}>GroupId</td>
-     <td width={"200px"}>Panel ID</td>
-     <td width={"200px"}>Feedback</td>
-     <td width={"200px"}>EvaluvatedDate</td>
+      
+     <th width={"200px"}>GroupId</th>
+     <th width={"200px"}>Panel ID</th>
+     <th width={"200px"}>Feedback</th>
+     <th width={"200px"}>EvaluvatedDate</th>
     
-     <td width={"200px"}>Action</td>
+     <th width={"200px"}>Action</th>
      <table>
       {Feedbacks && Feedbacks.map((Feedbacks, i)=>(
         
@@ -32,7 +40,7 @@ const Sug_AllTopicdocfeedbacks = () => {
         </tr>
       ))}
       </table>
-      </ul></div>
+      </ul></div></div></div></div>
   )
 }
 

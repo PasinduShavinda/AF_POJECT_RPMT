@@ -25,8 +25,11 @@ const Sug_topicdoc_feedback= (props) => {
        <td width={"200px"} >{ResTopicFilePanel}</td>
        <td width={"200px"}>{Feedback}</td>
        <td width={"200px"}>{EvaluvatedDate}</td>
-       <td width={"200px"}>  <button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}> delete</button>
-       <Button LinkComponent={Link} to={`/AllTopicDocFeedback/${_id}`} sx={{ mt: "auto" }}> update </Button></td>
+       <td width={"200px"}>  
+       <a><button class="btn btn-danger" onClick={deleteHandler} ><i class="fa fa-trash-o" aria-hidden="true"></i>delete</button></a> 
+        &nbsp;
+        <a href={`/AllTopicDocFeedback/${_id}`}><button class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> update </button></a> 
+       </td>
       
        </tr>
  

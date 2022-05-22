@@ -26,8 +26,10 @@ const Panel= (props) => {
        <td width={"200px"}>{panelmember2}</td>
        <td width={"200px"}>{panelmember3}</td>
        <td width={"200px"} >{panelmember4}</td>
-       <td width={"200px"}>  <button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}> delete</button></td>
       
+       <td width={"200px"}> <a><button class="btn btn-danger" onClick={deleteHandler} ><i class="fa fa-trash-o" aria-hidden="true"></i>delete</button></a> 
+        &nbsp;
+        <a ><button class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> update </button></a> </td>
        </tr>
  
         

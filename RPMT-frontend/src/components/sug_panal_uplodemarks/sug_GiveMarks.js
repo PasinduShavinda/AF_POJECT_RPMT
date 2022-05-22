@@ -2,6 +2,8 @@ import React ,{ useEffect, useState }from 'react'
 import axios from "axios"
 import { useNavigate ,useParams} from "react-router-dom";
 import { TextField } from '@material-ui/core';
+import Sug_panelmembers_page from "../sug_panelmembers_page/sug_panelmembers_page"
+
 const Sug_FinalMarks_Assign = () => {
   const [inputs, setInputs] = useState({});
     const id =useParams().id;
@@ -51,67 +53,107 @@ const Sug_FinalMarks_Assign = () => {
     
 
   return (
-   <div id="sug_createPanel">
- {inputs && (<form  onSubmit={handleSubmit} >
-
-<h1>Register Groups</h1>
 
 
 
+<div>
+      <div>
+      <Sug_panelmembers_page/>
+   <div className='contentsug'>
+<div className="col-md-8 mt-4 mx-auto">
+    <h1 > Final Marks Upload and Update</h1>
+    </div>
+      {inputs && (
+ <form onSubmit={handleSubmit} >
 
-<div className='contain'>
+<div class="container contact">
+<div class="row">
+<div class="col-md-3 sug3">
+<div class="contact-info">
+<h2> Final Marks</h2>
 
-      
-<label >Group ID</label>      
-<input type="text"
- name="Grp_ID" 
- placeholder="Grp_ID"
- value={inputs.Grp_ID}
+<img src="https://www.aeccglobal.lk/images/2021/06/14/standardized-examinations.webp" width="300" height="300"/>
+
+</div>
+</div>
+
+
+<div class="col-md-9 sug9">
+<div class="contact-form">
+
+
+
+<div className="form-group"  marginBottom='15px'>
+
+<label class="control-label col-sm-2"> GroupId</label>
+<div class="col-sm-10">
+<input type="text" 
+className="form-control"
+  value={inputs.Grp_ID}
  onChange={handleChange}
- />
 
-
+margin="normal"
+InputProps={{
+        readOnly: true,
+      }} fullWidth
+ name="Grp_ID" />
 </div>
-<div className='contain'>
+</div>
 
-      
-<label >Panel</label>      
-<input type="text"
- name="Panel" 
- placeholder="Panel"
- value={inputs.Panel}
+<div className="form-group"  marginBottom='15px'>
+
+<label class="control-label col-sm-2">Panel </label>
+<div class="col-sm-10">
+<input type="text" 
+className="form-control"
+value={inputs.Panel}
  onChange={handleChange}
- />
-
-
+margin="normal"
+InputProps={{
+        readOnly: true,
+      }} fullWidth
+ name="Panel" />
 </div>
-<div className='contain'>
-<label >marks</label>  
-<TextField
-          id="Finalmarks"
-          type="number"
-          name="Finalmarks"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          variant="filled"
-          value={inputs.Finalmarks}
-          onChange={handleChange}
-        />
-
 </div>
 
 
 
 
+<div className="form-group" marginBottom='15px'>
+      <label class="control-label col-sm-2">Finalmarks</label>
+      <div class="col-sm-10">
+     <input type="number"
+       class="form-control"
+       value={inputs.Finalmarks}
+      onChange={handleChange}
+     
+       name="Finalmarks"
+     />
+</div>
+</div>
 
 
 
 
-     <br/>
-     <button type="submit">submit</button>
-     </form>)}
-     </div>
+</div>
+
+<button  class="btn btn-dark btn-lg" type="submit" marginBottom='15px'>
+
+&nbsp;
+Give Marks</button>
+
+
+
+
+</div>
+</div>
+
+</div>
+</form>
+ )}
+</div>
+</div>
+</div>
 
   
   )

@@ -46,13 +46,14 @@ const Sug_CreatePanel = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log(inputs);
-      sendRequest().then(() => history("/allPanel"));
+      sendRequest().then(() => history("/dashboard"));
     };
   
     
     
 
   return (
+    <div className="ud_Msupplier_Form1">
    <div id="sug_createPanel">
 <form onSubmit={handleSubmit} >
 <h1>Create Panel</h1>
@@ -131,7 +132,7 @@ const Sug_CreatePanel = () => {
      <button type="submit">submit</button>
      </form>
      </div>
-
+     </div>
   
   )
 }

@@ -1,5 +1,6 @@
 import React ,{ useEffect, useState }from 'react'
 import axios from "axios"
+import Sug_panelmembers_page from "../sug_panelmembers_page/sug_panelmembers_page"
 
 import Sug_marks from "./sug_marks";
 const URL = "http://localhost:5000/group";
@@ -16,19 +17,27 @@ const Sug_AllGroups_Mark = () => {
 
 
   return (
+    <div class="py-3 ">
+
+    <Sug_panelmembers_page/>
+
+    <div className='contentsug'>
+      
+      <h1>All Feedbacks Given for Topic Document Submitions</h1>
+      <div class="py-3 ">
     <div id="sug_table"> <ul>
-      <h1>All  Registered Groups</h1>
-     <td width={"200px"}>Grpoup Leader</td>
-     <td width={"200px"}>Grpoup member2</td>
-     <td width={"200px"}>Grpoup member3</td>
-     <td width={"200px"}>Grpoup member4</td>
+     
+     <th width={"150px"}>Grpoup Leader</th>
+     <th width={"150px"}>Grpoup member2</th>
+     <th width={"150px"}>Grpoup member3</th>
+     <th width={"150px"}>Grpoup member4</th>
     
-     <td width={"200px"}>Group ID</td>
-     <td width={"200px"}>Panel</td>
+     <th width={"150px"}>Group ID</th>
+     <th width={"150px"}>Panel</th>
      
-     <td width={"200px"}>Action</td>
+     <th width={"150px"}>Action</th>
      
-     <td width={"200px"}>Finalmarks</td>
+     <th width={"150px"}>Finalmarks</th>
      <table>
       {Groups && Groups.map((Groups, i)=>(
         
@@ -37,7 +46,7 @@ const Sug_AllGroups_Mark = () => {
         </tr>
       ))}
       </table>
-      </ul></div>
+      </ul></div></div></div></div>
   )
 }
 
