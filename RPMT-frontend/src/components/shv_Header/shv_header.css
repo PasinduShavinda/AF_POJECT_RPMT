@@ -92,10 +92,10 @@ button {
 	cursor: pointer;
 }
 
-.full {
+/* .full {
 	float: left;
 	width: 100%;
-}
+} */
 
 .layout_padding {
 	padding-top: 90px;
@@ -124,9 +124,9 @@ button {
 	float: left;
 	margin: 0;
 	padding: 0;
-	position: fixed;
+	position:absolute;
 	top: 0;
-	left: 100px;
+	left: 50px;
 	width: 100px;
 	
 }

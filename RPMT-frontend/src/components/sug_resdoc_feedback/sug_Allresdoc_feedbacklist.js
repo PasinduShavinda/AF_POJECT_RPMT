@@ -1,8 +1,9 @@
 import React ,{ useEffect, useState }from 'react'
 import axios from "axios"
-
+import Sug_supervioser_page from "../sug_supervisor_page/sug_supervisor_page"
 import Sug_resdoc_feedback from "./sug_resdoc_feedback";
 const URL = "http://localhost:5000/resdoc_feedback2";
+
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);
@@ -16,16 +17,21 @@ const Sug_AllResdocfeedbacks = () => {
 
 
   return (
-    
+    <div class="py-5 h-100">
+    <Sug_supervioser_page/>
+    <div className='contentsug'>
+      
+    <h1>All Reserch Document Feedbacks</h1>
+    <div class="py-3 ">
     <div id="sug_table"> <ul>
-      <h1>All Reserch Document Feedbacks</h1>
-     <td width={"200px"}>ResDocFileGroupId</td>
-     <td width={"200px"}>ResDocFileSupervisor</td>
-     <td width={"200px"}>ResDocFileTopic</td>
-     <td width={"200px"}>Feedback</td>
-     <td width={"200px"}>EvaluvatedDate</td>
+      
+     <th width={"200px"}>GroupId</th>
+     <th width={"200px"}>Supervisor</th>
+     <th width={"200px"}>Topic</th>
+     <th width={"200px"}>Feedback</th>
+     <th width={"200px"}>Evaluvated Date</th>
     
-     <td width={"200px"}>Action</td>
+     <th width={"200px"}>Action</th>
      <table>
       {Feedbacks && Feedbacks.map((Feedbacks, i)=>(
         
@@ -35,6 +41,9 @@ const Sug_AllResdocfeedbacks = () => {
       ))}
       </table>
       </ul></div>
+      </div>
+      </div>
+      </div>
   )
 }
 

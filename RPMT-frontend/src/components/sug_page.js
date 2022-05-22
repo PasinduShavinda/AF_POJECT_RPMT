@@ -26,14 +26,14 @@ const Sug_page=()=>{
        
      </AppBar>
 
-     <a href="/RsDocFilesList"> <Button  > ResDoc list Shavi made</Button></a> 
+     <a href="/ResDocfileList_givefeedback"> <Button  > ResDoc list </Button></a> 
      <a href="/AllResDocFeedback"> <Button  > ResDoc feedback list</Button></a> 
 <br></br>
 
-     <a href="/RsTopiFileList"> <Button  > Topic Doc list Shavi made</Button></a> 
+     <a href="/TopicfileList_givefeedback"> <Button  > Topic Doc list </Button></a> 
      <a href="/AllTopicDocFeedback"> <Button  > Topic Doc feedback list</Button></a> 
 <br></br>
-     <a href="/ThesisFilesList"> <Button  > Thesis  list Shavi made</Button></a> 
+     <a href="/ThesisFilesList_givefeedback"> <Button  > Thesis  list </Button></a> 
      <a href="/AllThesisFeedback"> <Button  > Thesis feedback list</Button></a> 
       <br></br>
       <br></br>
@@ -48,6 +48,10 @@ const Sug_page=()=>{
      <a href="/All_groups_marks"> <Button  >All Groups marks (Panalmembers only can see this)</Button></a> 
      
 
+
+
+     <a href="/Sug_supervioser_page"> <Button  >Supervisor</Button></a> 
+     <a href="/Sug_panelmembers_page"> <Button  >Panelmember</Button></a> 
     </div>
 };
 

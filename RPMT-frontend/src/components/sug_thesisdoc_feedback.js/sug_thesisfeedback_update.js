@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
 import {Box,Button,FormLabel,TextareaAutosize,TextField,} from "@mui/material";
+import Sug_supervioser_page from "../sug_supervisor_page/sug_supervisor_page"
 
 const Sug_thesis_updatefeedback = () => {
      
@@ -47,64 +48,120 @@ const Sug_thesis_updatefeedback = () => {
     
     
   return (
-    <div>
-     {inputs && (
-   <form onSubmit={handleSubmit} >
-       <h1> Update   given feedbacks for thesis submitions</h1>
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent={"center"}
-      maxWidth={700}
-      alignContent={"center"}
-      alignSelf="center"
-      marginLeft={"auto"}
-      marginRight="auto"
-      marginTop={10}
-    >
-      <FormLabel> GroupId</FormLabel>
-      <TextField
-         value={inputs.ResThesisFileGroupId}
-         onChange={handleChange}
-        margin="normal"
-        fullWidth
-        variant="outlined"
-        name="ResThesisFileGroupId"
-      />
-       <FormLabel> Supervisor</FormLabel>
-      <TextField
-         value={inputs.ResThesisFileSupervisor}
-         onChange={handleChange}
-        margin="normal"
-        fullWidth
-        variant="outlined"
-        name="ResThesisFileSupervisor"
-      />
      
-<FormLabel>Feedback</FormLabel>
-<textarea   rows="10" cols="50"
-        value={inputs.Feedback}
-        onChange={handleChange}
-        margin="normal"
-        fullWidth
-        variant="outlined"
-        name="Feedback"
-      />
-       <FormLabel>EvaluvatedDate</FormLabel>
-  <input type="Date"
-        value={inputs.EvaluvatedDate}
-        onChange={handleChange}
-        margin="normal"
-        fullWidth
-        variant="outlined"
-        name="EvaluvatedDate"
-      />
 
-      <button variant="contained" type="submit"> Update Feedback </button>
-    </Box>
-  </form>
-     )}
+<div>
+      <div>
+  <Sug_supervioser_page/>
+   <div className='contentsug'>
+<div className="col-md-8 mt-4 mx-auto">
+    <h1 >Update Given Feedback  for Thesis Document</h1>
     </div>
+      {inputs && (
+ <form onSubmit={handleSubmit} >
+
+<div class="container contact">
+<div class="row">
+<div class="col-md-3 sug3">
+<div class="contact-info">
+<h2>Thesis Document</h2>
+<h2>Feedback</h2>
+<img src="../assets/images/resdocimage.png" width="300" height="300"/>
+
+</div>
+</div>
+
+
+<div class="col-md-9 sug9">
+<div class="contact-form">
+
+
+
+<div className="form-group"  marginBottom='15px'>
+
+<label class="control-label col-sm-2"> GroupId</label>
+<div class="col-sm-10">
+<input type="text" 
+className="form-control"
+value={inputs.ResThesisFileGroupId}
+ onChange={handleChange}
+
+margin="normal"
+InputProps={{
+        readOnly: true,
+      }} fullWidth
+ name="ResThesisFileGroupId" />
+</div>
+</div>
+
+<div className="form-group"  marginBottom='15px'>
+
+<label class="control-label col-sm-2"> Supervisor</label>
+<div class="col-sm-10">
+<input type="text" 
+className="form-control"
+value={inputs.ResThesisFileSupervisor}
+ onChange={handleChange}
+margin="normal"
+InputProps={{
+        readOnly: true,
+      }} fullWidth
+ name="ResThesisFileSupervisor" />
+</div>
+</div>
+
+
+
+
+<div className="form-group" marginBottom='15px'>
+      <label class="control-label col-sm-2">EvaluvatedDate</label>
+      <div class="col-sm-10">
+     <input type="Date"
+       class="form-control"
+      value={inputs.EvaluvatedDate}
+       onChange={handleChange}
+       margin="normal"
+      fullWidth
+       variant="standard"
+       name="EvaluvatedDate"
+     />
+</div>
+</div>
+
+<div className="form-group"  marginBottom='15px'>
+<label className= "control-label col-sm-2" for="comment">Feedback</label>
+<div class="col-sm-10">
+					<textarea class="form-control" 
+                    rows="5" 
+                    id="message"
+                    placeholder="Enter the message . . ."  
+                    name="Feedback"
+                    value={inputs.Feedback}
+                    onChange={handleChange}></textarea>
+				  </div>
+
+</div>
+
+
+</div>
+
+<button  class="btn btn-dark btn-lg" type="submit" marginBottom='15px'>
+
+&nbsp;
+ Update</button>
+
+
+
+
+</div>
+</div>
+
+</div>
+</form>
+ )}
+</div>
+</div>
+</div>
   );
 };
 

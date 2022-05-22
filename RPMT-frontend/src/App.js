@@ -57,6 +57,9 @@ import Sug_Assign_GrpIDPanel from "./components/sug_Assign_GrpID_&_panel/sug_Ass
 import Sug_GroupID_and_Panel_Assign from "./components/sug_Assign_GrpID_&_panel/sug_Assign_GrpID_&_panel";
 import Sug_AllGroups_Mark from "./components/sug_panal_uplodemarks/sug_AllGroupsmarks";
 import Sug_FinalMarks_Assign from "./components/sug_panal_uplodemarks/sug_GiveMarks";
+import Sug_ResDocFilesList from "./components/sug_resdoc_feedback/sug_resdocfilelist";
+import Sug_TopicFilesList from "./components/sug_topicdoc_feedback/sug_topic_file_list";
+import Sug_ThesisDocFilesList from "./components/sug_thesisdoc_feedback.js/sug_thesisdoc_list";
 
 //...........udara............
 import UD_Login from "./components/Login/UD_Login";
@@ -119,6 +122,9 @@ function App() {
 
 
           {/* Sugandhi */}
+          <Route path="/TopicfileList_givefeedback" element={<Sug_TopicFilesList/>} exact />
+          <Route path="/ResDocfileList_givefeedback" element={<Sug_ResDocFilesList/>} exact />
+          <Route path="/ThesisFilesList_givefeedback" element={<Sug_ThesisDocFilesList/>} exact />
           <Route path="/sug_page" element={<Sug_page />} exact />
           <Route path="/allPanel" element={<Sug_AllPanels />} exact />
           <Route path="/createPanel" element={<Sug_CreatePanel />} exact />

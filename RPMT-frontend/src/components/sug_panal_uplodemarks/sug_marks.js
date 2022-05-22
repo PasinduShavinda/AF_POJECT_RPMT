@@ -21,19 +21,19 @@ const Sug_marks= (props) => {
   return (
     <div >
       <tr>
-       <td width={"200px"}>{Grp_Leader}</td>
-       <td width={"200px"} >{Grp_member2}</td>
-       <td width={"200px"}>{Grp_member3}</td>
-       <td width={"200px"}>{Grp_member4}</td>
-       <td width={"200px"}>{Grp_ID}</td>
-       <td width={"200px"}>{Panel}</td>
-       <td width={"200px"}>  
+       <td width={"150px"}>{Grp_Leader}</td>
+       <td width={"150px"} >{Grp_member2}</td>
+       <td width={"150px"}>{Grp_member3}</td>
+       <td width={"150px"}>{Grp_member4}</td>
+       <td width={"150px"}>{Grp_ID}</td>
+       <td width={"150px"}>{Panel}</td>
+       <td width={"150px"}>  
 
        <Button LinkComponent={Link} to={`/All_groups_marks/${_id}`} sx={{ mt: "auto" }}> add marks </Button>
        
        
        </td>
-       <td width={"200px"}>{Finalmarks}</td>
+       <td width={"150px"}>{Finalmarks}</td>
        
       
        </tr>

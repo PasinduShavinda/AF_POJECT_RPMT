@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
+
 const Sug_thesisdoc_feedback= (props) => {
   const history = useNavigate();
     const { _id,  ResThesisFileGroupId ,ResThesisFileSupervisor,Feedback,EvaluvatedDate}=props.Feedbacks;
@@ -26,9 +27,10 @@ const Sug_thesisdoc_feedback= (props) => {
        <td width={"200px"}>{Feedback}</td>
        <td width={"200px"}>{EvaluvatedDate}</td>
        <td width={"200px"}> 
-        <button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}> delete</button>
-       <Button LinkComponent={Link} to={`/AllThesisFeedback/${_id}`} sx={{ mt: "auto" }}> update </Button></td>
-      
+   
+       <a><button class="btn btn-danger" onClick={deleteHandler} ><i class="fa fa-trash-o" aria-hidden="true"></i>delete</button></a> 
+        &nbsp;
+        <a href={`/AllThesisFeedback/${_id}`}><button class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> update </button></a> </td>
        </tr>
  
         

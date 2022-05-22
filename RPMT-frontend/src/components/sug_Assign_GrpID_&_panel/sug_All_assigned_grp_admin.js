@@ -18,14 +18,14 @@ const Sug_AllGroups_admin = () => {
   return (
     <div id="sug_table"> <ul>
       <h1> Assigne Group Number And Panal</h1>
-     <td width={"200px"}>Grpoup Leader</td>
-     <td width={"200px"}>Grpoup member2</td>
-     <td width={"200px"}>Grpoup member3</td>
-     <td width={"200px"}>Grpoup member4</td>
+     <th width={"100px"}>Grpoup Leader</th>
+     <th width={"100px"}>Grpoup member2</th>
+     <th width={"100px"}>Grpoup member3</th>
+     <th width={"100px"}>Grpoup member4</th>
     
-     <td width={"200px"}>Action</td>
-     <td width={"200px"}>Group ID</td>
-     <td width={"200px"}>Panel</td>
+     <th width={"100px"}>Action</th>
+     <th width={"100px"}>Group ID</th>
+     <th width={"100px"}>Panel</th>
      <table>
       {Groups && Groups.map((Groups, i)=>(
         

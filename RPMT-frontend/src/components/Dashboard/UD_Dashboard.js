@@ -7,6 +7,7 @@ import UD_HomeSupervisor from "../UD_Supervisor/UD_HomeSupervisor";
 import Shv_admin_notice_home from "../shv_submission_notices/shv_admin_notice_home";
 import Shv_admin_marking_home from "../shv_rs_admin_marking_scheme/shv_admin_marking_home";
 import Shv_admin_template_home from "../shv_rs_admin_templates/shv_admin_template_home";
+import Sug_Admin_manage_panel from "../sug_admin_manage_panel/sug_admin_manage_panel";
 
 // useHistory  = useNavigate,
 //Redirect = Navigate,NavLink
@@ -88,6 +89,14 @@ const UD_Dashboard = ({ authorized }) => {
             >
               Templates Submission
             </li>
+            <li
+              onClick={() => {
+                setComponent("adminPanelManagement");
+              }}
+              className="UDDlink"
+              id={component === "adminPanelManagement" ? "active" : ""}
+            >  Panel Management
+            </li>
 
           </ul>
         </div><br/><br/>
@@ -102,6 +111,7 @@ const UD_Dashboard = ({ authorized }) => {
         {component === "adminNotice" && <Shv_admin_notice_home />}
         {component === "adminMarking" && <Shv_admin_marking_home />}
         {component === "adminTemplates" && <Shv_admin_template_home />}
+        {component === "adminPanelManagement" && <Sug_Admin_manage_panel />}
       </div>
     </div>
   );

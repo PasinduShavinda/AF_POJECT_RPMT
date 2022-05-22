@@ -119,17 +119,17 @@ button {
 	margin-top: 30px !important;
 }
 
-.full {
+/* .full {
 	
 	float: left;
 	margin: 0;
 	padding: 0;
 	position: fixed;
 	top: 0;
-	left: 100px;
-	width: 100px;
+	left: 50px;
+	width: 50px;
 	
-}
+} */
 
 .main_heading {
 	text-align: center;
