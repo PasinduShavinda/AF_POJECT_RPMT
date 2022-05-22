@@ -28,7 +28,7 @@ const Header = () => {
                     <div class="limit-box">
                       <nav class="main-menu">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-success">Login</button>
+                        <button type="button" class="btn btn-primary">Login</button>
                         <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
@@ -38,7 +38,9 @@ const Header = () => {
                             <a class="dropdown-item" href="penalmemberlogin">Panel Member</a>
                             <a class="dropdown-item" href="login">Admin</a>
                         </div>
-                        </div>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <a href = "/"><button type="button" class="btn btn-primary">Logout</button></a>
 
                       </nav>
                     </div>
