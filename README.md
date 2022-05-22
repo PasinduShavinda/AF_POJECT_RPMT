@@ -11,5 +11,8 @@
 3. Wijeshinghe R.M.U.S --->	IT20015224	-->	User Login and Resgistration, Admin User Management(CRUD)     
 4. Piusha P.G.T ----------> IT20129644	--> Chat application, Create Student Groups(CRUD), Request supervisor, Accept Topics	    
 
-
+* User Credentials
+1. Admin -> 
+       * Username - admin@gmail.com 
+       * Passwoard - admin123
 
