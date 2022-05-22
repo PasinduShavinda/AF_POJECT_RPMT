@@ -11,10 +11,10 @@ const Sug_Admin_manage_panel = () => {
     <div>
             {component === "panel" && 
       <PanelMain onClick={setComponent} />}
-      {component === "createPanel" && 
+      {/* {component === "createPanel" && 
       <Sug_CreatePanel onClick={setComponent} />}
        {component === "Assign_Panel_&_GroupId" && 
-      <Sug_AllGroups_admin onClick={setComponent} />}
+      <Sug_AllGroups_admin onClick={setComponent} />} */}
 
       
     </div>
@@ -28,18 +28,19 @@ const PanelMain = (props) => {
         <div className="UD_supplierbutton">
           <div
             className="UD_addSupplier"
-            onClick={() => props.onClick("createPanel")}
+            
           ></div>
-          <h5> createPanel</h5>
+          <a href="/createPanel" color="black"><h5 > createPanel</h5></a>
+          
         </div>
 
        
         <div className="UD_addorderbutton">
           <div
             className="UD_addOrder"
-            onClick={() => props.onClick("Assign_Panel_&_GroupId")}
+            
           ></div>
-          <h5>Assign a Panel & Id for Groups</h5>
+         <a href="/All_groups_admin"><h5 color="black">Assign panel and groupId for groups</h5></a> 
         </div>
   
 
