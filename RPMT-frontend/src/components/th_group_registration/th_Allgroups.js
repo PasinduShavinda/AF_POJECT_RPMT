@@ -18,13 +18,13 @@ const Th_AllGroups = () => {
   return (
     <div id="sug_table"> <ul>
       <h1>Groups Details</h1>
-     <td width={"200px"}>Grpoup Leader</td>
-     <td width={"200px"}>Grpoup member2</td>
-     <td width={"200px"}>Grpoup member3</td>
-     <td width={"200px"}>Grpoup member4</td>
-     <td width={"200px"}>Group ID</td>
-     <td width={"200px"}>Panel</td>
-     <td width={"200px"}>Final marks</td>
+     <th width={"200px"}>Grpoup Leader</th>
+     <th width={"200px"}>Grpoup member2</th>
+     <th width={"200px"}>Grpoup member3</th>
+     <th width={"200px"}>Grpoup member4</th>
+     <th width={"200px"}>Group ID</th>
+     <th width={"200px"}>Panel</th>
+     <th width={"200px"}>Final marks</th>
      <table>
       {Groups && Groups.map((Groups, i)=>(
         

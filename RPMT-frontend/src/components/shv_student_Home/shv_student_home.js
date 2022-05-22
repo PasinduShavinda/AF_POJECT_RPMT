@@ -51,10 +51,44 @@ const StudentHomePage_shv = () => {
         <a href="/RsTopicsNoticesStudent"><img src="https://www.babulhassen.com/Files/Image/notice.gif" class="img-responsive"/></a>
         <center><p><b> Notices</b></p></center>
       </div>
+
+      
+
+
     </div>
   </div>
   
+  <section class="container py-5 h-100" >
+  <h1 class="d-flex justify-content-center"><b>Feedbacks and marks </b></h1>
+<div class="container px-4 py-5 h-100">
+        <div class="row gx-8">
+           
+          <div class="col" >
+            <a href="/student_AllTopicdocfeedbacks" style={{textDecoration:'none' ,color:'white'}}> 
+                <div class="p-5 border" id="feedback"><b>Topic document Feedback</b>
+                
+                </div>
+            </a>
+          </div>
 
+          <div class="col" >
+            <a href="/student_resdoc_feedbackALL" style={{textDecoration:'none' ,color:'white'}}> 
+                <div class="p-5 border" id="feedback"><b>Research Doc Feedback</b></div>
+            </a>
+          </div>
+          <div class="col" >
+            <a href="/student_AllThesisdocfeedbacks" style={{textDecoration:'none' ,color:'white'}}> 
+                <div class="p-5 border" id="feedback"><b>Thesis document Feedback</b></div>
+            </a>
+          </div>
+          <div class="col" >
+            <a href="/All_groups" style={{textDecoration:'none' ,color:'white'}}> 
+                <div class="p-5 border" id="feedback"><b>Panle and Group Id Publish</b></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      </section>
     </div>
   );
 };

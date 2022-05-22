@@ -53,7 +53,7 @@ import Sug_thesis_updatefeedback from "./components/sug_thesisdoc_feedback.js/su
 import Th_Group_Reg from "./components/th_group_registration/th_group_registration";
 import Th_AllGroups from "./components/th_group_registration/th_Allgroups";
 import Sug_AllGroups_admin from "./components/sug_Assign_GrpID_&_panel/sug_All_assigned_grp_admin";
-import Sug_Assign_GrpIDPanel from "./components/sug_Assign_GrpID_&_panel/sug_Assign_GrpID_&_panel";
+
 import Sug_GroupID_and_Panel_Assign from "./components/sug_Assign_GrpID_&_panel/sug_Assign_GrpID_&_panel";
 import Sug_AllGroups_Mark from "./components/sug_panal_uplodemarks/sug_AllGroupsmarks";
 import Sug_FinalMarks_Assign from "./components/sug_panal_uplodemarks/sug_GiveMarks";
@@ -79,6 +79,10 @@ import UD_Dashboard from "./components/Dashboard/UD_Dashboard";
 import Shv_admin_notice_home from "./components/shv_submission_notices/shv_admin_notice_home";
 import Footer from "./components/shv_Footer/shv_footer";
 import Header from "./components/shv_Header/shv_header";
+import Sug_student_AllTopicdocfeedbacks from "./components/sug_topicdoc_feedback/sug_student_topicdoc_feedbackALL";
+import Sug_student_AllThesisdocfeedbacks from "./components/sug_thesisdoc_feedback.js/sug_student_thesis_doc_feedbackALL";
+
+import Sug_student_resdoc_feedbackALL from "./components/sug_resdoc_feedback/sug_student_resdoc_feedbackALL";
 
 function App() {
   return (
@@ -132,6 +136,9 @@ function App() {
           <Route path="/AllResDocFeedback" element={<Sug_AllResdocfeedbacks />}exact/>
           <Route path="/AllResDocFeedback/:id" element={<Sug_Resdoc_updatefeedback />} exact/>
 
+          <Route path="/student_AllTopicdocfeedbacks" element={<Sug_student_AllTopicdocfeedbacks />} exact/>
+          <Route path="/student_AllThesisdocfeedbacks" element={<Sug_student_AllThesisdocfeedbacks />} exact/>
+          <Route path="/student_resdoc_feedbackALL" element={<Sug_student_resdoc_feedbackALL/>} exact/>
           <Route
             path="/AllTopicFilesList/:id"
             element={<Sug_Topicdoc_addfeedback />}
