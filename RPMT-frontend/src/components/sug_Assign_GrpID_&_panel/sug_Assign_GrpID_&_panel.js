@@ -53,88 +53,101 @@ const Sug_GroupID_and_Panel_Assign = () => {
     
 
   return (
-   <div id="sug_createPanel">
- {inputs && (<form  onSubmit={handleSubmit} >
+     
+<div>
+      <div>
+ 
+   <div>
 
-<h1>Assign a Group Number and Panal</h1>
-<div className='contain'>
+      {inputs && (
+ <form onSubmit={handleSubmit} >
 
-      
-<label >Group_Leader</label>      
-<input type="text"
+<div class="container">
+<div class="row">
+<div class="col-md-3 sug3">
+<div class="contact-info">
+<h2> Assign Group ID and Panel for Groups</h2>
+
+<img src="../../assets/images/groupicon.png" width="200" height="200"/>
+
+</div>
+</div>
+
+
+<div class="col-md-9 sug9">
+<div class="contact-form">
+
+<div className="form-group"  marginBottom='15px'>
+<label>Group_Leader</label>
+<input type="text" 
+className="form-control"
  name="Grp_Leader" 
- placeholder="Grp_Leader"
- value={inputs.Grp_Leader}
- onChange={handleChange}
- />
-
-
+placeholder="Grp_Leader"
+value={inputs.Grp_Leader}
+onChange={handleChange} 
+    />
+     
 </div>
 
-<div className='contain'>
+ 
 
-      
-<label >Grp_member2</label>      
+<div className="form-group"  marginBottom='15px'>     
+ <label >Grp_member2</label> 
 <input type="text"
- name="Grp_member2" 
+name="Grp_member2" 
+className="form-control"
  placeholder="Grp_member2"
- value={inputs.Grp_member2}
- onChange={handleChange}
+  value={inputs.Grp_member2}
+  onChange={handleChange}
  />
 
-
 </div>
-<div className='contain'>
 
-      
-<label >Grp_member3</label>      
-<input type="text"
+
+<div className="form-group"  marginBottom='15px'>  
+ <label >Grp_member3</label>   
+  <input type="text"
  name="Grp_member3" 
+ className="form-control"
  placeholder="Grp_member3"
  value={inputs.Grp_member3}
  onChange={handleChange}
  />
-
-
 </div>
-<div className='contain'>
 
-      
+
+<div className="form-group"  marginBottom='15px'>     
 <label >Grp_member4</label>      
 <input type="text"
  name="Grp_member4" 
+ className="form-control"
  placeholder="Grp_member4"
  value={inputs.Grp_member4}
  onChange={handleChange}
  />
-
-
 </div>
-<div className='contain'>
 
-      
-<label >Group_ID</label>      
+<div className="form-group"  marginBottom='15px'>    
+ <label >Group_ID</label>  
 <input type="text"
  name="Grp_ID" 
+ className="form-control"
  placeholder="Grp_ID"
  value={inputs.Grp_ID}
  onChange={handleChange}
  />
-
-
 </div>
-<div className='contain'>
 
-      
+
+<div className="form-group"  marginBottom='15px'> 
 <label >Panel</label>      
 <input type="text"
+ className="form-control"
  name="Panel" 
- placeholder="Panel"
+placeholder="Panel"
  value={inputs.Panel}
  onChange={handleChange}
- />
-
-
+ />     
 </div>
 
 
@@ -142,16 +155,28 @@ const Sug_GroupID_and_Panel_Assign = () => {
 
 
 
+</div>
+
+<button  class="btn btn-dark btn-lg" type="submit" marginBottom='15px'>
+
+&nbsp;
+Save</button>
 
 
 
 
-     <br/>
-     <button type="submit">submit</button>
-     </form>)}
-     </div>
+</div>
+</div>
+<br/>
+<a href='All_groups_admin'><button  className='btn btn-outline-dark btn-lg'>privious</button></a>
+</div>
 
-  
+</form>
+ )}
+
+</div>
+</div>
+</div>
   )
 }
 

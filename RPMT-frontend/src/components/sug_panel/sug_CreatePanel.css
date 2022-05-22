@@ -2,24 +2,26 @@
     width: 100%;
     max-width: 32rem; /* Or whatever width you prefer */
     margin: auto;
+    background-color:rgb(189, 231, 217);
   }
  
  
    
-    #sug_createPanel button {
-    width: 100%;
+     #sug_createPanel button {
+    width: 20%;
     padding: 10px 0;
     margin: 10px auto;
     border-radius: 5px; 
     border: none;
-    background: #77beeb; 
+    background: #38c8a8; 
     font-size: 14px;
     font-weight: 600;
     color: rgb(10, 11, 12);
+   
     }
     #sug_createPanel button:hover {
-    background: #054e70;
-    }
+    background: #315e5b5d;
+    } 
    
     #sug_createPanel label {
         padding: 0 20px;
