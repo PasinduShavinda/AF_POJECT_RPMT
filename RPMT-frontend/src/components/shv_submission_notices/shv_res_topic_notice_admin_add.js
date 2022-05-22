@@ -10,6 +10,7 @@ import {
   import axios from "axios";
   import React, { useState } from "react";
   import { useNavigate } from "react-router-dom";
+  import swal from 'sweetalert';
   
   const Shv_res_topic_notice_admin_add = () => {
     const history = useNavigate();
@@ -29,6 +30,10 @@ import {
     };
   
     const sendRequest = async () => {
+
+      if(inputs.ResTopicNoticeHeader.length == 0 || inputs.ResTopicNoticeLineOne.length == 0 || inputs.ResTopicNoticeLineThree.length == 0 || inputs.ResTopicNoticeDueDate.length == 0 ){
+        swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
+      }else{
       await axios
         .post("http://localhost:5000/resTopicsNotice", {
           ResTopicNoticeHeader: String(inputs.ResTopicNoticeHeader),
@@ -38,13 +43,16 @@ import {
           ResTopicNoticeDueDate: String(inputs.ResTopicNoticeDueDate)
   
         })
-        .then((res) => res.data);
+        .then((res) => res.data)
+        .then(() => history("/RsTopicsNotices"));
+        swal("Successful!", "Notice Successfully Published !!", "success");
+      }
     };
   
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log(inputs);
-      sendRequest().then(() => history("/RsTopicsNotices"));
+      sendRequest();
     };
   
     return (

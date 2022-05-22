@@ -2,9 +2,13 @@ import React, { useState, useRef } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import Dropzone from 'react-dropzone';
 import axios from 'axios';
+import swal from 'sweetalert';
+import { useNavigate } from "react-router-dom";
+
 const API_URL = 'http://localhost:5000';
 
 const MarkingSchemeHome = (props) => {
+  const history = useNavigate();
   const [file, setFile] = useState(null); // state for storing actual image
   const [previewSrc, setPreviewSrc] = useState(''); // state for storing previewImage
   const [state, setState] = useState({
@@ -44,27 +48,28 @@ const MarkingSchemeHome = (props) => {
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
-  
     try {
       const { markingscheme } = state;
-      if (markingscheme.trim() !== '' )  {
+      if (markingscheme.trim() == '' )  {
+        swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
+      }else{
         if (file) {
           const formData = new FormData();
           formData.append('file', file);
           formData.append('markingscheme', markingscheme);
   
-          setErrorMsg('');
           await axios.post(`${API_URL}/Mschemeupload`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-          });
-        } else {
-          setErrorMsg('Please select a file to add.');
+          })
+          .then(() => history("/MSchemeList"));
+          swal("Successful!", "Marking Scheme Successfully Uploded !!", "success");
+        }else{
+          swal("Submission Fail !", "You Must Select a File ! Please Upload a file And Try Again !", "error");
         }
-      } else {
-        setErrorMsg('Please enter all the field values.');
-      }
+      } 
+      
     } catch (error) {
       error.response && setErrorMsg(error.response.data);
     }

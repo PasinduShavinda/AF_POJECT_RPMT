@@ -2,12 +2,13 @@ import React, { useState, useRef } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import Dropzone from 'react-dropzone';
 import axios from 'axios';
-
-
+import swal from 'sweetalert';
+import { useNavigate } from "react-router-dom";
 
 const API_URL = 'http://localhost:5000';
 
 const TopicHome = (props) => {
+  const history = useNavigate();
   const [file, setFile] = useState(null); // state for storing actual image
   const [previewSrc, setPreviewSrc] = useState(''); // state for storing previewImage
   const [state, setState] = useState({
@@ -49,31 +50,38 @@ const TopicHome = (props) => {
   };
 
   const handleOnSubmit = async (event) => {
+
+    const name = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
     event.preventDefault();
   
     try {
       const { ResTopicFileGroupId, ResTopicFileSupervisor, ResTopicFileTopic, ResTopicFilePanel } = state;
-      if (ResTopicFileGroupId.trim() !== '' && ResTopicFileSupervisor.trim() !== ''  && ResTopicFileTopic.trim() !== ''  && ResTopicFilePanel.trim() !== '') {
+      const formData = new FormData();
+      if(ResTopicFileGroupId.trim() == '' || ResTopicFileSupervisor.trim() == '' || ResTopicFileTopic.trim() == '' || ResTopicFilePanel.trim() == '' ){
+        swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
+      }else if((!name.test(String(ResTopicFileSupervisor)))){
+        swal("Invalid Supervisor Name !", "Name cannot contain numbers ! Please enter valid name !", "error");
+      }else{
         if (file) {
-          const formData = new FormData();
+
           formData.append('file', file);
           formData.append('ResTopicFileGroupId', ResTopicFileGroupId);
           formData.append('ResTopicFileSupervisor', ResTopicFileSupervisor);
           formData.append('ResTopicFileTopic', ResTopicFileTopic);
           formData.append('ResTopicFilePanel', ResTopicFilePanel);
-  
-          setErrorMsg('');
-          await axios.post(`${API_URL}/TopicUpload`, formData, {
+          
+            await axios.post(`${API_URL}/TopicUpload`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-          });
-        } else {
-          setErrorMsg('Please select a file to add.');
+          })
+          .then(() => history("/RsTopiFileList"));
+          swal("Successful!", "Topic details Document Successfully Submitted !!", "success");
+        }else {
+          swal("Submission Fail !", "You Must Select a File ! Please Upload a file And Try Again !", "error");
         }
-      } else {
-        setErrorMsg('Please enter all the field values.');
-      }
+      } 
+      
     } catch (error) {
       error.response && setErrorMsg(error.response.data);
     }

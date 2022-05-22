@@ -9,6 +9,7 @@ import {
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import swal from 'sweetalert';
 
 const Shv_rs_topic_details = () => {
 
@@ -27,6 +28,14 @@ const Shv_rs_topic_details = () => {
   }, [id]);
 
   const sendRequest = async () => {
+
+    const name = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+
+    if(inputs.ResTopicgroupId.length == 0 || inputs.ResTopicsupervisor.length == 0 || inputs.ResTopicresearchArea.length == 0 || inputs.ResTopicResearchTopic.length == 0 ){
+      swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
+    }else if((!name.test(String(inputs.ResTopicsupervisor)))){
+      swal("Invalid Supervisor Name !", "Name cannot contain numbers ! Please enter valid name !", "error");
+    }else{
     await axios
       .put(`http://localhost:5000/resTopics/${id}`, {
         ResTopicgroupId: String(inputs.ResTopicgroupId),
@@ -35,11 +44,17 @@ const Shv_rs_topic_details = () => {
         ResTopicResearchTopic: String(inputs.ResTopicResearchTopic),
         ResTopicdateEntered : String(inputs.ResTopicdateEntered),
       })
-      .then((res) => res.data);
+      .then((res) => res.data).then(() => history("/RsTopics"));
+      
+      swal("Successful!", "Research Topic Successfully Updated !!", "success");
+    }
   };
+
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendRequest().then(() => history("/RsTopics"));
+    sendRequest();
   };
   const handleChange = (e) => {
     setInputs((prevState) => ({

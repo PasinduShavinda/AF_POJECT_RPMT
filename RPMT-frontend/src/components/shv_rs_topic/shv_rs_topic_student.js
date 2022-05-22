@@ -7,6 +7,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./styles/shv_rs_topic.css";
 import { withStyles, makeStyles } from '@material-ui/core/styles';
+import swal from 'sweetalert';
 
 const Shv_rs_topic = (props) => {
 
@@ -14,14 +15,33 @@ const Shv_rs_topic = (props) => {
   
   const { _id, ResTopicgroupId, ResTopicsupervisor, ResTopicresearchArea, ResTopicResearchTopic, createdAt } = props.resTopic;
   
-  const deleteHandler = async () => {
   
-    await axios
+  const deleteHandler = async () => {
+    
+    swal({
+      title: "Are you sure?",
+      text: "Once Deleted, You Will Not Be Able To Recover This Research Topic Details !",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+       axios
       .delete(`http://localhost:5000/resTopics/${_id}`)
       .then((res) => res.data)
       .then(() => history("/"))
       .then(() => history("/RsTopics"));
+
+      swal("Done! Research Topic details has been deleted!", {
+        icon: "success",
+      });
+    } else {
+      swal("Not deleted ! Research Topic details are safe !");
+    }
+  });
   };
+
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
