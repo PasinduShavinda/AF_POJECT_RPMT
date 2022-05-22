@@ -46,8 +46,8 @@ const TemplateList = () => {
         <thead>
           <tr>
             <th>Description</th>
-            <th>Download Template</th>
             <th>Uploaded Date</th>
+            <th>Download Template</th> 
           </tr>
         </thead>
         <tbody>
