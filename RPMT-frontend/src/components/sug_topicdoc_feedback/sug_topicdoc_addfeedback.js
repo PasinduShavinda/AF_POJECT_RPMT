@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
 import {Box,Button,FormLabel,TextField,} from "@mui/material";
 import Sug_panelmembers_page from "../sug_panelmembers_page/sug_panelmembers_page"
-
+import swal from 'sweetalert';
 const Sug_Topicdoc_addfeedback = () => {
      
   const [inputs, setInputs] = useState({});
@@ -30,20 +30,25 @@ const Sug_Topicdoc_addfeedback = () => {
         }));
       };
       const sendRequest = async () => {
-        await axios
+        if(inputs.ResTopicFileGroupId.length == 0 || inputs.ResTopicFilePanel.length == 0 || inputs.Feedback.length == 0 ||inputs.EvaluvatedDate.length == 0 ){
+         
+          swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
+  
+        }else{await axios
           .post("http://localhost:5000/topicdoc_feedback2", {
             ResTopicFileGroupId: String(inputs.ResTopicFileGroupId),
             ResTopicFilePanel: String(inputs.ResTopicFilePanel),
             Feedback: String(inputs.Feedback),
             EvaluvatedDate: String(inputs.EvaluvatedDate),
           })
-          .then((res) => res.data);
+          .then((res) => res.data).then(() => history("/AllTopicDocFeedback"))}
+        
       };
     
       const handleSubmit = (e) => {
         e.preventDefault();
         console.log(inputs);
-        sendRequest().then(() => history("/AllTopicDocFeedback"));
+        sendRequest();
       };
     
     

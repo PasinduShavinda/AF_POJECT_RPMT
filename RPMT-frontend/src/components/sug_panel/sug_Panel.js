@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
-
+import swal from 'sweetalert';
 
 const Panel= (props) => {
   const history = useNavigate();
@@ -9,11 +9,32 @@ const Panel= (props) => {
    
  
     const deleteHandler = async () => {
-      await axios
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+        
+         axios
         .delete(`http://localhost:5000/panelcreate/${_id}`)
         .then((res) => res.data)
         .then(() => history("/"))
         .then(() => history("/allPanel"));
+
+          swal("Poof! Panel has been deleted!", {
+            icon: "success",
+
+     
+          });
+        } else {
+          swal("Panel record is safe!");
+        }
+      });
+      
     };
    
  

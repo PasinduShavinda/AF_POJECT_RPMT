@@ -3,6 +3,7 @@ import axios from "axios"
 import { useNavigate ,useParams} from "react-router-dom";
 import { TextField } from '@material-ui/core';
 import Sug_panelmembers_page from "../sug_panelmembers_page/sug_panelmembers_page"
+import swal from 'sweetalert';
 
 const Sug_FinalMarks_Assign = () => {
   const [inputs, setInputs] = useState({});
@@ -29,20 +30,27 @@ const Sug_FinalMarks_Assign = () => {
         }));
       };
       const sendRequest = async () => {
-        await axios
+        if(inputs.Grp_ID.length == 0 || inputs.Panel.length == 0 || inputs.Finalmarks.length == 0 ){
+         
+          swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
+
+        }else{
+          await axios
           .put(`http://localhost:5000/group/${id}`, {
           
             Grp_ID:String(inputs.Grp_ID),
             Panel:String(inputs.Panel),
             Finalmarks:String(inputs.Finalmarks)
           })
-          .then((res) => res.data);
+          .then((res) => res.data).then(() => history("/All_groups_marks"));
+        }
+       
       };
     
       const handleSubmit = (e) => {
         e.preventDefault();
         console.log(inputs);
-        sendRequest().then(() => history("/All_groups_marks"));
+        sendRequest();
       };
    
 

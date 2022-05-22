@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
-
+import swal from 'sweetalert';
 
 
 const Sug_thesisdoc_feedback= (props) => {
@@ -10,11 +10,28 @@ const Sug_thesisdoc_feedback= (props) => {
    
  
     const deleteHandler = async () => {
-      await axios
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+           axios
         .delete(`http://localhost:5000/thesisdoc_feedback2/${_id}`)
         .then((res) => res.data)
         .then(() => history("/"))
         .then(() => history("/AllThesisFeedback"));
+          swal("Poof! feedback has been deleted!", {
+            icon: "success",
+          });
+        } else {
+          swal("Your feedback file is safe!");
+        }
+      });
+     
     };
    
  

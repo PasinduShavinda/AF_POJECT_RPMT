@@ -1,6 +1,7 @@
 import React ,{ useEffect, useState }from 'react'
 import axios from "axios"
 import { useNavigate ,useParams} from "react-router-dom";
+import swal from 'sweetalert';
 
 const Sug_GroupID_and_Panel_Assign = () => {
   const [inputs, setInputs] = useState({});
@@ -27,7 +28,11 @@ const Sug_GroupID_and_Panel_Assign = () => {
         }));
       };
       const sendRequest = async () => {
-        await axios
+        if(inputs.Grp_Leader.length == 0 || inputs.Grp_member2.length == 0 || inputs.Grp_member3.length == 0 ||inputs.Grp_member4.length == 0||inputs.Grp_ID.length == 0 ||inputs.Panel.length == 0 ){
+         
+          swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
+
+        }else{await axios
           .put(`http://localhost:5000/group/${id}`, {
             Grp_Leader: String(inputs.Grp_Leader),
             Grp_member2: String(inputs.Grp_member2),
@@ -36,13 +41,14 @@ const Sug_GroupID_and_Panel_Assign = () => {
             Grp_ID:String(inputs.Grp_ID),
             Panel:String(inputs.Panel)
           })
-          .then((res) => res.data);
+          .then((res) => res.data).then(() => history("/All_groups_admin"));}
+        
       };
     
       const handleSubmit = (e) => {
         e.preventDefault();
         console.log(inputs);
-        sendRequest().then(() => history("/All_groups_admin"));
+        sendRequest();
       };
    
 

@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
-
+import swal from 'sweetalert';
 
 const Sug_resdoc_feedback= (props) => {
   const history = useNavigate();
@@ -9,11 +9,34 @@ const Sug_resdoc_feedback= (props) => {
    
  
     const deleteHandler = async () => {
-      await axios
+    
+        
+
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this feedback!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+          
+           axios
         .delete(`http://localhost:5000/resdoc_feedback2/${_id}`)
         .then((res) => res.data)
         .then(() => history("/"))
         .then(() => history("/AllResDocFeedback"));
+  
+            swal("Poof! feedback has been deleted!", {
+              icon: "success",
+  
+       
+            });
+          } else {
+            swal("feedback record is safe!");
+          }
+        });
     };
    
  
