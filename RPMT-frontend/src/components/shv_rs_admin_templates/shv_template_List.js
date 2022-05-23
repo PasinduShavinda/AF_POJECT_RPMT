@@ -6,6 +6,7 @@ const API_URL = 'http://localhost:5000';
 const TemplateList = () => {
   const [filesList, setFilesList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
+  const [filterText, setFilterText] = useState("");
 
   useEffect(() => {
     const getFilesList = async () => {
@@ -32,16 +33,33 @@ const TemplateList = () => {
       return download(result.data, filename, mimetype);
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        setErrorMsg('Error while downloading Marking Scheme. Try again later');
+        setErrorMsg('Error while downloading Template. Try again later');
       }
     }
   };
 
+    //search..........................
+    const filteredItems = filesList.filter((sup) =>
+    sup.templates.toLocaleLowerCase().includes(filterText),
+      
+    );
+    const filesLists = filterText ? filteredItems : filesList;
   return (
     <div>
     <h1 className="h3 mb-3 font-weight-normal" ><font face = "Comic sans MS" size =""><b>Uploaded Templates</b></font></h1>
     <div className="container">
+    <form action="">
+                  <input
+                    className="float-right"
+                    type="text"
+                    placeholder="Search"
+                    name="search"
+                    onChange={(e) =>
+                      setFilterText(e.target.value.toLocaleLowerCase())
+                    }/>
+      </form><br/>{" "}
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
+      <br/>
       <table className="files-table">
         <thead>
           <tr>
@@ -52,7 +70,7 @@ const TemplateList = () => {
         </thead>
         <tbody>
           {filesList.length > 0 ? (
-            filesList.map(
+            filesLists.map(
               ({ _id, templates, createdAt, file_path, file_mimetype }) => (
                 <tr key={_id}>
                   <td className="file-title">{templates}</td>
@@ -73,7 +91,7 @@ const TemplateList = () => {
           ) : (
             <tr>
               <td colSpan={3} style={{ fontWeight: '300' }}>
-                No Marking Schemes found. Please add some.
+                No templates found. Please add some.
               </td>
             </tr>
           )}

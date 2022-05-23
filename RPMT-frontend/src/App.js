@@ -219,7 +219,7 @@ function App() {
       </main>  
       </div>
     </React.Fragment>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <Footer/>
     </div>
   );

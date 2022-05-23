@@ -71,8 +71,8 @@ const ResDocHome = (props) => {
               'Content-Type': 'multipart/form-data'
             }
           })
-          .then(() => history("/RsTopiFileList"));
-          swal("Successful!", "Topic details Document Successfully Submitted !!", "success");
+          .then(() => history("/RsDocFilesList"));
+          swal("Successful!", "Research Document Successfully Submitted !!", "success");
         }else {
           swal("Submission Fail !", "You Must Select a File ! Please Upload a file And Try Again !", "error");
         }
@@ -89,6 +89,7 @@ const ResDocHome = (props) => {
       <div className='container'>
       <br/>
     <center><h2>Research Document Submission</h2></center><br/><br/>
+    
       <Form className="search-form" onSubmit={handleOnSubmit}>
         {errorMsg && <p className="errorMsg">{errorMsg}</p>}
         <Row>

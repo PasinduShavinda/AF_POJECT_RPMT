@@ -6,6 +6,7 @@ const API_URL = 'http://localhost:5000';
 const ResDocFilesList = () => {
   const [filesList, setFilesList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
+  const [filterText, setFilterText] = useState("");
 
   useEffect(() => {
     const getFilesList = async () => {
@@ -37,13 +38,33 @@ const ResDocFilesList = () => {
     }
   };
 
+   //search..........................
+   const filteredItems = filesList.filter((sup) =>
+   sup.ResDocFileGroupId.toLocaleLowerCase().includes(filterText),
+   
+    );
+    const filesLists = filterText ? filteredItems : filesList;
+
   return (
     <div>
     &nbsp;<a href = "/stdHome"><button className="btn btn-success">Back</button></a>
     <div className="container">
        <br/>
     <center><h2>Research Documents</h2></center><br/><br/>
+      
+    <form action="">
+                  <input
+                    className="float-right"
+                    type="text"
+                    placeholder="Search"
+                    name="search"
+                    onChange={(e) =>
+                      setFilterText(e.target.value.toLocaleLowerCase())
+                    }/>
+                    </form><br/>{" "}
+      
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
+      <br/>
       <table className="files-table">
         <thead>
           <tr>
@@ -56,7 +77,7 @@ const ResDocFilesList = () => {
         </thead>
         <tbody>
           {filesList.length > 0 ? (
-            filesList.map(
+            filesLists.map(
               ({ _id, ResDocFileGroupId, ResDocFileSupervisor, ResDocFileTopic, createdAt, file_path, file_mimetype }) => (
                 <tr key={_id}>
                   <td className="file-title">{ResDocFileGroupId}</td>
@@ -79,7 +100,7 @@ const ResDocFilesList = () => {
           ) : (
             <tr>
               <td colSpan={3} style={{ fontWeight: '300' }}>
-                No files found. Please add some.
+                No Research documents found. Please add some.
               </td>
             </tr>
           )}

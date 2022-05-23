@@ -6,6 +6,7 @@ const API_URL = 'http://localhost:5000';
 const MarkingSchemeList = () => {
   const [filesList, setFilesList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
+  const [filterText, setFilterText] = useState("");
 
   useEffect(() => {
     const getFilesList = async () => {
@@ -37,11 +38,30 @@ const MarkingSchemeList = () => {
     }
   };
 
+      //search..........................
+      const filteredItems = filesList.filter((sup) =>
+      sup.markingscheme.toLocaleLowerCase().includes(filterText),
+      
+    );
+    const filesLists = filterText ? filteredItems : filesList;
+
   return (
     <div>
-    <h1 className="h3 mb-3 font-weight-normal" ><font face = "Comic sans MS" size =""><b>Uploaded Marking Schemes</b></font></h1>
+    <h1 className="h3 mb-3 font-weight-normal" ><font face = "Comic sans MS" size =""><b>Uploaded Marking Schemes</b></font></h1><br/>
     <div className="container">
+
+    <form action="">
+                  <input
+                    className="float-right"
+                    type="text"
+                    placeholder="Search"
+                    name="search"
+                    onChange={(e) =>
+                      setFilterText(e.target.value.toLocaleLowerCase())
+                    }/>
+                    </form><br/>{" "}
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
+      <br/>
       <table className="files-table">
         <thead>
           <tr>
@@ -52,7 +72,7 @@ const MarkingSchemeList = () => {
         </thead>
         <tbody>
           {filesList.length > 0 ? (
-            filesList.map(
+            filesLists.map(
               ({ _id, markingscheme, createdAt, file_path, file_mimetype }) => (
                 <tr key={_id}>
                   <td className="file-title">{markingscheme}</td>

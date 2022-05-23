@@ -6,6 +6,7 @@ const API_URL = 'http://localhost:5000';
 const ThesisDocFilesList = () => {
   const [filesList, setFilesList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
+  const [filterText, setFilterText] = useState("");
 
   useEffect(() => {
     const getFilesList = async () => {
@@ -37,13 +38,31 @@ const ThesisDocFilesList = () => {
     }
   };
 
+      //search..........................
+      const filteredItems = filesList.filter((sup) =>
+      sup.ResThesisFileGroupId.toLocaleLowerCase().includes(filterText),
+      
+    );
+    const filesLists = filterText ? filteredItems : filesList;
+
   return (
     <div>
     &nbsp;<a href = "/stdHome"><button className="btn btn-success">Back</button></a>
     <div className="container">
        <br/>
         <center><h2>Thesis Documents</h2></center><br/><br/>
+        <form action="">
+                  <input
+                    className="float-right"
+                    type="text"
+                    placeholder="Search"
+                    name="search"
+                    onChange={(e) =>
+                      setFilterText(e.target.value.toLocaleLowerCase())
+                    }/>
+                    </form><br/>{" "}
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
+      <br/>
       <table className="files-table">
         <thead>
           <tr>
@@ -56,7 +75,7 @@ const ThesisDocFilesList = () => {
         </thead>
         <tbody>
           {filesList.length > 0 ? (
-            filesList.map(
+            filesLists.map(
               ({ _id, ResThesisFileGroupId, ResThesisFileSupervisor, ResThesisFileTopic, createdAt, file_path, file_mimetype }) => (
                 <tr key={_id}>
                   <td className="file-title">{ResThesisFileGroupId}</td>

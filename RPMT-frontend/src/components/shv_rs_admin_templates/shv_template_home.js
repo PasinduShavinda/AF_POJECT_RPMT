@@ -66,7 +66,7 @@ const TemplateHome = (props) => {
             }
           })
           .then(() => history("/TemplateList"));
-          swal("Successful!", "Thesis Document Successfully Submitted !!", "success");
+          swal("Successful!", "Template Successfully Submitted !!", "success");
         }else {
           swal("Submission Fail !", "You Must Select a File ! Please Upload a file And Try Again !", "error");
         }
