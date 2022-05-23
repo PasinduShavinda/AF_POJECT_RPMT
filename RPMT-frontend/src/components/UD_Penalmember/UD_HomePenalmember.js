@@ -40,13 +40,13 @@ const PenalmemberMain = (props) => {
           <h5> Penalmember Deatials</h5>
         </div>
 
-        <div className="UD_addorderbutton">
+        {/* <div className="UD_addorderbutton">
           <div
             className="UD_addOrder"
-            onClick={() => props.onClick("manageorder")}
+            onClick={() => props.onClick("penalmemberReport")}
           ></div>
-          <h5>Add Order Deatials</h5>
-        </div>
+          <h5>Generate PenalmemberReport</h5>
+        </div> */}
 
         <div className="UD_supplierreportbutton">
           <div
