@@ -41,18 +41,18 @@ const SupervisorMain = (props) => {
         <div className="UD_addorderbutton">
           <div
             className="UD_addOrder"
-            onClick={() => props.onClick("manageorder")}
+            onClick={() => props.onClick("supervisorReport")}
           ></div>
-          <h5>Add Order Deatials</h5>
+          <h5>Generate SupervisorReport</h5>
         </div>
 
-        <div className="UD_supplierreportbutton">
+        {/* <div className="UD_supplierreportbutton">
           <div
             className="UD_supplierreport"
             onClick={() => props.onClick("supervisorReport")}
           ></div>
           <h5>Generate SupervisorReport</h5>
-        </div>
+        </div> */}
       </div>
     </div>
   );
