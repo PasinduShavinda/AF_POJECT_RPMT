@@ -35,7 +35,7 @@ const UD_PenalSignup = () => {
       .then((res) => {
         if (res.data.message === "success") {
           // var currentUser = res.data.data;
-          // localStorage.setItem("user-info-customer", currentUser);
+          // localStorage.setItem("user-info-customer",currentUser);
           navigate("/penalmemberlogin");
         } else {
           swal("Sorry", "Registration Failed", "error");
