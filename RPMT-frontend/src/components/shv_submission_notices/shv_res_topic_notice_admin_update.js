@@ -9,7 +9,8 @@ import {
   import axios from "axios";
   import React, { useEffect, useState } from "react";
   import { useNavigate, useParams } from "react-router-dom";
-  
+  import swal from 'sweetalert';
+
   const Shv_res_topic_notice_admin_update = () => {
   
     const [inputs, setInputs] = useState();
@@ -35,11 +36,14 @@ import {
           ResTopicNoticeLineThree: String(inputs.ResTopicNoticeLineThree),
           ResTopicNoticeDueDate : String(inputs.ResTopicNoticeDueDate),
         })
-        .then((res) => res.data);
-    };
+        .then((res) => res.data).then(() => history("/RsTopicsNotices"));
+        swal("Successful!", "Notice Successfully Updated !!", "success");
+      };
+
+    
     const handleSubmit = (e) => {
       e.preventDefault();
-      sendRequest().then(() => history("/RsTopicsNotices"));
+      sendRequest();
     };
     const handleChange = (e) => {
       setInputs((prevState) => ({

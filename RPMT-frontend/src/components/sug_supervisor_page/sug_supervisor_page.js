@@ -24,6 +24,7 @@ const Sug_supervioser_page = () => {
     <a href=""><span>Chat with group</span></a> 
     <a href="/ResDocfileList_givefeedback"><span>  Evaluvate ReserchDoc</span></a>
     <a href="/ThesisFilesList_givefeedback"><span> Evaluvate Thesis </span></a>
+    <a href="/MSchemeList"><span> Marking Schemes </span></a>
    
   </div>
   
