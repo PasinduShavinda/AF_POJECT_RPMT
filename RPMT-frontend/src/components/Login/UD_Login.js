@@ -7,8 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
 // useHistory  = useNavigate,
-//Redirect = Navigate,NavLink
-// import { useNavigate } from "react-router-dom";
+//Redirect = Navigate
 // const navigate = useNavigate();
 // navigate("/home");
 const UD_Login = () => {
