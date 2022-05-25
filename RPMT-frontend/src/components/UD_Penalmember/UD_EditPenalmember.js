@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./UD_EditPenalmember.css";
 import swal from "sweetalert";
 import axios from "axios";
+import validator from "validator"; //validation email
 
 const UD_EditPenalmember = ({ onClick, id, formData }) => {
   const [firstName, setFirstName] = useState(formData.firstName);
@@ -11,6 +12,8 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
   const [phoneNumber, setPhoneNumber] = useState(formData.phoneNumber);
   const [email, setEmail] = useState(formData.email);
   const [password, setPassword] = useState(formData.password);
+
+  const valid = validator.isEmail(email); //validation email
 
   const EditPenalmember = () => {
     const penalmember = {
@@ -22,6 +25,16 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
       email: email,
       password: password,
     };
+
+    if (phoneNumber.length < 10 || phoneNumber.length > 10 || phoneNumber < 0) {
+      swal("Error", "Invalid Phone Number", "error"); //validation PhoneNumber
+      return;
+    }
+
+    if (!valid) {
+      swal("Error", "Invalid Email", "error"); //validation email
+      return;
+    }
 
     axios
       .post(`http://localhost:5000/penal/penalmemberregister${id}`, penalmember)
