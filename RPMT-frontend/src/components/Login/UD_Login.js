@@ -34,7 +34,7 @@ const UD_Login = () => {
             navigate("/dashboard");
           } else {
             localStorage.setItem("user-info-customer", currentUser);
-            // history.push("/customer", { currentUser });
+            // history.push("/stdHome", { currentUser });
             navigate("/stdHome", { currentUser });
           }
         } else {
@@ -42,7 +42,7 @@ const UD_Login = () => {
         }
       })
       .catch((error) => {
-        swal("Sorry", "Login Failed", "error");
+        swal("Sorry", error.response.data.error, "error");
       });
   };
 

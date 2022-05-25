@@ -41,8 +41,8 @@ const UD_PenalSignup = () => {
           swal("Sorry", "Registration Failed", "error");
         }
       })
-      .catch((error) => {
-        swal("Sorry", error.response.data.error, "error");
+      .catch((er) => {
+        swal("Sorry", er.response.data.error, "error");
       });
   };
 

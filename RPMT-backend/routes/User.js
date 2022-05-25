@@ -35,10 +35,10 @@ router.post("/login", async (req, res) => {
       message: "success",
       data: user,
     });
-  } catch (error) {
+  } catch (er) {
     res.status(400).json({
       message: "fail",
-      error: error.message,
+      error: er.message,
     });
   }
 });

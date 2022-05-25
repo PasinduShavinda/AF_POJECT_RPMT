@@ -41,10 +41,10 @@ const UD_AddStudent = (props) => {
       .then((res) => {
         if (res.data.message === "success") {
           console.log(res.data);
-          swal("Success", "student genarate successfully", "success");
+          swal("Success", "student generate successfully", "success");
         } else {
           console.log(res.data);
-          swal("Error", "student genarate unsuccessfully", "error");
+          swal("Error", "student generate unsuccessfully", "error");
         }
       })
 
