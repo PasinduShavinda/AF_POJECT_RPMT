@@ -2,21 +2,41 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./shv_rs_topic_notice_styles.css";
+import swal from 'sweetalert';
 
 const Shv_res_topic_notice_admin = (props) => {
 
   const history = useNavigate();
+  
   const { _id, ResTopicNoticeHeader, ResTopicNoticeLineOne, ResTopicNoticeLineTwo, ResTopicNoticeLineThree, ResTopicNoticeDueDate } = props.resTopicNotice;
+  
   const deleteHandler = async () => {
 
-    await axios
+    swal({
+      title: "Are you sure?",
+      text: "Once Deleted, You Will Not Be Able To Recover Notice !",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+       axios
       .delete(`http://localhost:5000/resTopicsNotice/${_id}`)
       .then((res) => res.data)
       .then(() => history("/"))
       .then(() => history("/RsTopicsNotices"));
+      swal("Done! Notice has been deleted!", {
+        icon: "success",
+      });
+    } else {
+      swal("Notice not deleted !");
+    }
+  });
   };
 
   return (
+    <div>
     <div className="ssCard">
     <div className="container border" style={{
 
@@ -45,10 +65,15 @@ const Shv_res_topic_notice_admin = (props) => {
       </Button>&nbsp;
       <Button variant="contained" color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
         Delete
-      </Button>
+      </Button>&nbsp;
+      <a href = '/dashboard'><Button variant="contained" color="secondary">Back</Button></a>
+      
       </center>
       </div>
       </div>
+      <br/><br/>
+      </div>
+
  
   );
 };

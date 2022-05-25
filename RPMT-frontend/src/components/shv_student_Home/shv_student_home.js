@@ -41,16 +41,23 @@ const StudentHomePage_shv = () => {
       </div>
 
       
-      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery"><br/>
         <a href="/ThesisHome"><img src="https://thumbs.dreamstime.com/b/thesis-icon-trendy-design-style-isolated-white-background-vector-simple-modern-flat-symbol-web-site-mobile-logo-app-135733053.jpg" class="img-responsive"/></a>
         <center><p><b> Final Thesis Document Submission</b></p></center>
         <Button variant="contained" color="warning" LinkComponent={Link} to="/ThesisHome" sx={{ mt: "auto" }}>Submit</Button>&nbsp;&nbsp;
         <Button variant="contained" color="error"  LinkComponent={Link} to="/ThesisFilesList" sx={{ mt: "auto" }}>View</Button>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery"><br/><br/>
         <a href="/RsTopicsNoticesStudent"><img src="https://www.babulhassen.com/Files/Image/notice.gif" class="img-responsive"/></a>
         <center><p><b> Notices</b></p></center>
       </div>
+      
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+      <br/><br/> <br/><br/>
+        <a href="/TemplateList"><img src="https://uerc.gov.in/images/download.gif" class="img-responsive"/></a>
+        <center><p><b> Document/Presentation Templates</b></p></center>
+      </div>
+
 
       
 
