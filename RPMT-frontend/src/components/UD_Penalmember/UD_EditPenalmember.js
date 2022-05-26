@@ -62,23 +62,20 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
 
   return (
     <>
-      <div className="ud_edit_add_Supplier_Form1">
-        <div className="ud_edit_add_Supplier_title">
-          {" "}
-          Add Penalmember Details
-        </div>
+      <div className="ud_edit_Penalmeber_Form1">
+        <div className="ud_edit_Penalmeber_title"> Add Penalmember Details</div>
 
-        <div className="ud_edit_add_Supplier_form2">
-          <div className="ud_edit_add_Supplier_Photo"></div>
+        <div className="ud_edit_Penalmeber_form2">
+          <div className="ud_edit_Penalmeber_Photo"></div>
 
           <div type="text" value={formData.Id} disabled="true" />
 
-          <label className="ud_edit_add_Supplier_name1">
+          <label className="ud_edit_Penalmeber_name1">
             <b>FirstName</b>
           </label>
           <br></br>
           <input
-            className="ud_edit_add_Supplier_box1"
+            className="ud_edit_Penalmeber_box1"
             type="text"
             value={firstName}
             required
@@ -88,11 +85,11 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
           />
           <br></br>
 
-          <label className="ud_edit_add_Supplier_name2">
+          <label className="ud_edit_Penalmeber_name2">
             <b>LastName</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box2"
+            className="ud_edit_Penalmeber_box2"
             type="text"
             value={lastName}
             required
@@ -100,11 +97,11 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
               setLastName(e.target.value);
             }}
           />
-          <label className="ud_edit_add_Supplier_name3">
+          <label className="ud_edit_Penalmeber_name3">
             <b>Address</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box3"
+            className="ud_edit_Penalmeber_box3"
             type="text"
             value={address}
             required
@@ -113,11 +110,11 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
             }}
           />
           <br></br>
-          <label className="ud_edit_add_Supplier_name4">
+          <label className="ud_edit_Penalmeber_name4">
             <b>City</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box4"
+            className="ud_edit_Penalmeber_box4"
             type="text"
             value={city}
             required
@@ -126,11 +123,11 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
             }}
           />
           <br></br>
-          <label className="ud_edit_add_Supplier_name7">
+          <label className="ud_edit_Penalmeber_name7">
             <b>PhoneNumber</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box7"
+            className="ud_edit_Penalmeber_box7"
             type="text"
             value={phoneNumber}
             required
@@ -138,11 +135,11 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
               setPhoneNumber(e.target.value);
             }}
           />
-          <label className="ud_edit_add_Supplier_name5">
+          <label className="ud_edit_Penalmeber_name5">
             <b>EMAIL</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box5"
+            className="ud_edit_Penalmeber_box5"
             type="text"
             value={email}
             required
@@ -151,12 +148,12 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
             }}
           />
           <br></br>
-          <label className="ud_edit_add_Supplier_name6">
+          <label className="ud_edit_Penalmeber_name6">
             <b>Password</b>
           </label>
           <br></br>
           <input
-            className="ud_edit_add_Supplier_box6"
+            className="ud_edit_Penalmeber_box6"
             type="text"
             value={password}
             required
@@ -168,13 +165,13 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
         </div>
 
         <button
-          className="ud_edit_add_Supplier_Savebutton"
+          className="ud_edit_Penalmeber_Savebutton"
           onClick={EditPenalmember}
         >
           Save
         </button>
 
-        <button className="ud_edit_add_Supplier_Backbutton" onClick={onClick}>
+        <button className="ud_edit_Penalmeber_Backbutton" onClick={onClick}>
           Cancel
         </button>
       </div>
