@@ -76,10 +76,10 @@ const UD_StudentReport = (props) => {
           formData={data}
         />
       ) : (
-        <div className="ud_Msupplier_Form1">
-          <div className="ud_Msupplier_title">Supervisor Details</div>
+        <div className="ud_MSupervisor_Form1">
+          <div className="ud_MSupervisor_title">Supervisor Details</div>
 
-          <div className="ud_Msupplier_Form2">
+          <div className="ud_MSupervisor_Form2">
             <TableContainer
               component={Paper}
               style={{
@@ -93,10 +93,10 @@ const UD_StudentReport = (props) => {
               <br></br>
 
               {/* //search.......................... */}
-              <div class="ud_Msupplier_Search">
+              <div class="ud_MSupervisor_Search">
                 <form action="">
                   <input
-                    className="ud_Msupplier_Search_name "
+                    className="ud_MSupervisor_Search_name "
                     type="text"
                     placeholder="Search By Supervisor Name"
                     name="search"
@@ -105,7 +105,7 @@ const UD_StudentReport = (props) => {
                     }
                   />
 
-                  {/* <button className="ud_Msupplier_search_Button" type="submit" value="search">
+                  {/* <button className="ud_MSupervisor_search_Button" type="submit" value="search">
                   <SearchIcon />
                 </button> */}
                 </form>{" "}
@@ -116,46 +116,48 @@ const UD_StudentReport = (props) => {
                   <TableRow>
                     <TableCell
                       align="center"
-                      className="newud_Msupplier_cellColor"
+                      className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_Msupplier_headcolor">FirstName</div>
+                      <div className="ud_MSupervisor_headcolor">FirstName</div>
                     </TableCell>
                     <TableCell
                       align="center"
-                      className="newud_Msupplier_cellColor"
+                      className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_Msupplier_headcolor">LastName</div>
+                      <div className="ud_MSupervisor_headcolor">LastName</div>
                     </TableCell>
                     <TableCell
                       align="center"
-                      className="newud_Msupplier_cellColor"
+                      className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_Msupplier_headcolor">Address</div>
+                      <div className="ud_MSupervisor_headcolor">Address</div>
                     </TableCell>
                     <TableCell
                       align="center"
-                      className="newud_Msupplier_cellColor"
+                      className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_Msupplier_headcolor">City</div>
+                      <div className="ud_MSupervisor_headcolor">City</div>
                     </TableCell>
                     <TableCell
                       align="center"
-                      className="newud_Msupplier_cellColor"
+                      className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_Msupplier_headcolor">PhoneNumber</div>
+                      <div className="ud_MSupervisor_headcolor">
+                        PhoneNumber
+                      </div>
                     </TableCell>
 
                     <TableCell
                       align="center"
-                      className="newud_Msupplier_cellColor"
+                      className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_Msupplier_headcolor">Email</div>
+                      <div className="ud_MSupervisor_headcolor">Email</div>
                     </TableCell>
                     <TableCell
                       align="center"
-                      className="newud_Msupplier_cellColor"
+                      className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_Msupplier_headcolor">Password</div>
+                      <div className="ud_MSupervisor_headcolor">Password</div>
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -165,51 +167,51 @@ const UD_StudentReport = (props) => {
                     <TableRow key={index}>
                       <TableCell
                         align="center"
-                        component="udmth"
+                        component="th"
                         scope="UD_row"
-                        className="ud_Msupplier_cellColor"
+                        className="ud_MSupervisor_cellColor"
                       >
                         {row.firstName}
                       </TableCell>
 
                       <TableCell
                         align="center"
-                        className="ud_Msupplier_cellColor"
+                        className="ud_MSupervisor_cellColor"
                       >
                         {row.lastName}
                       </TableCell>
 
                       <TableCell
                         align="center"
-                        className="ud_Msupplier_cellColor"
+                        className="ud_MSupervisor_cellColor"
                       >
                         {row.address}
                       </TableCell>
 
                       <TableCell
                         align="center"
-                        className="ud_Msupplier_cellColor"
+                        className="ud_MSupervisor_cellColor"
                       >
                         {row.city}
                       </TableCell>
 
                       <TableCell
                         align="center"
-                        className="ud_Msupplier_cellColor"
+                        className="ud_MSupervisor_cellColor"
                       >
                         {row.phoneNumber}
                       </TableCell>
 
                       <TableCell
                         align="center"
-                        className="ud_Msupplier_cellColor"
+                        className="ud_MSupervisor_cellColor"
                       >
                         {row.email}
                       </TableCell>
 
                       <TableCell
                         align="center"
-                        className="ud_Msupplier_cellColor"
+                        className="ud_MSupervisor_cellColor"
                       >
                         {row.password}
                       </TableCell>
@@ -220,18 +222,18 @@ const UD_StudentReport = (props) => {
             </TableContainer>
 
             {/* <div
-          onClick={() => props.onClick("supplieraddform")}className="ud_Msupplier_addbutton">
-          Add New Supplier
+          onClick={() => props.onClick("Supervisoraddform")}className="ud_MSupervisor_addbutton">
+          Add New Supervisor
         </div> */}
 
             <div
               onClick={() => props.onClick("supervisor")}
-              className="ud_Msupplier_back_button"
+              className="ud_MSupervisor_back_button"
             >
               Previous
             </div>
 
-            <button className="ud_Msupplier_Pdf_Button" onClick={downloadPdf}>
+            <button className="ud_MSupervisor_Pdf_Button" onClick={downloadPdf}>
               Downloard PDF
             </button>
           </div>
