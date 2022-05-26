@@ -1,4 +1,4 @@
-.ud_add_Supplier_Form1 {
+.ud_add_Student_Form1 {
   top: 20px;
   left: 20px;
   width: 980px;
@@ -14,7 +14,7 @@
   position: relative;
 }
 
-.ud_add_Supplier_title {
+.ud_add_Student_title {
   position: absolute;
   left: 16px;
   bottom: 528px;
@@ -27,7 +27,7 @@
 
 /*//////////Second layer form/////////////*/
 
-.ud_add_Supplier_form2 {
+.ud_add_Student_form2 {
   position: relative;
   width: 960px;
   height: 500px;
@@ -41,7 +41,7 @@
 }
 
 /*---add Poto-----*/
-.ud_add_Supplier_Photo {
+.ud_add_Student_Photo {
   position: fixed;
   top: 200px;
   left: 1190px;
@@ -57,7 +57,7 @@
 }
 
 /*//////////////////////*/
-.ud_add_Supplier_name1 {
+.ud_add_Student_name1 {
   margin-left: 60px;
   position: absolute;
   margin-top: 40px;
@@ -69,7 +69,7 @@
   color: #0a0505;
 }
 
-.ud_add_Supplier_box1 {
+.ud_add_Student_box1 {
   margin-left: 60px;
   margin-top: 50px;
   margin-bottom: 40px;
@@ -82,7 +82,7 @@
 }
 
 /*//////////////////////*/
-.ud_add_Supplier_name2 {
+.ud_add_Student_name2 {
   margin-left: 60px;
   font-family: Roboto;
   font-style: normal;
@@ -92,7 +92,7 @@
   color: #0e0606;
 }
 
-.ud_add_Supplier_box2 {
+.ud_add_Student_box2 {
   margin-left: 5px;
   margin-bottom: 50px;
   right: -0px;
@@ -106,7 +106,7 @@
 }
 
 /*//////////////////////*/
-.ud_add_Supplier_name3 {
+.ud_add_Student_name3 {
   margin-left: 5px;
   font-family: Roboto;
   font-style: normal;
@@ -116,7 +116,7 @@
   color: #080404;
 }
 
-.ud_add_Supplier_box3 {
+.ud_add_Student_box3 {
   position: relative;
   margin-left: 28px;
   right: 20px;
@@ -130,7 +130,7 @@
 }
 
 /*//////////////////////*/
-.ud_add_Supplier_name4 {
+.ud_add_Student_name4 {
   margin-left: 60px;
   font-family: Roboto;
   font-style: normal;
@@ -140,7 +140,7 @@
   color: #0e0606;
 }
 
-.ud_add_Supplier_box4 {
+.ud_add_Student_box4 {
   position: relative;
   margin-left: 30px;
   margin-bottom: 60px;
@@ -155,7 +155,7 @@
 }
 
 /*//////////////////////*/
-.ud_add_Supplier_name5 {
+.ud_add_Student_name5 {
   margin-left: 0px;
   font-family: Roboto;
   font-style: normal;
@@ -165,7 +165,7 @@
   color: #140909;
 }
 
-.ud_add_Supplier_box5 {
+.ud_add_Student_box5 {
   position: relative;
   margin-left: 30px;
   right: 20px;
@@ -179,7 +179,7 @@
 }
 
 /*//////////////////////*/
-.ud_add_Supplier_name6 {
+.ud_add_Student_name6 {
   margin-top: 35px;
   margin-bottom: 20px;
   margin-left: 60px;
@@ -191,7 +191,7 @@
   color: #0c0606;
 }
 
-.ud_add_Supplier_box6 {
+.ud_add_Student_box6 {
   position: relative;
   margin-left: 80px;
   margin-top: 10px;
@@ -205,7 +205,7 @@
   font-size: 20px;
 }
 
-.ud_add_Supplier_name7 {
+.ud_add_Student_name7 {
   margin-left: 60px;
   font-family: Roboto;
   font-style: normal;
@@ -215,7 +215,7 @@
   color: #0e0606;
 }
 
-.ud_add_Supplier_box7 {
+.ud_add_Student_box7 {
   position: relative;
   margin-left: 30px;
   margin-bottom: 60px;
@@ -230,7 +230,7 @@
 }
 
 /*Previous button*/
-.ud_add_Supplier_Backbutton {
+.ud_add_Student_Backbutton {
   height: 25px;
   width: 100px;
   top: 470px;
@@ -247,12 +247,12 @@
   transition: 0.5s ease;
 }
 
-.ud_add_Supplier_Backbutton:hover {
+.ud_add_Student_Backbutton:hover {
   background-color: red;
 }
 
-/*Save Supplier Details button*/
-.ud_add_Supplier_Savebutton {
+/*Save Student Details button*/
+.ud_add_Student_Savebutton {
   height: 35px;
   width: 115px;
   top: 400px;
@@ -269,6 +269,6 @@
   transition: 0.5s ease;
 }
 
-.ud_add_Supplier_Savebutton:hover {
+.ud_add_Student_Savebutton:hover {
   background-color: red;
 }
