@@ -40,22 +40,6 @@
   border-radius: 45px;
 }
 
-/*---add Poto-----*/
-.ud_add_Supervisor_Photo {
-  position: fixed;
-  top: 200px;
-  left: 1190px;
-  width: 15vw;
-  height: 13vw;
-  border-radius: 20px;
-  background-image: url("../../assets/manageFeedback.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 145%;
-  border: 2px solid rgb(236, 11, 11);
-  transition: 0.5s ease;
-}
-
 /*//////////////////////*/
 .ud_add_Supervisor_name1 {
   margin-left: 60px;
