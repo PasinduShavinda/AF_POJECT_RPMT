@@ -63,18 +63,18 @@ const UD_AddSupervisor = (props) => {
 
   return (
     <>
-      <div className="ud_add_Supplier_Form1">
-        <div className="ud_add_Supplier_title"> Add Supervisor Details</div>
+      <div className="ud_add_Supervisor_Form1">
+        <div className="ud_add_Supervisor_title"> Add Supervisor Details</div>
 
-        <form className="ud_add_Supplier_form2">
-          <div className="ud_add_Supplier_Photo"></div>
+        <form className="ud_add_Supervisor_form2">
+          <div className="ud_add_Supervisor_Photo"></div>
 
-          <label className="ud_edit_add_Supplier_name1">
+          <label className="ud_add_Supervisor_name1">
             <b>FirstName</b>
           </label>
           <br></br>
           <input
-            className="ud_edit_add_Supplier_box1"
+            className="ud_add_Supervisor_box1"
             type="text"
             value={firstName}
             required
@@ -84,11 +84,11 @@ const UD_AddSupervisor = (props) => {
           />
           <br></br>
 
-          <label className="ud_edit_add_Supplier_name2">
+          <label className="ud_add_Supervisor_name2">
             <b>LastName</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box2"
+            className="ud_add_Supervisor_box2"
             type="text"
             value={lastName}
             required
@@ -96,11 +96,11 @@ const UD_AddSupervisor = (props) => {
               setLastName(e.target.value);
             }}
           />
-          <label className="ud_edit_add_Supplier_name3">
+          <label className="ud_add_Supervisor_name3">
             <b>Address</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box3"
+            className="ud_add_Supervisor_box3"
             type="text"
             value={address}
             required
@@ -109,11 +109,11 @@ const UD_AddSupervisor = (props) => {
             }}
           />
           <br></br>
-          <label className="ud_edit_add_Supplier_name4">
+          <label className="ud_add_Supervisor_name4">
             <b>City</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box4"
+            className="ud_add_Supervisor_box4"
             type="text"
             value={city}
             required
@@ -122,11 +122,11 @@ const UD_AddSupervisor = (props) => {
             }}
           />
           <br></br>
-          <label className="ud_edit_add_Supplier_name7">
+          <label className="ud_add_Supervisor_name7">
             <b>PhoneNumber</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box7"
+            className="ud_add_Supervisor_box7"
             type="text"
             value={phoneNumber}
             required
@@ -134,11 +134,11 @@ const UD_AddSupervisor = (props) => {
               setPhoneNumber(e.target.value);
             }}
           />
-          <label className="ud_edit_add_Supplier_name5">
+          <label className="ud_add_Supervisor_name5">
             <b>EMAIL</b>
           </label>
           <input
-            className="ud_edit_add_Supplier_box5"
+            className="ud_add_Supervisor_box5"
             type="text"
             value={email}
             required
@@ -147,12 +147,12 @@ const UD_AddSupervisor = (props) => {
             }}
           />
           <br></br>
-          <label className="ud_edit_add_Supplier_name6">
+          <label className="ud_add_Supervisor_name6">
             <b>Password</b>
           </label>
           <br></br>
           <input
-            className="ud_edit_add_Supplier_box6"
+            className="ud_add_Supervisor_box6"
             type="text"
             value={password}
             required
@@ -164,7 +164,7 @@ const UD_AddSupervisor = (props) => {
         </form>
 
         <button
-          className="ud_add_Supplier_Savebutton"
+          className="ud_add_Supervisor_Savebutton"
           onClick={manageSupervisor}
         >
           Save
@@ -172,7 +172,7 @@ const UD_AddSupervisor = (props) => {
 
         <div
           onClick={() => props.onClick("manageSupervisor")}
-          className="ud_add_Supplier_Backbutton"
+          className="ud_add_Supervisor_Backbutton"
         >
           Cancel
         </div>
