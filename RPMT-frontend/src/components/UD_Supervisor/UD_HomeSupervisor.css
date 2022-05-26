@@ -27,7 +27,7 @@
   text-align: center;
   cursor: pointer;
   position: absolute;
-  top: 10%;
+  top: 20%;
 }
 
 /*Genarate Report*/
@@ -49,7 +49,7 @@
   text-align: center;
   cursor: pointer;
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 30%;
 }
 
