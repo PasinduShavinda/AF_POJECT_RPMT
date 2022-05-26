@@ -66,8 +66,6 @@ const UD_EditStudent = ({ onClick, id, formData }) => {
         <div className="ud_edit_add_Student_title"> Add Student Details</div>
 
         <div className="ud_edit_add_Student_form2">
-          <div className="ud_edit_add_Student_Photo"></div>
-
           <div type="text" value={formData.Id} disabled="true" />
 
           <label className="ud_edit_add_Student_name1">

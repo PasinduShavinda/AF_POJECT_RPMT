@@ -67,8 +67,6 @@ const UD_AddStudent = (props) => {
         <div className="ud_add_Student_title"> Add Student Details</div>
 
         <form className="ud_add_Student_form2">
-          <div className="ud_add_Student_Photo"></div>
-
           <label className="ud_add_Student_name1">
             <b>FirstName</b>
           </label>

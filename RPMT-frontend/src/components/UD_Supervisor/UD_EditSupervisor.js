@@ -69,8 +69,6 @@ const UD_EditSupervisor = ({ onClick, id, formData }) => {
         </div>
 
         <div className="ud_edit_add_Supervisor_form2">
-          <div className="ud_edit_add_Supervisor_Photo"></div>
-
           <div type="text" value={formData.Id} disabled="true" />
 
           <label className="ud_edit_add_Supervisor_name1">
