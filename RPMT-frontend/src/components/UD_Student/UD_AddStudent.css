@@ -180,7 +180,7 @@
 
 /*//////////////////////*/
 .ud_add_Student_name6 {
-  margin-top: 35px;
+  margin-top: 1px;
   margin-bottom: 20px;
   margin-left: 60px;
   font-family: Roboto;
@@ -194,11 +194,11 @@
 .ud_add_Student_box6 {
   position: relative;
   margin-left: 80px;
-  margin-top: 10px;
+  margin-top: -45px;
   right: 20px;
   padding: 13px;
   width: 570px;
-  height: 80px;
+  height: 30px;
   background: #c4c4c4;
   border: 2px solid #000000;
   border-radius: 4px;
@@ -231,8 +231,8 @@
 
 /*Previous button*/
 .ud_add_Student_Backbutton {
-  height: 25px;
-  width: 100px;
+  height: 35px;
+  width: 115px;
   top: 470px;
   margin-left: 660px;
   background-color: blue;
