@@ -29,26 +29,26 @@ const UD_HomeSupervisor = () => {
 const SupervisorMain = (props) => {
   return (
     <div className="UD_row">
-      <div className="UD_suppliermain">
-        <div className="UD_supplierbutton">
+      <div className="UD_Supervisormain">
+        <div className="UD_Supervisorbutton">
           <div
-            className="UD_addSupplier"
+            className="UD_addSupervisor"
             onClick={() => props.onClick("manageSupervisor")}
           ></div>
           <h5> Supervisor Deatials</h5>
         </div>
 
-        <div className="UD_addorderbutton">
+        <div className="UD_Supervisorreportbutton">
           <div
-            className="UD_addOrder"
+            className="UD_Supervisorreport"
             onClick={() => props.onClick("supervisorReport")}
           ></div>
           <h5>Generate SupervisorReport</h5>
         </div>
 
-        {/* <div className="UD_supplierreportbutton">
+        {/* <div className="UD_Supervisorreportbutton">
           <div
-            className="UD_supplierreport"
+            className="UD_Supervisorreport"
             onClick={() => props.onClick("supervisorReport")}
           ></div>
           <h5>Generate SupervisorReport</h5>
