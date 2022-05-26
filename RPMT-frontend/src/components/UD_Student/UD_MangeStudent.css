@@ -5,7 +5,7 @@
 }
 
 /*---------Form1---------------*/
-.MSud_Msupplier_Form1 {
+.MSud_MStudent_Form1 {
   top: 20px;
   left: 20px;
   width: 950px;
@@ -22,7 +22,7 @@
 }
 
 /*----------------Title-------*/
-.MSud_Msupplier_title {
+.MSud_MStudent_title {
   position: absolute;
   left: 50px;
   bottom: 528px;
@@ -34,7 +34,7 @@
 }
 
 /*---------Form2---------------*/
-.MSud_Msupplier_Form2 {
+.MSud_MStudent_Form2 {
   width: 850px;
   height: 475px;
   background-color: #383333;
@@ -47,11 +47,11 @@
 
 /*------search button-------*/
 
-.MSud_Msupplier_Search {
+.MSud_MStudent_Search {
   margin-top: 5px;
   margin-left: 10px;
 }
-.MSud_Msupplier_Search_name {
+.MSud_MStudent_Search_name {
   height: 30px;
   width: 250px;
   background-color: #000000;
@@ -61,11 +61,11 @@
   font-size: 15px;
   font-weight: bold;
 }
-.MSud_Msupplier_Search_name:hover {
+.MSud_MStudent_Search_name:hover {
   border: 2px solid rgb(255, 0, 0);
 }
 
-.MSud_Msupplier_search_Button {
+.MSud_MStudent_search_Button {
   position: relative;
   margin-left: -40px;
   top: 3px;
@@ -74,75 +74,66 @@
   width: 30px;
   height: 30px;
 }
-.MSud_Msupplier_search_Button:hover {
+.MSud_MStudent_search_Button:hover {
   color: #ff0000;
 }
 
 /*-------row--color-----*/
 
-.MSud_Msupplier_cellColor {
+.MSud_MStudent_cellColor {
   color: white !important;
 }
 
-.MSud_Msupplier_headcolor {
+.MSud_MStudent_headcolor {
   border: 1px solid #00ff75;
   border-radius: 5px;
 }
 
-/* new head head color */
-.newMSud_Msupplier_headcolor {
-  color: #090909;
-}
-/* new head cell color */
-.newMSud_Msupplier_cellColor {
-  color: #090909;
-}
-
 /**------Edit---icon----***/
-.MSud_Msupplier_Edit_Icon5 {
+.MSud_MStudent_Edit_Icon5 {
   color: rgb(0, 60, 255) !important;
   cursor: pointer;
   background-color: #c04ddd;
 }
-.MSud_Msupplier_Edit_Icon5:hover {
+.MSud_MStudent_Edit_Icon5:hover {
   color: rgb(190, 16, 16) !important;
 }
-.MSud_Msupplier_Edit_Icon6 {
+.MSud_MStudent_Edit_Icon6 {
   color: rgb(0, 60, 255) !important;
   cursor: pointer;
   width: 50px;
   background-color: #dbdd4d;
 }
-.MSud_Msupplier_Edit_Icon6:hover {
+.MSud_MStudent_Edit_Icon6:hover {
   color: rgb(190, 16, 16) !important;
   background-color: #000000;
 }
 
 /*--------------/*Icon delete button------------------*/
-.MSud_Msupplier_deleteIcon7 {
+.MSud_MStudent_deleteIcon7 {
   color: rgb(216, 10, 20) !important;
   cursor: pointer;
   background-color: #66c977;
 }
 
-.MSud_Msupplier_deleteIcon7:hover {
+.MSud_MStudent_deleteIcon7:hover {
   color: #8ff86e !important;
 }
 
-.MSud_Msupplier_deleteIcon8 {
+.MSud_MStudent_deleteIcon8 {
   color: rgb(216, 10, 20) !important;
   cursor: pointer;
   width: 50px;
   background-color: #ddc34d;
 }
 
-.MSud_Msupplier_deleteIcon8:hover {
+.MSud_MStudent_deleteIcon8:hover {
   color: #8ff86e !important;
   background-color: #000000;
 }
 
-/*Add Supplier  button*/
-.MSud_Msupplier_addbutton {
+/*Add Student  button*/
+.MSud_MStudent_addbutton {
   background-color: blue;
   color: white;
   padding: 5px 10px;
@@ -154,12 +145,12 @@
   transition: 0.5s ease;
 }
 
-.MSud_Msupplier_addbutton:hover {
+.MSud_MStudent_addbutton:hover {
   background-color: red;
 }
 
 /*Previous button*/
-.MSud_Msupplier_back_button {
+.MSud_MStudent_back_button {
   background-color: blue;
   color: white;
   padding: 5px 10px;
@@ -171,12 +162,12 @@
   transition: 0.5s ease;
 }
 
-.MSud_Msupplier_back_button:hover {
+.MSud_MStudent_back_button:hover {
   background-color: red;
 }
 
 /*Pdf button*/
-.MSud_Msupplier_Pdf_Button {
+.MSud_MStudent_Pdf_Button {
   background-color: blue;
   color: white;
   padding: 7px 13px;
@@ -188,6 +179,6 @@
   transition: 0.5s ease;
 }
 
-.MSud_Msupplier_Pdf_Button:hover {
+.MSud_MStudent_Pdf_Button:hover {
   background-color: red;
 }
