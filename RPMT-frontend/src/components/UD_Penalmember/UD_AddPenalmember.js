@@ -67,8 +67,6 @@ const UD_AddPenalmember = (props) => {
         <div className="ud_add_Penalmeber_title"> Add Penalmember Details</div>
 
         <form className="ud_add_Penalmeber_form2">
-          <div className="ud_add_Penalmeber_Photo"></div>
-
           <label className="ud_add_Penalmeber_name1">
             <b>FirstName</b>
           </label>

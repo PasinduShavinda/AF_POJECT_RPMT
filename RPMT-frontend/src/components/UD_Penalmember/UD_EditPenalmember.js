@@ -66,8 +66,6 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
         <div className="ud_edit_Penalmeber_title"> Add Penalmember Details</div>
 
         <div className="ud_edit_Penalmeber_form2">
-          <div className="ud_edit_Penalmeber_Photo"></div>
-
           <div type="text" value={formData.Id} disabled="true" />
 
           <label className="ud_edit_Penalmeber_name1">
