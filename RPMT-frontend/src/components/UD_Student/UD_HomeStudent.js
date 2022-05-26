@@ -27,26 +27,26 @@ const UD_HomeStudent = () => {
 const StudentMain = (props) => {
   return (
     <div className="UD_row">
-      <div className="UD_suppliermain">
-        <div className="UD_supplierbutton">
+      <div className="UD_Studentmain">
+        <div className="UD_Studentbutton">
           <div
-            className="UD_addSupplier"
+            className="UD_addStudent"
             onClick={() => props.onClick("manageStudent")}
           ></div>
           <h5> Student Deatials</h5>
         </div>
 
-        <div className="UD_addorderbutton">
+        <div className="UD_GenerateStudentReportbutton">
           <div
-            className="UD_addOrder"
+            className="UD_GenerateStudentReport"
             onClick={() => props.onClick("studentReport")}
           ></div>
           <h5>Generate StudentReport</h5>
         </div>
 
-        {/* <div className="UD_supplierreportbutton">
+        {/* <div className="UD_Studentreportbutton">
           <div
-            className="UD_supplierreport"
+            className="UD_Studentreport"
             onClick={() => props.onClick("studentReport")}
           ></div>
           <h5>Generate StudentReport</h5>
