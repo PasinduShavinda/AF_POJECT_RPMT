@@ -5,7 +5,7 @@
 }
 
 /*---------Form1---------------*/
-.ud_Msupplier_Form1 {
+.ud_MSupervisor_Form1 {
   top: 20px;
   left: 20px;
   width: 950px;
@@ -22,7 +22,7 @@
 }
 
 /*----------------Title-------*/
-.ud_Msupplier_title {
+.ud_MSupervisor_title {
   position: absolute;
   left: 50px;
   bottom: 528px;
@@ -34,7 +34,7 @@
 }
 
 /*---------Form2---------------*/
-.ud_Msupplier_Form2 {
+.ud_MSupervisor_Form2 {
   width: 850px;
   height: 475px;
   background-color: #383333;
@@ -47,11 +47,11 @@
 
 /*------search button-------*/
 
-.ud_Msupplier_Search {
+.ud_MSupervisor_Search {
   margin-top: 5px;
   margin-left: 10px;
 }
-.ud_Msupplier_Search_name {
+.ud_MSupervisor_Search_name {
   height: 30px;
   width: 250px;
   background-color: #000000;
@@ -61,11 +61,11 @@
   font-size: 15px;
   font-weight: bold;
 }
-.ud_Msupplier_Search_name:hover {
+.ud_MSupervisor_Search_name:hover {
   border: 2px solid rgb(255, 0, 0);
 }
 
-.ud_Msupplier_search_Button {
+.ud_MSupervisor_search_Button {
   position: relative;
   margin-left: -40px;
   top: 3px;
@@ -74,75 +74,66 @@
   width: 30px;
   height: 30px;
 }
-.ud_Msupplier_search_Button:hover {
+.ud_MSupervisor_search_Button:hover {
   color: #ff0000;
 }
 
 /*-------row--color-----*/
 
-.ud_Msupplier_cellColor {
+.ud_MSupervisor_cellColor {
   color: white !important;
 }
 
-.ud_Msupplier_headcolor {
+.ud_MSupervisor_headcolor {
   border: 1px solid #00ff75;
   border-radius: 5px;
 }
 
-/* new head head color */
-.newud_Msupplier_headcolor {
-  color: #090909;
-}
-/* new head cell color */
-.newud_Msupplier_cellColor {
-  color: #090909;
-}
-
 /**------Edit---icon----***/
-.ud_Msupplier_Edit_Icon5 {
+.ud_MSupervisor_Edit_Icon5 {
   color: rgb(0, 60, 255) !important;
   cursor: pointer;
   background-color: #c04ddd;
 }
-.ud_Msupplier_Edit_Icon5:hover {
+.ud_MSupervisor_Edit_Icon5:hover {
   color: rgb(190, 16, 16) !important;
 }
-.ud_Msupplier_Edit_Icon6 {
+.ud_MSupervisor_Edit_Icon6 {
   color: rgb(0, 60, 255) !important;
   cursor: pointer;
   width: 50px;
   background-color: #dbdd4d;
 }
-.ud_Msupplier_Edit_Icon6:hover {
+.ud_MSupervisor_Edit_Icon6:hover {
   color: rgb(190, 16, 16) !important;
   background-color: #000000;
 }
 
 /*--------------/*Icon delete button------------------*/
-.ud_Msupplier_deleteIcon7 {
+.ud_MSupervisor_deleteIcon7 {
   color: rgb(216, 10, 20) !important;
   cursor: pointer;
   background-color: #66c977;
 }
 
-.ud_Msupplier_deleteIcon7:hover {
+.ud_MSupervisor_deleteIcon7:hover {
   color: #8ff86e !important;
 }
 
-.ud_Msupplier_deleteIcon8 {
+.ud_MSupervisor_deleteIcon8 {
   color: rgb(216, 10, 20) !important;
   cursor: pointer;
   width: 50px;
   background-color: #ddc34d;
 }
 
-.ud_Msupplier_deleteIcon8:hover {
+.ud_MSupervisor_deleteIcon8:hover {
   color: #8ff86e !important;
   background-color: #000000;
 }
 
-/*Add Supplier  button*/
-.ud_Msupplier_addbutton {
+/*Add Supervisor  button*/
+.ud_MSupervisor_addbutton {
   background-color: blue;
   color: white;
   padding: 5px 10px;
@@ -154,12 +145,12 @@
   transition: 0.5s ease;
 }
 
-.ud_Msupplier_addbutton:hover {
+.ud_MSupervisor_addbutton:hover {
   background-color: red;
 }
 
 /*Previous button*/
-.ud_Msupplier_back_button {
+.ud_MSupervisor_back_button {
   background-color: blue;
   color: white;
   padding: 5px 10px;
@@ -171,12 +162,12 @@
   transition: 0.5s ease;
 }
 
-.ud_Msupplier_back_button:hover {
+.ud_MSupervisor_back_button:hover {
   background-color: red;
 }
 
 /*Pdf button*/
-.ud_Msupplier_Pdf_Button {
+.ud_MSupervisor_Pdf_Button {
   background-color: blue;
   color: white;
   padding: 7px 13px;
@@ -188,6 +179,6 @@
   transition: 0.5s ease;
 }
 
-.ud_Msupplier_Pdf_Button:hover {
+.ud_MSupervisor_Pdf_Button:hover {
   background-color: red;
 }
