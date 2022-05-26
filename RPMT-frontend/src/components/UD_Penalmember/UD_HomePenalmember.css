@@ -4,12 +4,12 @@
   position: absolute;
 }
 
-.UD_suppliermain {
+.UD_Penalmebermain {
   display: flex;
 }
 
-/* Add Supplier Details*/
-.UD_addSupplier {
+/* Add Penalmeber Details*/
+.UD_addPenalmeber {
   width: 15vw;
   height: 15vw;
   margin: 0px 60px;
@@ -22,7 +22,7 @@
   transition: 0.5s ease;
 }
 
-.UD_supplierbutton {
+.UD_Penalmeberbutton {
   display: block;
   text-align: center;
   cursor: pointer;
@@ -30,78 +30,8 @@
   top: 10%;
 }
 
-/* Add Order Details*/
-.UD_addOrder {
-  width: 15vw;
-  height: 15vw;
-  margin: 0px 60px;
-  border-radius: 20px;
-  background-image: url("../../assets/addorderdetails.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 145%;
-  border: 4px solid darkblue;
-  transition: 0.5s ease;
-}
-
-.UD_addorderbutton {
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  position: absolute;
-  top: 10%;
-  left: 30%;
-}
-
-/* View  Manager Order Notice */
-.UD_viewManagerNotice {
-  width: 15vw;
-  height: 15vw;
-  margin: 0px 60px;
-  border-radius: 20px;
-  background-image: url("../../assets/MorderNotice.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 150%;
-  border: 4px solid darkblue;
-  transition: 0.5s ease;
-}
-
-.UD_ViewNoticebutton {
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  position: absolute;
-  top: 10%;
-  left: 60%;
-}
-
-/*
-.vieworderdetail {
-    width: 15vw;
-    height: 15vw;
-    margin: 0px 60px;
-    border-radius: 20px;
-    background-image: url("../../assets/Sorderdetails.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 145%;
-    border: 4px solid darkblue;
-    transition: 0.5s ease;
-}
-
-.orderbutton {
-    display: block;
-    text-align: center;
-    cursor: pointer;
-    position: absolute;
-    top: 55%;
-}
-
-*/
-
-/* Genarate Report */
-.UD_supplierreport {
+/* Genarate Report*/
+.UD_GeneratePenalmember_report {
   width: 15vw;
   height: 15vw;
   margin: 0px 60px;
@@ -114,12 +44,12 @@
   transition: 0.5s ease;
 }
 
-.UD_supplierreportbutton {
+.UD_GeneratePenalmember_report_button {
   display: block;
   text-align: center;
   cursor: pointer;
   position: absolute;
-  top: 55%;
+  top: 10%;
   left: 30%;
 }
 
@@ -130,16 +60,16 @@
   font-weight: bold;
 }
 
-.UD_addSupplier:hover,
-.UD_supplierreport:hover,
+.UD_addPenalmeber:hover,
+.UD_Penalmeberreport:hover,
 .UD_addOrder:hover,
 .UD_viewManagerNotice:hover {
   opacity: 80%;
   border: 4px solid red;
 }
 
-.UD_supplier,
-.UD_managesupplier,
+.UD_Penalmeber,
+.UD_managePenalmeber,
 .UD_manageorder,
 .UD_managenotice {
   width: 40vw;
@@ -169,3 +99,74 @@
 .ud_Gr_back_button:hover {
   background-color: red;
 }
+
+/* ............................ */
+/* 
+.UD_viewManagerNotice {
+  width: 15vw;
+  height: 15vw;
+  margin: 0px 60px;
+  border-radius: 20px;
+  background-image: url("../../assets/MorderNotice.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  border: 4px solid darkblue;
+  transition: 0.5s ease;
+}
+
+.UD_ViewNoticebutton {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  left: 60%;
+}
+
+
+.vieworderdetail {
+    width: 15vw;
+    height: 15vw;
+    margin: 0px 60px;
+    border-radius: 20px;
+    background-image: url("../../assets/Sorderdetails.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 145%;
+    border: 4px solid darkblue;
+    transition: 0.5s ease;
+}
+
+.orderbutton {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+}
+
+
+
+
+.UD_Penalmeberreport {
+  width: 15vw;
+  height: 15vw;
+  margin: 0px 60px;
+  border-radius: 20px;
+  background-image: url("../../assets/supreport.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 145%;
+  border: 4px solid darkblue;
+  transition: 0.5s ease;
+}
+
+.UD_Penalmeberreportbutton {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  left: 30%;
+} */

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import "./UD_HomePenalmember.css";
+import "./UD_HomePenalmember.css";
 import UD_ManagePenalmember from "./UD_MangePenalmember";
 import UD_AddPenalmember from "./UD_AddPenalmember";
 import UD_PenalmemberReport from "./UD_PenalmemberReport";
@@ -31,26 +31,26 @@ const UD_HomePenalmember = () => {
 const PenalmemberMain = (props) => {
   return (
     <div className="UD_row">
-      <div className="UD_suppliermain">
-        <div className="UD_supplierbutton">
+      <div className="UD_Penalmebermain">
+        <div className="UD_Penalmeberbutton">
           <div
-            className="UD_addSupplier"
+            className="UD_addPenalmeber"
             onClick={() => props.onClick("managePenalmember")}
           ></div>
           <h5> Penalmember Deatials</h5>
         </div>
 
-        <div className="UD_addorderbutton">
+        <div className="UD_GeneratePenalmember_report_button">
           <div
-            className="UD_addOrder"
+            className="UD_GeneratePenalmember_report"
             onClick={() => props.onClick("penalmemberReport")}
           ></div>
           <h5>Generate PenalmemberReport</h5>
         </div>
 
-        {/* <div className="UD_supplierreportbutton">
+        {/* <div className="UD_Penalmeberreportbutton">
           <div
-            className="UD_supplierreport"
+            className="UD_Penalmeberreport"
             onClick={() => props.onClick("penalmemberReport")}
           ></div>
           <h5>Generate PenalmemberReport</h5>
