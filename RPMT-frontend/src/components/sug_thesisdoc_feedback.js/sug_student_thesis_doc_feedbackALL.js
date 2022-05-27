@@ -2,21 +2,44 @@ import React ,{ useEffect, useState }from 'react'
 import axios from "axios"
 
 
-import Sug_student_thesisdoc_feedback from "./sug_student_thesis_doc_feedback";
 const URL = "http://localhost:5000/thesisdoc_feedback2";
 
-const fetchHandler = async () => {
-  return await axios.get(URL).then((res) => res.data);
-};
+
 const Sug_student_AllThesisdocfeedbacks = () => {
-  const [Feedbacks, setfeedbacks] = useState();
+  const [Feedbacks, setfeedbacks] = useState([]);
   useEffect(() => {
-    fetchHandler().then((data) => setfeedbacks(data.Feedbacks));
+    axios.get(URL).then((res) => res.data).then((data) => setfeedbacks(data.Feedbacks));
   }, []);
   console.log(Feedbacks);
 
 
+
+
+  const [filterText, setFilterText] = useState("");
+
+        
+  //search..........................
+
+  const filteredItems = Feedbacks.filter((sup) =>
+  sup.ResThesisFileGroupId.toLocaleLowerCase().includes(filterText)
+          
+        );
+ 
+   
+  const Feedbacksf = filterText ? filteredItems : Feedbacks; 
+
+
   return (<div>
+     <form action="">
+                  <input
+                    className="float-right"
+                    type="text"
+                    placeholder="Search"
+                    name="search"
+                    onChange={(e) =>
+                      setFilterText(e.target.value.toLocaleLowerCase())
+                    }/>
+                    </form><br/>{" "}
 
     
 
@@ -33,10 +56,13 @@ const Sug_student_AllThesisdocfeedbacks = () => {
     
   
      <table>
-      {Feedbacks && Feedbacks.map((Feedbacks, i)=>(
+      {Feedbacksf.map((Feedbacks, i)=>(
         
         <tr  key={i}>
-         <Sug_student_thesisdoc_feedback  Feedbacks={Feedbacks}/>
+           <td width={"200px"}>{Feedbacks.ResThesisFileGroupId}</td>
+       <td width={"200px"} >{Feedbacks.ResThesisFileSupervisor}</td>
+       <td width={"200px"}>{Feedbacks.Feedback}</td>
+       <td width={"200px"}>{Feedbacks.EvaluvatedDate}</td>
         </tr>
       ))}
       </table>

@@ -1,24 +1,49 @@
 import React ,{ useEffect, useState }from 'react'
 import axios from "axios"
-
 import Sug_student_topicdoc_feedback from "./sug_topicdoc_feedbacks";
-const URL = "http://localhost:5000/topicdoc_feedback2";
+const URL = `http://localhost:5000/topicdoc_feedback2`;
 
-const fetchHandler = async () => {
-  return await axios.get(URL).then((res) => res.data);
-};
+
 const  Sug_student_AllTopicdocfeedbacks= () => {
-  const [Feedbacks, setfeedbacks] = useState();
+
+  const [Feedback, setfeedbacks] = useState([]);
+
+
+
+
+
   useEffect(() => {
-    fetchHandler().then((data) => setfeedbacks(data.Feedbacks));
-  }, []);
-  console.log(Feedbacks);
+    
+     axios.get(URL).then((res) => setfeedbacks(res.data.Feedbacks));
+  });
+ 
+  const [filterText, setFilterText] = useState("");
 
+        
+          //search..........................
+    
+          const filteredItems = Feedback.filter((sup) =>
+          sup.ResTopicFileGroupId.toLocaleLowerCase().includes(filterText)
+                  
+                );
+         
+           
+              const Feedbacksf = filterText ? filteredItems : Feedback; 
 
+  
+     
   return (
     <div >
-
-   
+             <form action="">
+                  <input
+                    className="float-right"
+                    type="text"
+                    placeholder="Search"
+                    name="search"
+                    onChange={(e) =>
+                      setFilterText(e.target.value.toLocaleLowerCase())
+                    }/>
+                    </form><br/>{" "}
 
     <div >
       
@@ -31,12 +56,14 @@ const  Sug_student_AllTopicdocfeedbacks= () => {
      <th width={"200px"}>Feedback</th>
      <th width={"200px"}>EvaluvatedDate</th>
     
-     <th width={"200px"}>Action</th>
      <table>
-      {Feedbacks && Feedbacks.map((Feedbacks, i)=>(
+      {Feedbacksf.map(({ _id, ResTopicFileGroupId, ResTopicFilePanel,Feedback, EvaluvatedDate }) => (
         
-        <tr  key={i}>
-         <Sug_student_topicdoc_feedback Feedbacks={Feedbacks}/>
+        <tr  key={_id}>
+           <td width={"200px"}>{ResTopicFileGroupId}</td>
+       <td width={"200px"} >{ResTopicFilePanel}</td>
+       <td width={"200px"}>{Feedback}</td>
+       <td width={"200px"}>{EvaluvatedDate}</td>
         </tr>
       ))}
       </table>

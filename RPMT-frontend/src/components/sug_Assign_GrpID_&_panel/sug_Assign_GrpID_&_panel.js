@@ -32,7 +32,16 @@ const Sug_GroupID_and_Panel_Assign = () => {
          
           swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
 
-        }else{await axios
+        }else  if(!inputs.Grp_ID.includes("GRP_") && inputs.Grp_ID.trim().length>0 ){
+         
+          swal("Invalid Group Id !!", "You Must fill valid Group Id !!", "error");
+
+        } else  if(!inputs.Panel.includes("Panel") && inputs.Panel.trim().length>0 ){
+         
+          swal("Invalid Panel Id !!", "You Must fill valid Panel Id !!", "error");
+
+        }
+        else{await axios
           .put(`http://localhost:5000/group/${id}`, {
             Grp_Leader: String(inputs.Grp_Leader),
             Grp_member2: String(inputs.Grp_member2),

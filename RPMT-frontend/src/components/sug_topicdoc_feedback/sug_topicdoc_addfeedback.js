@@ -30,9 +30,11 @@ const Sug_Topicdoc_addfeedback = () => {
         }));
       };
       const sendRequest = async () => {
-        if(inputs.ResTopicFileGroupId.length == 0 || inputs.ResTopicFilePanel.length == 0 || inputs.Feedback.length == 0 ||inputs.EvaluvatedDate.length == 0 ){
-         
+        if( inputs.ResTopicFilePanel.trim().length == 0  ){
+        
           swal("Feilds Cannot Be empty !!", "You Must fill all the feilds !!", "error");
+          
+          
   
         }else{await axios
           .post("http://localhost:5000/topicdoc_feedback2", {

@@ -8,13 +8,7 @@ const Th_groups= (props) => {
     const { _id,Grp_Leader,Grp_member2,Grp_member3,Grp_member4,Grp_ID,Panel,Finalmarks }=props.Groups;
    
  
-    /*const deleteHandler = async () => {
-      await axios
-        .delete(`http://localhost:5000/group/${_id}`)
-        .then((res) => res.data)
-        .then(() => history("/"))
-        .then(() => history("/AllTopicDocFeedback"));
-    };*/
+ 
    
  
 
