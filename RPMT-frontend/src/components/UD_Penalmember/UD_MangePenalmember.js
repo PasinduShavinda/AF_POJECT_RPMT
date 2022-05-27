@@ -27,18 +27,27 @@ const UD_ManagePenalmember = (props) => {
 
   //.....Delete..............
   const deleteData = (e) => {
-    try {
-      axios
-        .delete(
-          `http://localhost:5000/penal/penalmemberregister${e.target.value}`
-        )
-        .then((res) => {
-          swal("Success", "Item Deleted Successfully", "success");
+    swal({
+      title: "Are you sure?",
+      text: "Once Deleted, you will not be able to recover this Penalmember details!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        axios
+          .delete(
+            `http://localhost:5000/penal/penalmemberregister${e.target.value}`
+          )
+          .then((res) => res.data);
+
+        swal("Done! Penalmember has been deleted!", {
+          icon: "success",
         });
-    } catch (error) {
-      swal("Error", "Deletion Failed", "error");
-    }
-    console.log(e.target.value);
+      } else {
+        swal("Penalmember not deleted !");
+      }
+    });
   };
 
   const editData = (e, data) => {

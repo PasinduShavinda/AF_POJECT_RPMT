@@ -26,19 +26,42 @@ const UD_ManageStudent = (props) => {
   const [filterText, setFilterText] = useState("");
 
   //.....Delete..............
+  // const deleteData = (e) => {
+  //   try {
+  //     axios
+  //       .delete(`http://localhost:5000/auth/register${e.target.value}`)
+  //       .then((res) => {
+  //         swal("Success", "Deleted Successfully", "success");
+  //       });
+  //   } catch (error) {
+  //     swal("Error", "Deletion Failed", "error");
+  //   }
+  //   console.log(e.target.value);
+  // };
+
   const deleteData = (e) => {
-    try {
-      axios
-        .delete(`http://localhost:5000/auth/register${e.target.value}`)
-        .then((res) => {
-          swal("Success", "Item Deleted Successfully", "success");
+    swal({
+      title: "Are you sure?",
+      text: "Once Deleted, you will not be able to recover this Student details!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        axios
+          .delete(`http://localhost:5000/auth/register${e.target.value}`)
+          .then((res) => res.data);
+
+        swal("Done! Student has been deleted!", {
+          icon: "success",
         });
-    } catch (error) {
-      swal("Error", "Deletion Failed", "error");
-    }
-    console.log(e.target.value);
+      } else {
+        swal("Student not deleted !");
+      }
+    });
   };
 
+  //edit..................
   const editData = (e, data) => {
     setId(e.target.value);
     setData(data);
