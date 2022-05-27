@@ -12,7 +12,7 @@
   height: 80vh;
   top: 58px;
   left: 10px;
-  background-color: #f7f2f2;
+  background-color: #e6f6df;
   border-radius: 30px;
   color: rgb(158, 131, 131);
   display: flex;
@@ -54,7 +54,7 @@
 .MSud_MStudent_Search_name {
   height: 30px;
   width: 250px;
-  background-color: #f4eded;
+  background-color: #e6f6df;
   color: rgb(255, 255, 255);
   border: 2px solid rgb(0, 85, 255);
   border-radius: 17px;
