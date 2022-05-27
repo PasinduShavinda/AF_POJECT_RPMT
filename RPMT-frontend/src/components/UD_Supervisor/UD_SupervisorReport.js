@@ -79,164 +79,162 @@ const UD_StudentReport = (props) => {
         <div className="ud_MSupervisor_Form1">
           <div className="ud_MSupervisor_title">Supervisor Details</div>
 
-          <div className="ud_MSupervisor_Form2">
-            <TableContainer
-              component={Paper}
-              style={{
-                maxHeight: 450,
-                minHeight: 200,
-                maxWidth: 850,
-                backgroundColor: "#1B1B1B",
-                borderRadius: "15px",
-              }}
-            >
-              <br></br>
+          {/* <div className="ud_MSupervisor_Form2"> */}
+          <TableContainer
+            component={Paper}
+            style={{
+              maxHeight: 450,
+              minHeight: 200,
+              maxWidth: 1200,
+              backgroundColor: "#FFFFFF",
+              borderRadius: "15px",
+            }}
+          >
+            <br></br>
 
-              {/* //search.......................... */}
-              <div class="ud_MSupervisor_Search">
-                <form action="">
-                  <input
-                    className="ud_MSupervisor_Search_name "
-                    type="text"
-                    placeholder="Search By Supervisor Name"
-                    name="search"
-                    onChange={(e) =>
-                      setFilterText(e.target.value.toLocaleLowerCase())
-                    }
-                  />
+            {/* //search.......................... */}
+            <div class="ud_MSupervisor_Search">
+              <form action="">
+                <input
+                  className="ud_MSupervisor_Search_name "
+                  type="text"
+                  placeholder="Search By Supervisor Name"
+                  name="search"
+                  onChange={(e) =>
+                    setFilterText(e.target.value.toLocaleLowerCase())
+                  }
+                />
 
-                  {/* <button className="ud_MSupervisor_search_Button" type="submit" value="search">
+                {/* <button className="ud_MSupervisor_search_Button" type="submit" value="search">
                   <SearchIcon />
                 </button> */}
-                </form>{" "}
-              </div>
+              </form>{" "}
+            </div>
 
-              <Table aria-label="caption table">
-                <TableHead>
-                  <TableRow>
+            <Table aria-label="caption table">
+              <TableHead>
+                <TableRow>
+                  <TableCell
+                    align="center"
+                    className="ud_MSupervisor_cellColor"
+                  >
+                    <div className="ud_MSupervisor_headcolor">FirstName</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MSupervisor_cellColor"
+                  >
+                    <div className="ud_MSupervisor_headcolor">LastName</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MSupervisor_cellColor"
+                  >
+                    <div className="ud_MSupervisor_headcolor">Address</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MSupervisor_cellColor"
+                  >
+                    <div className="ud_MSupervisor_headcolor">City</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MSupervisor_cellColor"
+                  >
+                    <div className="ud_MSupervisor_headcolor">PhoneNumber</div>
+                  </TableCell>
+
+                  <TableCell
+                    align="center"
+                    className="ud_MSupervisor_cellColor"
+                  >
+                    <div className="ud_MSupervisor_headcolor">Email</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MSupervisor_cellColor"
+                  >
+                    <div className="ud_MSupervisor_headcolor">Password</div>
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+
+              <TableBody>
+                {supervisorss.map((row, index) => (
+                  <TableRow key={index}>
                     <TableCell
                       align="center"
+                      component="th"
+                      scope="UD_row"
                       className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_MSupervisor_headcolor">FirstName</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MSupervisor_cellColor"
-                    >
-                      <div className="ud_MSupervisor_headcolor">LastName</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MSupervisor_cellColor"
-                    >
-                      <div className="ud_MSupervisor_headcolor">Address</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MSupervisor_cellColor"
-                    >
-                      <div className="ud_MSupervisor_headcolor">City</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MSupervisor_cellColor"
-                    >
-                      <div className="ud_MSupervisor_headcolor">
-                        PhoneNumber
-                      </div>
+                      {row.firstName}
                     </TableCell>
 
                     <TableCell
                       align="center"
                       className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_MSupervisor_headcolor">Email</div>
+                      {row.lastName}
                     </TableCell>
+
                     <TableCell
                       align="center"
                       className="ud_MSupervisor_cellColor"
                     >
-                      <div className="ud_MSupervisor_headcolor">Password</div>
+                      {row.address}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="ud_MSupervisor_cellColor"
+                    >
+                      {row.city}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="ud_MSupervisor_cellColor"
+                    >
+                      {row.phoneNumber}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="ud_MSupervisor_cellColor"
+                    >
+                      {row.email}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="ud_MSupervisor_cellColor"
+                    >
+                      {row.password}
                     </TableCell>
                   </TableRow>
-                </TableHead>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
 
-                <TableBody>
-                  {supervisorss.map((row, index) => (
-                    <TableRow key={index}>
-                      <TableCell
-                        align="center"
-                        component="th"
-                        scope="UD_row"
-                        className="ud_MSupervisor_cellColor"
-                      >
-                        {row.firstName}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MSupervisor_cellColor"
-                      >
-                        {row.lastName}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MSupervisor_cellColor"
-                      >
-                        {row.address}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MSupervisor_cellColor"
-                      >
-                        {row.city}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MSupervisor_cellColor"
-                      >
-                        {row.phoneNumber}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MSupervisor_cellColor"
-                      >
-                        {row.email}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MSupervisor_cellColor"
-                      >
-                        {row.password}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-
-            {/* <div
+          {/* <div
           onClick={() => props.onClick("Supervisoraddform")}className="ud_MSupervisor_addbutton">
           Add New Supervisor
         </div> */}
 
-            <div
-              onClick={() => props.onClick("supervisor")}
-              className="ud_MSupervisor_back_button"
-            >
-              Previous
-            </div>
-
-            <button className="ud_MSupervisor_Pdf_Button" onClick={downloadPdf}>
-              Downloard PDF
-            </button>
+          <div
+            onClick={() => props.onClick("supervisor")}
+            className="ud_MSupervisor_back_button"
+          >
+            Previous
           </div>
+
+          <button className="ud_MSupervisor_Pdf_Button" onClick={downloadPdf}>
+            Downloard PDF
+          </button>
+          {/* </div> */}
         </div>
       )}
     </>

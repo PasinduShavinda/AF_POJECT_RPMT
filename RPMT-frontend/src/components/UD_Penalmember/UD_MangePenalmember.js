@@ -83,208 +83,206 @@ const UD_ManagePenalmember = (props) => {
         <div className="ud_MPenalmeber_Form1">
           <div className="ud_MPenalmeber_title">Penalmember Details</div>
 
-          <div className="ud_MPenalmeber_Form2">
-            <TableContainer
-              component={Paper}
-              style={{
-                maxHeight: 450,
-                minHeight: 200,
-                maxWidth: 850,
-                backgroundColor: "#1B1B1B",
-                borderRadius: "15px",
-              }}
-            >
-              <br></br>
+          {/* <div className="ud_MPenalmeber_Form2"> */}
+          <TableContainer
+            component={Paper}
+            style={{
+              maxHeight: 450,
+              minHeight: 200,
+              maxWidth: 1200,
+              backgroundColor: "#FFFFFF",
+              borderRadius: "15px",
+            }}
+          >
+            <br></br>
 
-              {/* //search.......................... */}
-              <div class="ud_MPenalmeber_Search">
-                <form action="">
-                  <input
-                    className="ud_MPenalmeber_Search_name "
-                    type="text"
-                    placeholder="Search By Penalmember Name"
-                    name="search"
-                    onChange={(e) =>
-                      setFilterText(e.target.value.toLocaleLowerCase())
-                    }
-                  />
+            {/* //search.......................... */}
+            <div class="ud_MPenalmeber_Search">
+              <form action="">
+                <input
+                  className="ud_MPenalmeber_Search_name "
+                  type="text"
+                  placeholder="Search By Penalmember Name"
+                  name="search"
+                  onChange={(e) =>
+                    setFilterText(e.target.value.toLocaleLowerCase())
+                  }
+                />
 
-                  {/* <button className="ud_MPenalmeber_search_Button" type="submit" value="search">
+                {/* <button className="ud_MPenalmeber_search_Button" type="submit" value="search">
                   <SearchIcon />
                 </button> */}
-                </form>{" "}
-              </div>
+              </form>{" "}
+            </div>
 
-              <Table aria-label="caption table">
-                <TableHead>
-                  <TableRow>
+            <Table aria-label="caption table">
+              <TableHead>
+                <TableRow>
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">FirstName</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">LastName</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">Address</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">City</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">PhoneNumber</div>
+                  </TableCell>
+
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">Email</div>
+                  </TableCell>
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">Password</div>
+                  </TableCell>
+
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">Action</div>
+                  </TableCell>
+
+                  <TableCell
+                    align="center"
+                    className="ud_MPenalmeber_cellColor"
+                  >
+                    <div className="ud_MPenalmeber_headcolor">Action</div>
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+
+              <TableBody>
+                {penalmemberss.map((row, index) => (
+                  <TableRow key={index}>
                     <TableCell
                       align="center"
+                      component="th"
+                      scope="UD_row"
                       className="ud_MPenalmeber_cellColor"
                     >
-                      <div className="ud_MPenalmeber_headcolor">FirstName</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MPenalmeber_cellColor"
-                    >
-                      <div className="ud_MPenalmeber_headcolor">LastName</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MPenalmeber_cellColor"
-                    >
-                      <div className="ud_MPenalmeber_headcolor">Address</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MPenalmeber_cellColor"
-                    >
-                      <div className="ud_MPenalmeber_headcolor">City</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MPenalmeber_cellColor"
-                    >
-                      <div className="ud_MPenalmeber_headcolor">
-                        PhoneNumber
-                      </div>
+                      {row.firstName}
                     </TableCell>
 
                     <TableCell
                       align="center"
                       className="ud_MPenalmeber_cellColor"
                     >
-                      <div className="ud_MPenalmeber_headcolor">Email</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="ud_MPenalmeber_cellColor"
-                    >
-                      <div className="ud_MPenalmeber_headcolor">Password</div>
+                      {row.lastName}
                     </TableCell>
 
                     <TableCell
                       align="center"
                       className="ud_MPenalmeber_cellColor"
                     >
-                      <div className="ud_MPenalmeber_headcolor">Action</div>
+                      {row.address}
                     </TableCell>
 
                     <TableCell
                       align="center"
                       className="ud_MPenalmeber_cellColor"
                     >
-                      <div className="ud_MPenalmeber_headcolor">Action</div>
+                      {row.city}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="ud_MPenalmeber_cellColor"
+                    >
+                      {row.phoneNumber}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="ud_MPenalmeber_cellColor"
+                    >
+                      {row.email}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="ud_MPenalmeber_cellColor"
+                    >
+                      {row.password}
+                    </TableCell>
+
+                    <TableCell
+                      itemType="button"
+                      align="center"
+                      className="ud_MPenalmeber_Edit_Icon5"
+                    >
+                      <button
+                        className="ud_MPenalmeber_Edit_Icon6"
+                        value={row._id}
+                        onClick={deleteData}
+                      >
+                        Delete
+                      </button>
+                    </TableCell>
+
+                    <TableCell
+                      itemType="button"
+                      align="center"
+                      className="ud_MPenalmeber_deleteIcon7"
+                    >
+                      <button
+                        className="ud_MPenalmeber_deleteIcon8"
+                        value={row._id}
+                        onClick={(e) => editData(e, row)}
+                      >
+                        Edit
+                      </button>
                     </TableCell>
                   </TableRow>
-                </TableHead>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
 
-                <TableBody>
-                  {penalmemberss.map((row, index) => (
-                    <TableRow key={index}>
-                      <TableCell
-                        align="center"
-                        component="th"
-                        scope="UD_row"
-                        className="ud_MPenalmeber_cellColor"
-                      >
-                        {row.firstName}
-                      </TableCell>
+          <div
+            onClick={() => props.onClick("addPenalmember")}
+            className="ud_MPenalmeber_addbutton"
+          >
+            Add New Penalmember
+          </div>
 
-                      <TableCell
-                        align="center"
-                        className="ud_MPenalmeber_cellColor"
-                      >
-                        {row.lastName}
-                      </TableCell>
+          <div
+            onClick={() => props.onClick("penalmember")}
+            className="ud_MPenalmeber_back_button"
+          >
+            Previous
+          </div>
 
-                      <TableCell
-                        align="center"
-                        className="ud_MPenalmeber_cellColor"
-                      >
-                        {row.address}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MPenalmeber_cellColor"
-                      >
-                        {row.city}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MPenalmeber_cellColor"
-                      >
-                        {row.phoneNumber}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MPenalmeber_cellColor"
-                      >
-                        {row.email}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="ud_MPenalmeber_cellColor"
-                      >
-                        {row.password}
-                      </TableCell>
-
-                      <TableCell
-                        itemType="button"
-                        align="center"
-                        className="ud_MPenalmeber_Edit_Icon5"
-                      >
-                        <button
-                          className="ud_MPenalmeber_Edit_Icon6"
-                          value={row._id}
-                          onClick={deleteData}
-                        >
-                          Delete
-                        </button>
-                      </TableCell>
-
-                      <TableCell
-                        itemType="button"
-                        align="center"
-                        className="ud_MPenalmeber_deleteIcon7"
-                      >
-                        <button
-                          className="ud_MPenalmeber_deleteIcon8"
-                          value={row._id}
-                          onClick={(e) => editData(e, row)}
-                        >
-                          Edit
-                        </button>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-
-            <div
-              onClick={() => props.onClick("addPenalmember")}
-              className="ud_MPenalmeber_addbutton"
-            >
-              Add New Penalmember
-            </div>
-
-            <div
-              onClick={() => props.onClick("penalmember")}
-              className="ud_MPenalmeber_back_button"
-            >
-              Previous
-            </div>
-
-            {/* <button className="ud_MPenalmeber_Pdf_Button" onClick={downloadPdf}>
+          {/* <button className="ud_MPenalmeber_Pdf_Button" onClick={downloadPdf}>
             Downloard PDF
           </button> */}
-          </div>
+          {/* </div> */}
         </div>
       )}
     </>

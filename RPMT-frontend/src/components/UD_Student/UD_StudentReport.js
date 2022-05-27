@@ -72,162 +72,141 @@ const UD_StudentReport = (props) => {
         <div className="MSud_MStudent_Form1">
           <div className="MSud_MStudent_title">Student Details</div>
 
-          <div className="MSud_MStudent_Form2">
-            <TableContainer
-              component={Paper}
-              style={{
-                maxHeight: 450,
-                minHeight: 200,
-                maxWidth: 850,
-                backgroundColor: "#1B1B1B",
-                borderRadius: "15px",
-              }}
-            >
-              <br></br>
+          {/* <div className="MSud_MStudent_Form2"> */}
+          <TableContainer
+            component={Paper}
+            style={{
+              maxHeight: 450,
+              minHeight: 200,
+              maxWidth: 1200,
+              backgroundColor: "#FFFFFF",
+              borderRadius: "15px",
+            }}
+          >
+            <br></br>
 
-              {/* //search.......................... */}
-              <div class="MSud_MStudent_Search">
-                <form action="">
-                  <input
-                    className="MSud_MStudent_Search_name "
-                    type="text"
-                    placeholder="Search By First Name"
-                    name="search"
-                    onChange={(e) =>
-                      setFilterText(e.target.value.toLocaleLowerCase())
-                    }
-                  />
+            {/* //search.......................... */}
+            <div class="MSud_MStudent_Search">
+              <form action="">
+                <input
+                  className="MSud_MStudent_Search_name "
+                  type="text"
+                  placeholder="Search By First Name"
+                  name="search"
+                  onChange={(e) =>
+                    setFilterText(e.target.value.toLocaleLowerCase())
+                  }
+                />
 
-                  {/* <button className="ud_MStudent_search_Button" type="submit" value="search">
+                {/* <button className="ud_MStudent_search_Button" type="submit" value="search">
                   <SearchIcon />
                 </button> */}
-                </form>{" "}
-              </div>
+              </form>{" "}
+            </div>
 
-              <Table aria-label="caption table">
-                <TableHead>
-                  <TableRow>
+            <Table aria-label="caption table">
+              <TableHead>
+                <TableRow>
+                  <TableCell align="center" className="MSud_MStudent_cellColor">
+                    <div className="MSud_MStudent_headcolor">FirstName</div>
+                  </TableCell>
+                  <TableCell align="center" className="MSud_MStudent_cellColor">
+                    <div className="MSud_MStudent_headcolor">LastName</div>
+                  </TableCell>
+                  <TableCell align="center" className="MSud_MStudent_cellColor">
+                    <div className="MSud_MStudent_headcolor">Address</div>
+                  </TableCell>
+                  <TableCell align="center" className="MSud_MStudent_cellColor">
+                    <div className="MSud_MStudent_headcolor">City</div>
+                  </TableCell>
+                  <TableCell align="center" className="MSud_MStudent_cellColor">
+                    <div className="MSud_MStudent_headcolor">PhoneNumber</div>
+                  </TableCell>
+
+                  <TableCell align="center" className="MSud_MStudent_cellColor">
+                    <div className="MSud_MStudent_headcolor">Email</div>
+                  </TableCell>
+                  <TableCell align="center" className="MSud_MStudent_cellColor">
+                    <div className="MSud_MStudent_headcolor">Password</div>
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+
+              <TableBody>
+                {userss.map((row, index) => (
+                  <TableRow key={index}>
                     <TableCell
                       align="center"
+                      component="udth"
+                      scope="MSUD_row"
                       className="MSud_MStudent_cellColor"
                     >
-                      <div className="MSud_MStudent_headcolor">FirstName</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="MSud_MStudent_cellColor"
-                    >
-                      <div className="MSud_MStudent_headcolor">LastName</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="MSud_MStudent_cellColor"
-                    >
-                      <div className="MSud_MStudent_headcolor">Address</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="MSud_MStudent_cellColor"
-                    >
-                      <div className="MSud_MStudent_headcolor">City</div>
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className="MSud_MStudent_cellColor"
-                    >
-                      <div className="MSud_MStudent_headcolor">PhoneNumber</div>
+                      {row.firstName}
                     </TableCell>
 
                     <TableCell
                       align="center"
                       className="MSud_MStudent_cellColor"
                     >
-                      <div className="MSud_MStudent_headcolor">Email</div>
+                      {row.lastName}
                     </TableCell>
+
                     <TableCell
                       align="center"
                       className="MSud_MStudent_cellColor"
                     >
-                      <div className="MSud_MStudent_headcolor">Password</div>
+                      {row.address}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="MSud_MStudent_cellColor"
+                    >
+                      {row.city}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="MSud_MStudent_cellColor"
+                    >
+                      {row.phoneNumber}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="MSud_MStudent_cellColor"
+                    >
+                      {row.email}
+                    </TableCell>
+
+                    <TableCell
+                      align="center"
+                      className="MSud_MStudent_cellColor"
+                    >
+                      {row.password}
                     </TableCell>
                   </TableRow>
-                </TableHead>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
 
-                <TableBody>
-                  {userss.map((row, index) => (
-                    <TableRow key={index}>
-                      <TableCell
-                        align="center"
-                        component="udth"
-                        scope="MSUD_row"
-                        className="MSud_MStudent_cellColor"
-                      >
-                        {row.firstName}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="MSud_MStudent_cellColor"
-                      >
-                        {row.lastName}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="MSud_MStudent_cellColor"
-                      >
-                        {row.address}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="MSud_MStudent_cellColor"
-                      >
-                        {row.city}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="MSud_MStudent_cellColor"
-                      >
-                        {row.phoneNumber}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="MSud_MStudent_cellColor"
-                      >
-                        {row.email}
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        className="MSud_MStudent_cellColor"
-                      >
-                        {row.password}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-
-            {/* <div
+          {/* <div
           onClick={() => props.onClick("Studentaddform")}className="ud_MStudent_addbutton">
           Add New Student
         </div> */}
 
-            <div
-              onClick={() => props.onClick("student")}
-              className="MSud_MStudent_back_button"
-            >
-              Previous
-            </div>
-
-            <button className="MSud_MStudent_Pdf_Button" onClick={downloadPdf}>
-              Downloard PDF
-            </button>
+          <div
+            onClick={() => props.onClick("student")}
+            className="MSud_MStudent_back_button"
+          >
+            Previous
           </div>
+
+          <button className="MSud_MStudent_Pdf_Button" onClick={downloadPdf}>
+            Downloard PDF
+          </button>
+          {/* </div> */}
         </div>
       )}
     </>
