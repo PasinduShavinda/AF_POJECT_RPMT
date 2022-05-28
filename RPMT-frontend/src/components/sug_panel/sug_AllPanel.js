@@ -4,7 +4,7 @@ import Panel from "./sug_Panel";
 import "./sug_AllPanel.css"
 import Sug_panelmembers_page from "../sug_panelmembers_page/sug_panelmembers_page"
 
-const URL = "http://localhost:5000/panelcreate";
+const URL = "https://af-test-deploy-app.herokuapp.com/panelcreate";
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);

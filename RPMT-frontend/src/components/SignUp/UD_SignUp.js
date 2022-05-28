@@ -31,7 +31,7 @@ const UD_Signup = () => {
     };
 
     axios
-      .post("http://localhost:5000/auth/register", userData)
+      .post("https://af-test-deploy-app.herokuapp.com/auth/register", userData)
       .then((res) => {
         if (res.data.message === "success") {
           // var currentUser = res.data.data;

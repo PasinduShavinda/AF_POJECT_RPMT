@@ -23,7 +23,7 @@ const Sug_resdoc_feedback= (props) => {
           if (willDelete) {
           
            axios
-        .delete(`http://localhost:5000/resdoc_feedback2/${_id}`)
+        .delete(`https://af-test-deploy-app.herokuapp.com/resdoc_feedback2/${_id}`)
         .then((res) => res.data)
         .then(() => history("/"))
         .then(() => history("/AllResDocFeedback"));

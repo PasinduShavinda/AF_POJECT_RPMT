@@ -37,7 +37,7 @@ const UD_AddPenalmember = (props) => {
     }
 
     axios
-      .post("http://localhost:5000/penal/penalmemberregister", penalmember)
+      .post("https://af-test-deploy-app.herokuapp.com/penal/penalmemberregister", penalmember)
       .then((res) => {
         if (res.data.message === "success") {
           console.log(res.data);

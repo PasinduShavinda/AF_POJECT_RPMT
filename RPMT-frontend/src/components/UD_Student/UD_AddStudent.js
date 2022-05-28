@@ -37,7 +37,7 @@ const UD_AddStudent = (props) => {
     }
 
     axios
-      .post("http://localhost:5000/auth/register", user)
+      .post("https://af-test-deploy-app.herokuapp.com/auth/register", user)
       .then((res) => {
         if (res.data.message === "success") {
           console.log(res.data);

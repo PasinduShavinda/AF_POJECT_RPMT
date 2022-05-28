@@ -14,7 +14,7 @@ const Sug_Resdoc_addfeedback = () => {
     useEffect(() => {
     const fetchHandler = async () => {
       await axios
-        .get(`http://localhost:5000/resdoc_feedback/${id}`)
+        .get(`https://af-test-deploy-app.herokuapp.com/resdoc_feedback/${id}`)
         .then((res) => res.data)
         .then(data=>setInputs(data.feedbacks))
            
@@ -31,7 +31,7 @@ const Sug_Resdoc_addfeedback = () => {
       };
       const sendRequest = async () => {
         await axios
-          .post("http://localhost:5000/resdoc_feedback2", {
+          .post("https://af-test-deploy-app.herokuapp.com/resdoc_feedback2", {
             ResDocFileGroupId: String(inputs.ResDocFileGroupId),
             ResDocFileSupervisor: String(inputs.ResDocFileSupervisor),
             ResDocFileTopic: String(inputs. ResDocFileTopic),

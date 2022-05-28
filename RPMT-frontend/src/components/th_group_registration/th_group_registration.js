@@ -36,7 +36,7 @@ const Th_Group_Reg = () => {
   
     const sendRequest = async () => {
       await axios
-        .post("http://localhost:5000/group", {
+        .post("https://af-test-deploy-app.herokuapp.com/group", {
             Grp_Leader: String(inputs.Grp_Leader),
             Grp_member2: String(inputs.Grp_member2),
             Grp_member3: String(inputs.Grp_member3),

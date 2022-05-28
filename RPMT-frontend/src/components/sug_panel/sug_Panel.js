@@ -20,7 +20,7 @@ const Panel= (props) => {
         if (willDelete) {
         
          axios
-        .delete(`http://localhost:5000/panelcreate/${_id}`)
+        .delete(`https://af-test-deploy-app.herokuapp.com/panelcreate/${_id}`)
         .then((res) => res.data)
         .then(() => history("/"))
         .then(() => history("/allPanel"));

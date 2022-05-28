@@ -41,7 +41,7 @@ const Shv_rs_add_rs_topic = () => {
       swal("Invalid Supervisor Name !", "Name cannot contain numbers ! Please enter valid name !", "error");
     }else{
     await axios
-      .post("http://localhost:5000/resTopics", {
+      .post("https://af-test-deploy-app.herokuapp.com/resTopics", {
         ResTopicgroupId: String(inputs.ResTopicgroupId),
         ResTopicsupervisor: String(inputs.ResTopicsupervisor),
         ResTopicresearchArea: String(inputs.ResTopicresearchArea),

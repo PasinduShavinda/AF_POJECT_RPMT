@@ -37,7 +37,7 @@ const UD_ManagePenalmember = (props) => {
       if (willDelete) {
         axios
           .delete(
-            `http://localhost:5000/penal/penalmemberregister${e.target.value}`
+            `https://af-test-deploy-app.herokuapp.com/penal/penalmemberregister${e.target.value}`
           )
           .then((res) => res.data);
 
@@ -59,7 +59,7 @@ const UD_ManagePenalmember = (props) => {
   //retrieving data from the database---------------------------------
   useEffect(() => {
     axios
-      .get("http://localhost:5000/penal/penalmember${props.ID}")
+      .get("https://af-test-deploy-app.herokuapp.com/penal/penalmember${props.ID}")
       .then((res) => {
         setPenalmembers(res.data.data);
       });

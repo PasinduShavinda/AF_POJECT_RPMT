@@ -37,7 +37,7 @@ const UD_PenalmemberReport = (props) => {
   //retrieving data from the database---------------------------------
   useEffect(() => {
     axios
-      .get("http://localhost:5000/penal/penalmember${props.ID}")
+      .get("https://af-test-deploy-app.herokuapp.com/penal/penalmember${props.ID}")
       .then((res) => {
         setPenalmembers(res.data.data);
       });

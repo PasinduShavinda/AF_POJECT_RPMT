@@ -37,7 +37,7 @@ const UD_EditStudent = ({ onClick, id, formData }) => {
     }
 
     axios
-      .post(`http://localhost:5000/auth/register${id}`, user)
+      .post(`https://af-test-deploy-app.herokuapp.com/auth/register${id}`, user)
       .then((res) => {
         if (res.data.message === "success") {
           setFirstName("");

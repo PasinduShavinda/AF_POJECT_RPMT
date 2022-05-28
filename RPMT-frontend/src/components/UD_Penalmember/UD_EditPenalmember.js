@@ -37,7 +37,7 @@ const UD_EditPenalmember = ({ onClick, id, formData }) => {
     }
 
     axios
-      .post(`http://localhost:5000/penal/penalmemberregister${id}`, penalmember)
+      .post(`https://af-test-deploy-app.herokuapp.com/penal/penalmemberregister${id}`, penalmember)
       .then((res) => {
         if (res.data.message === "success") {
           setFirstName("");

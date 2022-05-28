@@ -26,7 +26,7 @@ const Shv_res_topic_notice_admin = (props) => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`http://localhost:5000/resTopicsNotice/${_id}`)
+          .delete(`https://af-test-deploy-app.herokuapp.com/resTopicsNotice/${_id}`)
           .then((res) => res.data)
           .then(() => history("/"))
           .then(() => history("/RsTopicsNotices"));

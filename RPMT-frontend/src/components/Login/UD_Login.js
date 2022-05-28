@@ -24,7 +24,7 @@ const UD_Login = () => {
     };
 
     axios
-      .post("http://localhost:5000/auth/login", user)
+      .post("https://af-test-deploy-app.herokuapp.com/auth/login", user)
       .then((res) => {
         if (res.data.message === "success") {
           var currentUser = res.data.data;

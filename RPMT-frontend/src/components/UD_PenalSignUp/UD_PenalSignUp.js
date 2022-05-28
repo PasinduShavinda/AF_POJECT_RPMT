@@ -31,7 +31,7 @@ const UD_PenalSignup = () => {
     };
 
     axios
-      .post("http://localhost:5000/penal/penalmemberregister", penalmemberData)
+      .post("https://af-test-deploy-app.herokuapp.com/penal/penalmemberregister", penalmemberData)
       .then((res) => {
         if (res.data.message === "success") {
           // var currentUser = res.data.data;

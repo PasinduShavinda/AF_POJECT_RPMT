@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+require('dotenv').config();
 const router1 = require("./routes/shv_res_topic_routes");
 const router2 = require("./routes/shv_res_topic_notice_admin_routes");
 const router3 = require("./routes/shv_rs_topic_file_routes");
@@ -16,8 +17,10 @@ const router13= require("./routes/sug_Thesis_feedback_router");
 const router14= require("./routes/sug_Thesis_feedback_router2");
 const router15= require("./routes/th_group_router");
 
+
 const cors = require("cors");
 const app = express();
+
 
 // Middlewares
 app.use(express.json());
@@ -45,6 +48,7 @@ app.get("/", (req, res) => {
 app.use("/auth", require("./routes/User"));
 app.use("/super", require("./routes/Supervisor"));
 app.use("/penal", require("./routes/Penalmember"));
+
 mongoose
   .connect(
     "mongodb+srv://afProject2022:af2022proj12A@afprojectcluster.t6kdd.mongodb.net/RPMT_DB?retryWrites=true&w=majority",
@@ -54,6 +58,8 @@ mongoose
   )
   .then(() => console.log("Connected To Database"))
   .then(() => {
-    app.listen(5000);
+    app.listen(process.env.PORT || 5000, ()=>{
+      console.log("Server is running on port 5000");
+    });
   })
   .catch((err) => console.log(err));

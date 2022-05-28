@@ -37,7 +37,7 @@ const UD_ManageSupervisor = (props) => {
       if (willDelete) {
         axios
           .delete(
-            `http://localhost:5000/super/supervisorregister${e.target.value}`
+            `https://af-test-deploy-app.herokuapp.com/super/supervisorregister${e.target.value}`
           )
           .then((res) => res.data);
 
@@ -59,7 +59,7 @@ const UD_ManageSupervisor = (props) => {
   //retrieving data from the database---------------------------------
   useEffect(() => {
     axios
-      .get("http://localhost:5000/super/supervisor${props.ID}")
+      .get("https://af-test-deploy-app.herokuapp.com/super/supervisor${props.ID}")
       .then((res) => {
         setSupervisors(res.data.data);
       });
