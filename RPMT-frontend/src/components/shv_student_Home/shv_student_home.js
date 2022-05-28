@@ -65,14 +65,15 @@ const StudentHomePage_shv = () => {
     </div>
   </div>
   
-  <section class="container py-5 h-100" >
+  <section class=" py-5 h-100" >
   <h1 class="d-flex justify-content-center"><b>Feedbacks and marks </b></h1>
 <div class="container px-4 py-5 h-100">
         <div class="row gx-8">
            
           <div class="col" >
-            <a href="/student_AllTopicdocfeedbacks" style={{textDecoration:'none' ,color:'white'}}> 
-                <div class="p-5 border" id="feedback"><b>Topic document Feedback</b>
+            <a href="/student_AllTopicdocfeedbacks" style={{textDecoration:'none' ,color:'black'}}> 
+            <img src="https://college.brown.edu/sites/g/files/dprerj916/files/2021-08/goals6.png"></img>
+                <div><h5><b>Topic document Feedback</b></h5>
                 
                 </div>
             </a>
@@ -80,18 +81,31 @@ const StudentHomePage_shv = () => {
 
           <div class="col" >
             <a href="/student_resdoc_feedbackALL" style={{textDecoration:'none' ,color:'white'}}> 
-                <div class="p-5 border" id="feedback"><b>Research Doc Feedback</b></div>
+            <img src="https://cdn.jim-nielsen.com/macos/512/idoc-2-manage-documents-simplicity-2015-05-21.png"></img>
+               
             </a>
+            <div><h5><b>Reserch document Feedback</b></h5>
+                
+                </div>
           </div>
           <div class="col" >
             <a href="/student_AllThesisdocfeedbacks" style={{textDecoration:'none' ,color:'white'}}> 
-                <div class="p-5 border" id="feedback"><b>Thesis document Feedback</b></div>
+            <img src="https://sharepointmaven.com/wp-content/uploads/2017/04/documents-158461_960_720.png"></img>
+               
             </a>
+            <div><h5><b>Thesis document Feedback</b></h5>
+  
+                </div>
           </div>
           <div class="col" >
             <a href="/All_groups" style={{textDecoration:'none' ,color:'white'}}> 
-                <div class="p-5 border" id="feedback"><b>Panle and Group Id Publish</b></div>
+                <img src="assets/images/results_feedback.png"></img>
+                
             </a>
+            <div ><h5>  <b>Final Results for Reserch</b></h5>
+            
+                
+                </div>
           </div>
         </div>
       </div>

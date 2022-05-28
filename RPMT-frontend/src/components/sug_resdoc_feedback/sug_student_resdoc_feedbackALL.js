@@ -33,40 +33,43 @@ const Sug_student_resdoc_feedbackALL = () => {
 
 
   return (
-    <div class="py-5 h-100">
+    <div >
         <form action="">
+        <div class="col-sm-4">
                   <input
                     className="float-right"
                     type="text"
                     placeholder="Search"
                     name="search"
+                    class="form-control"
                     onChange={(e) =>
                       setFilterText(e.target.value.toLocaleLowerCase())
                     }/>
+                    </div>
                     </form><br/>{" "}
    
     <div >
       
     <h1>All Reserch Document Feedbacks</h1>
-    <div className='container contact'>
+    <div >
     <div id="sug_table"> <ul>
       
-     <th width={"200px"}>GroupId</th>
-     <th width={"200px"}>Supervisor</th>
-     <th width={"200px"}>Topic</th>
-     <th width={"200px"}>Feedback</th>
-     <th width={"200px"}>Evaluvated Date</th>
+     <th width={"300px"}>GroupId</th>
+     <th width={"300px"}>Supervisor</th>
+     <th width={"300px"}>Topic</th>
+     <th width={"500px"}>Feedback</th>
+     <th width={"300px"}>Evaluvated Date</th>
     
    
      <table>
       {Feedbacksf.map((Feedbacks, i)=>(
         
         <tr  key={i}>
-         <td width={"200px"}>{Feedbacks.ResDocFileGroupId}</td>
-       <td width={"200px"} >{Feedbacks.ResDocFileSupervisor}</td>
-       <td width={"200px"}>{Feedbacks.ResDocFileTopic}</td>
-       <td width={"200px"}>{Feedbacks.Feedback}</td>
-       <td width={"200px"}>{Feedbacks.EvaluvatedDate}</td>
+         <td width={"300px"}>{Feedbacks.ResDocFileGroupId}</td>
+       <td width={"300px"} >{Feedbacks.ResDocFileSupervisor}</td>
+       <td width={"300px"}>{Feedbacks.ResDocFileTopic}</td>
+       <td width={"500px"}>{Feedbacks.Feedback}</td>
+       <td width={"300px"}>{Feedbacks.EvaluvatedDate}</td>
         </tr>
       ))}
       </table>

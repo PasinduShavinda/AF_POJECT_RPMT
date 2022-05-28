@@ -31,14 +31,17 @@ const Sug_student_AllThesisdocfeedbacks = () => {
 
   return (<div>
      <form action="">
+     <div class="col-sm-4">
                   <input
                     className="float-right"
                     type="text"
                     placeholder="Search"
                     name="search"
+                    class="form-control"
                     onChange={(e) =>
                       setFilterText(e.target.value.toLocaleLowerCase())
                     }/>
+                    </div>
                     </form><br/>{" "}
 
     
@@ -51,7 +54,7 @@ const Sug_student_AllThesisdocfeedbacks = () => {
       
      <th width={"200px"}>GroupId</th>
      <th width={"200px"}>Supervisor</th>
-     <th width={"200px"}>Feedback</th>
+     <th width={"400px"}>Feedback</th>
      <th width={"200px"}>EvaluvatedDate</th>
     
   
@@ -61,7 +64,7 @@ const Sug_student_AllThesisdocfeedbacks = () => {
         <tr  key={i}>
            <td width={"200px"}>{Feedbacks.ResThesisFileGroupId}</td>
        <td width={"200px"} >{Feedbacks.ResThesisFileSupervisor}</td>
-       <td width={"200px"}>{Feedbacks.Feedback}</td>
+       <td width={"400px"}>{Feedbacks.Feedback}</td>
        <td width={"200px"}>{Feedbacks.EvaluvatedDate}</td>
         </tr>
       ))}
