@@ -93,7 +93,7 @@ className="form-control"
        fullWidth
       variant="standard"
         name="ResDocFileGroupId"
-    />
+        disabled/>
       </div>
 
 
@@ -109,7 +109,7 @@ className="form-control"
       fullWidth
        variant="standard"
        name="EvaluvatedDate"
-     />
+       />
 </div>
 </div>
 

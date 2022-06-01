@@ -104,7 +104,7 @@ margin="normal"
 InputProps={{
         readOnly: true,
       }} fullWidth
- name="Grp_ID" />
+ name="Grp_ID" disabled/>
 </div>
 </div>
 
@@ -120,7 +120,7 @@ margin="normal"
 InputProps={{
         readOnly: true,
       }} fullWidth
- name="Panel" />
+ name="Panel" disabled />
 </div>
 </div>
 

@@ -93,10 +93,8 @@ value={inputs. ResTopicFileGroupId}
  onChange={handleChange}
 
 margin="normal"
-InputProps={{
-        readOnly: true,
-      }} fullWidth
- name="ResTopicFileGroupId" />
+
+ name="ResTopicFileGroupId" disabled />
 </div>
 </div>
 
@@ -109,10 +107,8 @@ className="form-control"
 value={inputs.ResTopicFilePanel}
   onChange={handleChange}
 margin="normal"
-InputProps={{
-        readOnly: true,
-      }} fullWidth
- name="ResTopicFilePanel" />
+
+ name="ResTopicFilePanel" disabled/>
 </div>
 </div>
 

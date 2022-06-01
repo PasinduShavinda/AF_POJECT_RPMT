@@ -64,6 +64,8 @@ const StudentHomePage_shv = () => {
 
     </div>
   </div>
+
+ 
   
   <section class=" py-5 h-100" >
   <h1 class="d-flex justify-content-center"><b>Feedbacks and marks </b></h1>
@@ -110,6 +112,17 @@ const StudentHomePage_shv = () => {
         </div>
       </div>
       </section>
+      <div class="d-flex justify-content-center container px-4 py-5 h-100" >
+            <a href="/group_reg" style={{textDecoration:'none' ,color:'white'}}> 
+                <img src="https://rt12.rspo.org/ckfinder/userfiles/images/Group%20Registration-01.png" width={"800px"} height="800px"></img>
+                
+            </a>
+            <div >
+            
+                
+                </div>
+                </div>
+     
     </div>
   );
 };

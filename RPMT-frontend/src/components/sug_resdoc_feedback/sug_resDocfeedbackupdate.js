@@ -84,13 +84,11 @@ className="form-control"
     value={inputs. ResDocFileGroupId}
     onChange={handleChange}
      margin="normal"
-      InputProps={{
-        readOnly: true,
-      }}
+    
        fullWidth
       variant="standard"
-        name="ResDocFileGroupId"
-    />
+        name="ResDocFileGroupId" 
+        disabled/>
       </div>
 
 
@@ -106,7 +104,7 @@ className="form-control"
       fullWidth
        variant="standard"
        name="EvaluvatedDate"
-     />
+      />
 </div>
 </div>
 
