@@ -11,29 +11,29 @@
 
 ========================================================
 
-1. Shavinda W.A.P --------> IT20140298 
+1. Shavinda W.A.P (IT20140298) 
       Admin - Create Submission types 
-                  --> Research topic submission
-                  --> Research Topic Document Submission
-                  --> Research Document Submission
-                  --> Thesis Document Submission
+                  *Research topic submission
+                  *Research Topic Document Submission
+                  *Research Document Submission
+                  *Thesis Document Submission
                   
       Upload Marking Schemes
       Upload Document/Presentation templates
       Publish Notice (Create, Read, Update, Delete Notice)
                
-      Student - Register Research Document
-                  --> Submit , Edit, View, Delete Research Topic
-                  --> Research topic submission
-                  --> Research Topic Document Submission
-                  --> Research Document Submission
-                  --> Thesis Document Submission
-                  --> View Notice
-                  --> Download Document/Presentation templates
-                  --> Download Marking Scheme
+      Student - Register Research Document*
+                  *Submit , Edit, View, Delete Research Topic
+                  *Research topic submission
+                  *Research Topic Document Submission
+                  *Research Document Submission
+                  *Thesis Document Submission
+                  *View Notice
+                  *Download Document/Presentation templates
+                  *Download Marking Scheme
                   
       Supervisor/ Panel Member
-                  --> Download Marking Scheme
+                  *Download Marking Scheme
                            
       
 3. Kalansooriya S.H (IT20137700)
