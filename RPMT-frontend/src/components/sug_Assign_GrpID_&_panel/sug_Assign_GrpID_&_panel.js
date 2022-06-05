@@ -100,7 +100,7 @@ className="form-control"
 placeholder="Grp_Leader"
 value={inputs.Grp_Leader}
 onChange={handleChange} 
-    />
+disabled/>
      
 </div>
 
@@ -114,7 +114,7 @@ className="form-control"
  placeholder="Grp_member2"
   value={inputs.Grp_member2}
   onChange={handleChange}
- />
+  disabled/>
 
 </div>
 
@@ -127,7 +127,7 @@ className="form-control"
  placeholder="Grp_member3"
  value={inputs.Grp_member3}
  onChange={handleChange}
- />
+ disabled/>
 </div>
 
 
@@ -139,7 +139,7 @@ className="form-control"
  placeholder="Grp_member4"
  value={inputs.Grp_member4}
  onChange={handleChange}
- />
+ disabled />
 </div>
 
 <div className="form-group"  marginBottom='15px'>    

@@ -89,7 +89,7 @@ margin="normal"
 InputProps={{
         readOnly: true,
       }} fullWidth
- name="ResTopicFileGroupId" />
+ name="ResTopicFileGroupId" disabled/>
 </div>
 </div>
 
@@ -105,7 +105,7 @@ margin="normal"
 InputProps={{
         readOnly: true,
       }} fullWidth
- name="ResTopicFilePanel" />
+ name="ResTopicFilePanel" disabled />
 </div>
 </div>
 

@@ -90,7 +90,7 @@ margin="normal"
 InputProps={{
         readOnly: true,
       }} fullWidth
- name="ResThesisFileGroupId" />
+ name="ResThesisFileGroupId" disabled/>
 </div>
 </div>
 
@@ -106,7 +106,7 @@ margin="normal"
 InputProps={{
         readOnly: true,
       }} fullWidth
- name="ResThesisFileSupervisor" />
+ name="ResThesisFileSupervisor" disabled />
 </div>
 </div>
 

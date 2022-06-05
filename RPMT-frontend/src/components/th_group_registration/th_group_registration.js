@@ -53,7 +53,7 @@ const Th_Group_Reg = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log(inputs);
-      sendRequest().then(() => history("/sug_page"));
+      sendRequest().then(() => history("/stdHome"));
     };
   
     
