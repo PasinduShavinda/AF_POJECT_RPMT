@@ -67,5 +67,37 @@
 1. Admin -> 
        * Username - admin@gmail.com 
        * Passwoard - admin123
+       
+1. Student -> 
+       * Username - pasi@gmail.com 
+       * Passwoard - 1234
+
+1. Panel Member -> 
+       * Username - suga@gmail.com
+       * Passwoard - 1234
+       *
+1. Spervisor -> 
+       * Username - sup@gmail.com
+       * Passwoard - sup@123
+
 
 =====================================
+
+
+=====================================
+
+HOW TO RUN THE PROJECT
+======================
+Step 01 - Clone the repository to your local machine.
+
+Step 02 - Go to RPMT-backend folder and install node modules by typing "npm install" command
+
+Step 03 - Go to RPMT-frontend folder and install node modules by typing "npm install" command
+
+Step 04 - Go to RPMT-backend folder and run the backend by typing "npm start" command
+
+Step 05 - Go to RPMT-frontend folder and run the frontend by typing "npm start" command
+
+Step 06 - Now You can see our web application running on port 3000 and load in your browser.....
+
+
