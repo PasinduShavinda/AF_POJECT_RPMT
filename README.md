@@ -22,7 +22,7 @@
       Upload Document/Presentation templates
       Publish Notice (Create, Read, Update, Delete Notice)
                
-      Student - Register Research Document*
+      Student -
                   *Submit , Edit, View, Delete Research Topic
                   *Research topic submission
                   *Research Topic Document Submission
