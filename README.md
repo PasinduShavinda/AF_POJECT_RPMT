@@ -81,7 +81,7 @@ User Credentials
 1. Panel Member -> 
        * Username - suga@gmail.com
        * Passwoard - 1234
-       *
+       
 1. Spervisor -> 
        * Username - sup@gmail.com
        * Passwoard - sup@123
