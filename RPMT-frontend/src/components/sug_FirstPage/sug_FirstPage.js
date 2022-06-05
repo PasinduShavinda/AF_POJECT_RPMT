@@ -183,26 +183,6 @@ const FirstPage = () => {
           </div>
         </div>
       </div>
-
-      <div>
-        <a href="/shv_page">
-          <Button variant="contained" type="submit">
-            Shavinda
-          </Button>
-        </a>
-        <Button variant="contained" type="submit">
-          Thamodi
-        </Button>
-        <a href="/sug_page">
-          {" "}
-          <Button variant="contained" type="submit">
-            Sugandhi
-          </Button>
-        </a>
-        <Button variant="contained" type="submit">
-          Udara
-        </Button>
-      </div>
     </div>
   );
 };
