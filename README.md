@@ -7,11 +7,13 @@
 
 ===================================
 
-* GROUP MEMBERS DETAILS * || INDIVIDUAL CONTIBUTION
+GROUP MEMBERS DETAILS * || INDIVIDUAL CONTIBUTION
+=================================================
 
 ========================================================
 
-1. Shavinda W.A.P (IT20140298) 
+1.Shavinda W.A.P (IT20140298) 
+==============================
       Admin - Create Submission types 
                   *Research topic submission
                   *Research Topic Document Submission
@@ -36,7 +38,8 @@
                   *Download Marking Scheme
                            
       
-3. Kalansooriya S.H (IT20137700)
+3.Kalansooriya S.H (IT20137700)
+==============================
 
       *Home page , 
       *Create panel, 
@@ -47,12 +50,14 @@
       *Evaluate topic documant , Give final marks, 
       *students view Feedbacks and marks
         
-4. Wijeshinghe R.M.U.S (IT20015224) 
+4.Wijeshinghe R.M.U.S (IT20015224) 
+  ==============================
   
       *Login/Register - Student ,Penalmeber ,Supervisor ,Admin  
       *Admin - Student ,Penalmeber ,Supervisor ( View ,Edit, Delete , Genarate Report )     
 
-4. Piusha P.G.T (IT20129644)
+4.Piusha P.G.T (IT20129644)
+ ==============================
       
       *Create student groups
       *Update and delete student group details
@@ -62,7 +67,8 @@
 
 =========================================================
 
-* User Credentials
+User Credentials
+==================
 
 1. Admin -> 
        * Username - admin@gmail.com 
